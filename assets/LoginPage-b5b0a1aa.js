@@ -1,1 +1,0 @@
-import{j as e}from"./index-a209df9b.js";import{T as r}from"./theme-provider-2f7f4185.js";function n(){return e.jsx(r,{defaultTheme:"light",storageKey:"vite-ui-theme",children:e.jsx("div",{className:" bg-background min-h-screen w-full overflow-hidden flex flex-col justify-center  items-center",children:e.jsx("h1",{children:"Login Page"})})})}export{n as default};
