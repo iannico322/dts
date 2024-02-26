@@ -1,11 +1,23 @@
 import { ThemeProvider } from "@/components/theme-provider";
 
-import bg from "../../../public/assets/images/DICT-bg.webp";
-import logo from "../../../public/assets/images/DICT-Banner-Logo.webp"
-import google from "../../../public/assets/images/google.png"
+import bg from "../../assets/images/DICT-bg.webp";
+import logo from "../../assets/images/DICT-Banner-Logo.webp"
+import google from "../../assets/images/google.png"
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function LoginPage() {
+
+  const navigate = useNavigate();
+
+  const [User, setUser ] = useState (
+    { email: "", password: ""}
+  )
+
+  useEffect(()=>{
+    console.table(User)
+  },[User])
 
 
   return (
@@ -26,19 +38,19 @@ function LoginPage() {
 
           
 
-            <form className=" flex flex-col h-[500px] lg:w-[360px]  w-full max-w-[450px] mt-14 sm:w-[300px]  ">
+            <form className=" flex flex-col h-[500px] lg:w-[360px]  w-full max-w-[450px] mt-14 sm:w-[300px] " onSubmit={(e:any)=>{e.preventDefault(navigate('/dts/home'))}} >
 
               <p className=" text-textW text-[25px] font-semibold mb-10">Log in to your account</p>
 
               <label className=" text-textW mb-1"> Email Address  </label>
-              <input className=" w-full h-[45px] text-textW bg-bg border-[1px] outline-0 focus:border-[2px] focus:border-textW shadow-inner rounded-[5px] pl-4 " type="email" name="email" />
+              <input className=" w-full h-[45px] text-textW bg-blue2 border-[1px] outline-0 focus:border-[2px] focus:border-textW shadow-inner rounded-[5px] pl-4 " type="email" name="email" onChange={(event)=>{setUser({ ...User, email: event.target.value })}} required/>
 
               <label className=" text-textW mt-5 mb-1"> Password  </label>
-              <input className = "w-full h-[45px] text-textW bg-bg border-[1px] outline-0 focus:border-[2px] focus:border-textW shadow-inner rounded-[5px] pl-4 " type="password" name="password" /> 
+              <input className = "w-full h-[45px] text-textW bg-blue2 border-[1px] outline-0 focus:border-[2px] focus:border-textW shadow-inner rounded-[5px] pl-4 " type="password" name="password" onChange={(event)=>{setUser({ ...User, password: event.target.value })}} required /> 
 
               <p className=" text-textW text-[12px] mt-[25px] " onClick={()=>{console.log("Forgot password clicked!")}}>Forgot your password?</p>
 
-              <input className=" text-textW bg-yellow hover:bg-[#de9708af] active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-lg" type="submit" value="Login" />
+              <input className=" text-textW bg-yellow hover:bg-[#de9708af] active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-lg" type="submit" value="Login"  />
 
               <div className=" w-full h-[60px] flex flex-row justify-around items-center ">
                 <div className=" w-[25%] border-b border-textW " ></div>

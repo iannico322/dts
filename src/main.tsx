@@ -7,10 +7,12 @@ import { Suspense, lazy } from "react";
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
 
-
-
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
+);
+
+const ForgotPasswordPage= lazy(() =>
+  wait(1300).then(() => import("./screens/forgotPass/forgotPass.tsx"))
 );
 
 const Document= lazy(() =>
@@ -19,7 +21,6 @@ const Document= lazy(() =>
 const Dashboard= lazy(() =>
   wait(1300).then(() => import("./screens/homePage/dashboard/Dashboard.tsx"))
 );
-
 
 const HomePage= lazy(() =>
   wait(1300).then(() => import("./screens/homePage/HomePage.tsx"))
@@ -38,6 +39,16 @@ const router = createBrowserRouter([
     </Suspense>
   </>,
   },
+
+  {
+    path: "/dts/forgot_password",
+    element:  <>
+    <Suspense fallback={<Loader />}>
+      <ForgotPasswordPage />
+    </Suspense>
+  </>,
+  },
+
   {
     path: "/dts/home",
     element: <>
