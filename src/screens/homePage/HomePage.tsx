@@ -18,7 +18,7 @@ function HomePage() {
       
       <nav className=" animate__animated animate__slideInDown  z-20 bg-blue fixed flex justify-between items-center w-full max-w-full py-5 border-b-[0px] border-accent \ ">
         <Link className=" ml-5" to="/react-vite-supreme" >
-          <img src="./assets/images/DICT-Banner-Logo.png" className="logo " alt="Vite logo" />
+          <img src="./assets/images/DICT-Banner-Logo.webp" className="logo " alt="Vite logo" />
         </Link>
         <nav className=" text-accent-foreground flex gap-10 uppercase items-center">
         <NavLink

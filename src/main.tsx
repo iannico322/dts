@@ -38,7 +38,8 @@ const router = createBrowserRouter([
     </Suspense>
   </>,
   children: [
-  ],
+  ]
+  ,
   },
   {
     path: "*",
