@@ -1,92 +1,30 @@
+import Footer from "@/components/nav/Footer"
+import Header from "@/components/nav/Header"
 import { ThemeProvider } from "@/components/theme-provider"
-import { MenuIcon, XIcon } from "lucide-react";
-import { useState } from "react";
-
-import { Link} from "react-router-dom";
+import { useState } from "react"
+import { Outlet } from "react-router-dom"
 
 // import { ModeToggle } from "./components/mode-toggle";
 // import Reveal from "./components/animation/reveal";
 
 
 function HomePage() {
-
   const [navActive,setActive] = useState(false)
-
-  
-
-
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
      <div className=" bg-background min-h-screen w-full overflow-hidden flex flex-col  items-center">
-      
-      <nav className="  animate__animated animate__slideInDown  z-20 bg-blue fixed flex justify-between items-center w-full max-w-[1980px] py-5 border-b-[0px] border-accent  ">
-        <Link className=" ml-10 sm:ml-3" to="/react-vite-supreme" >
-          <img src="./assets/images/DICT-Banner-Logo.webp" className=" h-15 sm:h-10 object-contain " alt="Vite logo" />
-        </Link>
-        <nav className=" lg:hidden mr-10 text-accent-foreground flex gap-20 uppercase items-center">
-
-
-
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
-            <img className=" h-4 object-contain" src="./assets/icons/profile.png"/>
-          Profile
-          </Link>
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
-          <img className=" h-4 object-contain" src="./assets/icons/notif.png"/>
-          Notifications
-          </Link>
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
-          <img className=" h-4 object-contain" src="./assets/icons/out.png"/>
-            Log Out
-          </Link>
-        
-        
-        </nav>
-        <div className=" right-0 top-0 absolute mr-10 sm:mr-4 lg:flex flex-col hidden items-end  justify-end mt-5 ">
-
-      
-            {
-            !navActive?
-            <MenuIcon onClick={()=>{
-              setActive(!navActive)
-            }} className=" mt-2  sm:h-5 sm:w-5  h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
-            :
-            <XIcon onClick={()=>{
-              setActive(!navActive)
-            }} className="mt-2  sm:h-5 sm:w-5   h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
-          }
-    
-          
-          
-          <nav className={navActive?"  relative  z-10 lg:flex flex-col hidden text-accent-foreground  gap-10 uppercase items-start self-end mt-14 bg-blue px-5 py-7 rounded-md ":"hidden"}>
-
-
-
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
-            <img className=" h-4 object-contain" src="./assets/icons/profile.png"/>
-          Profile
-          </Link>
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
-          <img className=" h-4 object-contain" src="./assets/icons/notif.png"/>
-          Notifications
-          </Link>
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
-          <img className=" h-4 object-contain" src="./assets/icons/out.png"/>
-            Log Out
-          </Link>
-        
-        
-        </nav>
+      <Header navActive={navActive} setActive={setActive}/>
+      <div className=" absolute mt-40 md:mt-28 sm:mt-20 sm:items-center top-0 flex text-sm  right-0  items-center sm:mr-0  mr-20 animate__animated  animate__fadeInLeft ">
+          <p className=" sm:text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">Track Document</p>
+          |
+          <p className="sm:text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">In Process</p>|
+          <p className="sm:text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">Accomplished</p>
         </div>
-        
-        
-       
-      </nav>
  
 
-      <div onClick={()=>{
-    setActive(false)
-  }} className=" min-h-screen w-full flex items-center justify-center gap-4 flex-wrap">
+      {/* <div onClick={()=>{
+      setActive(false)
+      }} className=" min-h-screen w-full flex items-center justify-center gap-4 flex-wrap">
      
         <div className=" absolute mt-40 md:mt-28 sm:mt-20 sm:items-center top-0 flex text-sm  right-0  items-center sm:mr-0  mr-20 animate__animated  animate__fadeInLeft ">
           <p className=" sm:text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">Track Document</p>
@@ -110,17 +48,11 @@ function HomePage() {
        
       
           
-      </div>
+      </div> */}
 
-      <footer className=" animate__animated animate__fadeIn fixed bottom-0 h-20 sm:h-16 flex flex-col items-start justify-center sm:items-center sm:pl-0 pl-10 bg-yellow w-full text-black ">
-        <h1 className=" text-xs sm:text-[10px] text-center font-light">@2024 Department of Information and Techonology Communication</h1>
-        <div className=" flex gap-5 font-semibold text-xs">
-        <p className=" hover:underline hover:cursor-pointer">TERMS AND CONDITIONS</p>
-        <p className=" hover:underline hover:cursor-pointer">PRIVAY AND POLICY</p>
-        </div>
-        
+      <Outlet/>
 
-      </footer>
+    <Footer/>
 
       
      

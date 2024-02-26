@@ -7,10 +7,18 @@ import { Suspense, lazy } from "react";
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
 
+
+
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
 );
 
+const Document= lazy(() =>
+  wait(1300).then(() => import("./screens/homePage/document/Document.tsx"))
+);
+const Dashboard= lazy(() =>
+  wait(1300).then(() => import("./screens/homePage/dashboard/Dashboard.tsx"))
+);
 
 
 const HomePage= lazy(() =>
@@ -32,12 +40,34 @@ const router = createBrowserRouter([
   },
   {
     path: "/dts/home",
-    element:  <>
+    element: <>
     <Suspense fallback={<Loader />}>
       <HomePage />
     </Suspense>
   </>,
-  children: [
+    children: [
+    {
+      path: "/dts/home/", 
+      element: <Navigate to="/dts/home/dashboard/" />, 
+    },
+    {
+      path: "/dts/home/dashboard/",
+      element:  <>
+      <Suspense fallback={<Loader />}>
+        <Dashboard />
+      </Suspense>
+    </>,
+    },
+    {
+      path: "/dts/home/document/",
+      element:  <>
+      <Suspense fallback={<Loader />}>
+        <Document />
+      </Suspense>
+    </>,
+    }
+
+
   ]
   ,
   },
