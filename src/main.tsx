@@ -19,11 +19,11 @@ const HomePage= lazy(() =>
 
 const router = createBrowserRouter([
   {
-    path: "/react-vite-supreme/",
-    element: <Navigate to="/react-vite-supreme/login" />,
+    path: "/dts/",
+    element: <Navigate to="/dts/login" />,
   },
   {
-    path: "/react-vite-supreme/login",
+    path: "/dts/login",
     element:  <>
     <Suspense fallback={<Loader />}>
       <LoginPage />
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   </>,
   },
   {
-    path: "/react-vite-supreme/home",
+    path: "/dts/home",
     element:  <>
     <Suspense fallback={<Loader />}>
       <HomePage />
