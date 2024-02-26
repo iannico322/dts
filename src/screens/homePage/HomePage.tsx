@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider"
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
+import { useState } from "react";
 
 import { Link} from "react-router-dom";
 
@@ -8,6 +9,10 @@ import { Link} from "react-router-dom";
 
 
 function HomePage() {
+
+  const [navActive,setActive] = useState(false)
+
+  
 
 
   return (
@@ -37,12 +42,51 @@ function HomePage() {
         
         
         </nav>
-        <MenuIcon className=" sm:mr-4 sm:h-5 sm:w-5 mr-10 h-8 w-8 text-white hidden lg:flex"/>
+        <div className=" right-0 top-0 absolute mr-10 sm:mr-4 lg:flex flex-col hidden items-end  justify-end mt-5 ">
+
+      
+            {
+            !navActive?
+            <MenuIcon onClick={()=>{
+              setActive(!navActive)
+            }} className=" mt-2  sm:h-5 sm:w-5  h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
+            :
+            <XIcon onClick={()=>{
+              setActive(!navActive)
+            }} className="mt-2  sm:h-5 sm:w-5   h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
+          }
+    
+          
+          
+          <nav className={navActive?"  relative  z-10 lg:flex flex-col hidden text-accent-foreground  gap-10 uppercase items-start self-end mt-14 bg-blue px-5 py-7 rounded-md ":"hidden"}>
+
+
+
+          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
+            <img className=" h-4 object-contain" src="./assets/icons/profile.png"/>
+          Profile
+          </Link>
+          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
+          <img className=" h-4 object-contain" src="./assets/icons/notif.png"/>
+          Notifications
+          </Link>
+          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
+          <img className=" h-4 object-contain" src="./assets/icons/out.png"/>
+            Log Out
+          </Link>
+        
+        
+        </nav>
+        </div>
+        
+        
        
       </nav>
  
 
-      <div className=" min-h-screen w-full flex items-center justify-center gap-4 flex-wrap">
+      <div onClick={()=>{
+    setActive(false)
+  }} className=" min-h-screen w-full flex items-center justify-center gap-4 flex-wrap">
      
         <div className=" absolute mt-40 md:mt-28 sm:mt-20 sm:items-center top-0 flex text-sm  right-0  items-center sm:mr-0  mr-20 animate__animated  animate__fadeInLeft ">
           <p className=" sm:text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">Track Document</p>
