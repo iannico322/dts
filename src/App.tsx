@@ -1,7 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider"
 
-import viteLogo from "/vite.svg";
-
 import { Link, Outlet } from "react-router-dom";
 
 // import { ModeToggle } from "./components/mode-toggle";
