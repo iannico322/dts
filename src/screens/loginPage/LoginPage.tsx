@@ -32,9 +32,9 @@ function LoginPage() {
 
 
         {/* login form */}
-        <div className=" px-10 lg:col-span-4 col-span-2 md:col-span-6 flex flex-col justify-start items-center h-full bg-blue2 animate__animated animate__slideInUp  "  >
+        <div className=" sm:justify-center px-10 lg:col-span-4 col-span-2 md:col-span-6 flex flex-col justify-start items-center h-full bg-blue2 animate__animated animate__slideInUp  "  >
           
-          <img className= " mt-36 " src={logo} alt="DICT_bg" />
+          <img className= " sm:mt-2 mt-36 " src={logo} alt="DICT_bg" />
 
           
 
