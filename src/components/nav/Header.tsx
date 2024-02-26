@@ -29,7 +29,7 @@ const Header = ({ navActive, setActive }:any) => {
           <img className=" h-4 object-contain" alt="NotifIcon" src={NotifIcon}/>
           Notifications
           </Link>
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
+          <Link to="/dts/" className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white"  >
           <img className=" h-4 object-contain" alt="OutIcon" src={OutIcon}/>
             Log Out
           </Link>
@@ -64,7 +64,7 @@ const Header = ({ navActive, setActive }:any) => {
           <img className=" h-4 object-contain" alt="NotifIcon" src={NotifIcon}/>
           Notifications
           </Link>
-          <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white h-14 w-full pl-10  hover:bg-yellow" to="" >
+          <Link to="/dts/" className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white h-14 w-full pl-10  hover:bg-yellow" >
           <img className=" h-4 object-contain" alt="OutIcon" src={OutIcon}/>
             Log Out
           </Link>
