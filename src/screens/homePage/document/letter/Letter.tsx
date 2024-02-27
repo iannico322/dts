@@ -1,10 +1,22 @@
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
+import Message from "@/components/msg/successMessage"
+import { useState } from "react";
 
 
 function Letter() {
+
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
+        event.preventDefault(); 
+        setShowSuccessMessage(true);
+        setTimeout(() => setShowSuccessMessage(false), 3000)
+  };
+
+  
   return (
-    <div className=" rounded-[5px] min-h-screen w-full sm:pb-40 sm:pt-32  flex items-center justify-center gap-5">
+    <div className=" rounded-[5px] min-h-screen w-full sm:pb-40 sm:pt-32  flex items-center justify-center gap-5 relative">
         <div className=" w-[80%] sm:w-full sm:mx-5 max-w-[1366px] sm:px-2 px-10 border-dashed border border-blue/50 bg-white min-h-[200px] pb-5">
             <div className=" w-full flex items-center justify-between py-4 ">
                 <div className=" flex flex-col leading-2">
@@ -16,7 +28,7 @@ function Letter() {
                         Cancel
                 </Link>
             </div>
-            <form className=" w-full border border-gray-500/20 rounded-[5px] px-5 py-8  grid grid-cols-3 gap-3  sm:grid-cols-1    ">
+            <form className=" w-full border border-gray-500/20 rounded-[5px] px-5 py-8  grid grid-cols-3 gap-3  sm:grid-cols-1    " onSubmit={handleSubmit}>
 
                 <div className=" w-full flex flex-col gap-1 col-span-2 sm:col-span-1">
                     <p className=" text-xs">Name of the Requestor</p>
@@ -43,11 +55,15 @@ function Letter() {
                     <input type="text" className=" border border-blue/50 px-3 py-2 text-xs rounded-[5px]" placeholder="E.g Taylor, Shift" />
                 </div>
 
-                <Button variant="outline" className=" bg-[#038500] rounded-[5px] text-white col-span-3 sm:col-span-1">
+                
+                <Button  variant="outline" className=" bg-[#038500] rounded-[5px] text-white col-span-3 sm:col-span-1">
                     Submit
                 </Button>
-
+                
             </form>
+            <div className="absolute bottom-0 left-0" > 
+                {showSuccessMessage && <Message/>}
+            </div>
         </div>
     </div>
   )
