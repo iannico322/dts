@@ -1,1 +1,0 @@
-import{j as e}from"./index-8cf85c3f.js";import{T as r}from"./theme-provider-44087db4.js";function t(){return e.jsx(r,{defaultTheme:"light",storageKey:"vite-ui-theme",children:e.jsx("div",{className:" flex w-screen h-screen",children:"hello world"})})}export{t as default};
