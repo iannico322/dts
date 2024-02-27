@@ -6,11 +6,6 @@ import { Suspense, lazy } from "react";
 
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f2a207f8cb54b45cc40d6e4e6073fd2fbe0d920d
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
 );
@@ -97,10 +92,6 @@ const router = createBrowserRouter([
         <Document />
       </Suspense>
     </>,
-<<<<<<< HEAD
-    },
-    
-=======
      
     },
     {
@@ -111,7 +102,6 @@ const router = createBrowserRouter([
   </Suspense>
 </>,
     }
->>>>>>> f2a207f8cb54b45cc40d6e4e6073fd2fbe0d920d
 
 
   ]
