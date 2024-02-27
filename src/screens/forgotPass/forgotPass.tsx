@@ -36,7 +36,7 @@ function ForgotPasswordPage() {
           </div>
 
           {/* forgot password form */}
-          <form className=" sm:w-[400px] w-[500px] min-h-[400px] flex flex-col animate__animated animate__slideInDown">
+          <form className=" sm:w-[400px] w-[500px] min-h-[400px] flex flex-col animate__animated animate__slideInDown px-10">
             <p className=" text-textW text-[30px] font-semibold mb-10">Forgot Password</p>
 
             {/* email */}
