@@ -52,7 +52,7 @@ function LoginPage() {
 
               <p className=" text-textW text-[12px] mt-[25px] " onClick={()=>{navigate('/dts/forgot_password')}}>Forgot your password?</p>
 
-              <input className=" text-textW bg-yellow hover:bg-[#de9708af] active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-lg" type="submit" value="Login"  />
+              <input className=" text-textW bg-yellow hover:bg-[#de9708af] active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-full" type="submit" value="Login"  />
 
               <div className=" w-full h-[60px] flex flex-row justify-around items-center ">
                 <div className=" w-[25%] border-b border-textW " ></div>
