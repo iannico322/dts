@@ -32,13 +32,15 @@ function LoginPage() {
 
 
         {/* login form */}
-        <div className=" sm:justify-center px-10 lg:col-span-4 col-span-2 md:col-span-6 flex flex-col justify-start items-center h-full bg-blue2 animate__animated animate__slideInUp  "  >
+        <div className=" sm:justify-center px-10 lg:col-span-4 col-span-2 md:col-span-6 flex flex-col justify-center items-center h-full bg-blue2 animate__animated animate__slideInUp  "  >
           
-          <img className= " sm:mt-2 mt-36 " src={logo} alt="DICT_bg" />
-
           
 
-            <form className=" flex flex-col h-[500px] lg:w-[360px]  w-full max-w-[450px] mt-14 sm:w-[300px] " onSubmit={(e:any)=>{e.preventDefault(navigate('/dts/home'))}} >
+          
+
+            <form className=" flex flex-col min-h-[500px] lg:w-[360px]  w-full max-w-[450px] sm:w-[300px] " onSubmit={(e:any)=>{e.preventDefault(navigate('/dts/home'))}} >
+
+              <img className= " mb-10 w-[60%] object-contain self-center" src={logo} alt="DICT_bg" />
 
               <p className=" text-textW text-[25px] font-semibold mb-10">Log in to your account</p>
 
@@ -48,7 +50,7 @@ function LoginPage() {
               <label className=" text-textW mt-5 mb-1"> Password  </label>
               <input className = "w-full h-[45px] text-textW bg-blue2 border-[1px] outline-0 focus:border-[2px] focus:border-textW shadow-inner rounded-[5px] pl-4 " type="password" name="password" onChange={(event)=>{setUser({ ...User, password: event.target.value })}} required /> 
 
-              <p className=" text-textW text-[12px] mt-[25px] " onClick={()=>{console.log("Forgot password clicked!")}}>Forgot your password?</p>
+              <p className=" text-textW text-[12px] mt-[25px] " onClick={()=>{navigate('/dts/forgot_password')}}>Forgot your password?</p>
 
               <input className=" text-textW bg-yellow hover:bg-[#de9708af] active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-lg" type="submit" value="Login"  />
 
