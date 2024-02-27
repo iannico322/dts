@@ -36,7 +36,7 @@ function ForgotPasswordPage() {
           </div>
 
           {/* forgot password form */}
-          <form className=" sm:w-[400px] w-[500px] min-h-[400px] flex flex-col animate__animated animate__slideInDown px-10">
+          <form className=" sm:w-[400px] w-[500px] min-h-[100px] flex flex-col animate__animated animate__slideInDown px-10">
             <p className=" text-textW text-[30px] font-semibold mb-10">Forgot Password</p>
 
             {/* email */}
@@ -44,14 +44,14 @@ function ForgotPasswordPage() {
             <input className=" w-full h-[45px] text-textW bg-transparent border-[1px] outline-0 focus:border-[2px] focus:border-textW shadow-inner rounded-[5px] pl-4 " type="email" name="email" onChange={(event)=>{setUser({ ...User, email: event.target.value })}} required/>
 
             {/* reset password button */}
-            <input className=" text-textW bg-yellow hover:bg-[#de9708af] active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-full" type="submit" value="Reset my Password"  />
+            <input className=" text-textW bg-yellow cursor-pointer hover:bg-yellow/70  transition-all duration-200 active:scale-95 text-[18px] w-full h-[45px] mt-6 rounded-full text-base" type="submit" value="Reset my Password"  />
 
             <div className=" w-full h-[60px] flex flex-row justify-around items-center ">
               <div className=" w-[25%] border-b border-textW "></div>
               <div className=" w-[25%] border-b border-textW"></div>
             </div>
 
-            <div onClick={()=>{navigate('/dts/login')}} className="  w-[160px] justify-between items-center flex flex-row">
+            <div onClick={()=>{navigate('/dts/login')}} className=" cursor-pointer hover:translate-x-[-5px] transition-all duration-200  w-[160px] justify-between items-center flex ">
               <ArrowLeft  className=" text-textW" />
               <p className=" text-textW text-[14px]">Go back to Sign In</p>
             </div>
