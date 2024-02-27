@@ -13,14 +13,11 @@ const Header = ({ navActive, setActive }:any) => {
   
     
   return (
-    <header className="  animate__animated animate__slideInDown  z-20 bg-blue fixed flex justify-between items-center w-full max-w-[1980px] py-5 border-b-[0px] border-accent  ">
+    <header className=" z-50 animate__animated animate__slideInDown   bg-blue fixed flex justify-between items-center w-full  py-3 border-b-[0px] border-accent  ">
         <Link className=" ml-10 sm:ml-3" to="/react-vite-supreme" >
-          <img src={Logo} className=" h-15 sm:h-10 object-contain " alt="Vite logo" />
+          <img src={Logo} className=" max-h-[10vh] h-12  sm:h-10 object-contain " alt="Vite logo" />
         </Link>
         <nav className=" lg:hidden mr-10 text-accent-foreground flex gap-20 uppercase items-center">
-
-
-
           <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
             <img className=" h-4 object-contain" alt="ProfileIcon" src={ProfileIcon}/>
           Profile
@@ -43,16 +40,16 @@ const Header = ({ navActive, setActive }:any) => {
             !navActive?
             <MenuIcon onClick={()=>{
               setActive(!navActive)
-            }} className=" mt-2  sm:h-5 sm:w-5  h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
+            }} className="  mb-3  sm:h-5 sm:w-5  h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
             :
             <XIcon onClick={()=>{
               setActive(!navActive)
-            }} className="mt-2  sm:h-5 sm:w-5   h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
+            }} className=" mb-3  sm:h-5 sm:w-5   h-8 w-8 text-white hidden lg:flex cursor-pointer"/>
           }
     
           
           
-          <nav className={navActive?"  relative  z-10 lg:flex flex-col hidden text-accent-foreground   uppercase items-start self-end mt-12 bg-blue py-5 w-[300px]  backdrop-blur-md   rounded-md ":"hidden"}>
+          <nav className={navActive?"  relative  z-50 lg:flex flex-col hidden text-accent-foreground   uppercase items-start self-end mt-12 bg-blue py-5 w-[300px]  backdrop-blur-md   rounded-md ":"hidden"}>
 
 
 
