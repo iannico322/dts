@@ -6,9 +6,12 @@ import { Suspense, lazy } from "react";
 
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
-
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
+);
+
+const Message= lazy(() =>
+  wait(1300).then(() => import('./components/msg/successMessage.tsx'))
 );
 
 const ForgotPasswordPage= lazy(() =>
@@ -36,6 +39,14 @@ const router = createBrowserRouter([
     element:  <>
     <Suspense fallback={<Loader />}>
       <LoginPage />
+    </Suspense>
+  </>,
+  },
+  {
+    path: "/dts/message/",
+    element:  <>
+    <Suspense fallback={<Loader />}>
+      <Message />
     </Suspense>
   </>,
   },
@@ -76,7 +87,8 @@ const router = createBrowserRouter([
         <Document />
       </Suspense>
     </>,
-    }
+    },
+    
 
 
   ]
