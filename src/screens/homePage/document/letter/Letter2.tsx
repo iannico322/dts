@@ -4,9 +4,10 @@ import Message from "@/components/msg/successMessage"
 import { useState } from "react";
 import { ComboboxDemo } from "@/components/input/Dropdown";
 import InputTemp from "@/components/input/Input";
+import { SendIcon, Trash2Icon } from "lucide-react";
 
 
-function Letter() {
+function Letter2() {
 
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
@@ -23,7 +24,7 @@ function Letter() {
         <div className=" w-[80%] sm:w-full sm:mx-5 max-w-[1366px] sm:px-2 px-10 border-dashed border border-blue/50 bg-white min-h-[200px] pb-5">
             <div className=" w-full flex items-center justify-between py-4 ">
                 <div className=" flex flex-col leading-2">
-                    <h1 className=" font-semibold text-base sm:text-xs">File Document Request</h1>
+                    <h1 className=" font-semibold text-base sm:text-xs">File Document Requesss</h1>
                     <p className=" text-xs font-medium sm:text-[8px]">Please make sure to check all items before submitting</p>
                 </div>
                 
@@ -65,8 +66,10 @@ function Letter() {
                 />
                 <InputTemp label = "Remarks" placeholder="E.g Signed" span="col-span-3 sm:col-span-1"
                 />
+
+<div className=" flex items-center gap-4 flex-row col-span-3 sm:col-span-1">
                 <ComboboxDemo
-                span=" col-span-3 sm:col-span-1 "
+                span=" "
                 label="Receiver"
                 placeholder="Select name..."
                 frameworks={[
@@ -141,9 +144,98 @@ function Letter() {
                         label: "Arnold",
                       },
                   ]}
-
-                
                 />
+
+                <SendIcon className=" cursor-pointer text-blue mt-5 hover:scale-[1.1] transition-all"/>
+
+
+                </div>
+                 
+
+                <div className=" flex items-center gap-4 flex-row col-span-3 sm:col-span-1">
+                <ComboboxDemo
+                span=" "
+                label="Receiver"
+                placeholder="Select name..."
+                frameworks={[
+                    {
+                      label: "Ian",
+                    },
+                    {
+                      label: "Mark",
+                    },
+                    {
+                      label: "Angel",
+                    },
+                    {
+                      label: "Rose Mar",
+                    },
+                    {
+                      label: "Arnold",
+                    },{
+                        label: "Mark",
+                      },
+                      {
+                        label: "Angel",
+                      },
+                      {
+                        label: "Rose Mar",
+                      },
+                      {
+                        label: "Arnold",
+                      },{
+                        label: "Mark",
+                      },
+                      {
+                        label: "Angel",
+                      },
+                      {
+                        label: "Rose Mar",
+                      },
+                      {
+                        label: "Arnold",
+                      },{
+                        label: "Mark",
+                      },
+                      {
+                        label: "Angel",
+                      },
+                      {
+                        label: "Rose Mar",
+                      },
+                      {
+                        label: "Arnold",
+                      },{
+                        label: "Mark",
+                      },
+                      {
+                        label: "Angel",
+                      },
+                      {
+                        label: "Rose Mar",
+                      },
+                      {
+                        label: "Arnold",
+                      },{
+                        label: "Mark",
+                      },
+                      {
+                        label: "Angel",
+                      },
+                      {
+                        label: "Rose Mar",
+                      },
+                      {
+                        label: "Arnold",
+                      },
+                  ]}
+                />
+
+                <Trash2Icon className=" cursor-pointer text-red-600 mt-5 hover:scale-[1.1] transition-all"/>
+
+
+                </div>
+                
                
                 
                 
@@ -160,4 +252,4 @@ function Letter() {
   )
 }
 
-export default Letter
+export default Letter2

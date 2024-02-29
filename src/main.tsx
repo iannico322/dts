@@ -21,6 +21,9 @@ const ForgotPasswordPage= lazy(() =>
 const Letter= lazy(() =>
   wait(500).then(() => import("./screens/homePage/document/letter/Letter.tsx"))
 );
+const Letter2= lazy(() =>
+  wait(500).then(() => import("./screens/homePage/document/letter/Letter2.tsx"))
+);
 
 const Document= lazy(() =>
   wait(500).then(() => import("./screens/homePage/document/Document.tsx"))
@@ -99,6 +102,14 @@ const router = createBrowserRouter([
   element:  <>
   <Suspense fallback={<Loader />}>
     <Letter />
+  </Suspense>
+</>,
+    },
+    {
+      path: "/dts/home/letter2",
+  element:  <>
+  <Suspense fallback={<Loader />}>
+    <Letter2 />
   </Suspense>
 </>,
     }
