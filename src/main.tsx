@@ -16,6 +16,9 @@ const AdminDashboard= lazy(() =>
 const Users= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
 );
+const Deactivated= lazy(() =>
+  wait(500).then(() => import("./screens/adminPage/userManagement/Deactivated.tsx"))
+);
 
 const AdminProfile= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Profile.tsx"))
@@ -135,7 +138,7 @@ const router = createBrowserRouter([
   ,
   },
   {
-    path: "/dts/admin",
+    path: "/dts/admin/",
     element: <>
     <Suspense fallback={<Loader />}>
       <AdminPage />
@@ -143,8 +146,8 @@ const router = createBrowserRouter([
   </>,
     children: [
     {
-      path: "/dts/admin/d", 
-      element: <Navigate to="/dts/home/dashboard/" />, 
+      path: "/dts/admin/", 
+      element: <Navigate to="/dts/admin/dashboard/" />, 
     },
     {
       path: "/dts/admin/dashboard/", 
@@ -158,7 +161,18 @@ const router = createBrowserRouter([
       <Users />
     </Suspense>, 
     },
+<<<<<<< HEAD
     
+=======
+    {
+      path: "/dts/admin/deactivate", 
+      element: <Suspense fallback={<Loader />}>
+      <Deactivated />
+    </Suspense>, 
+    }
+  
+  
+>>>>>>> 2672e8f4dd9093dc382eab270620a809a3236409
   ]
   },
 
