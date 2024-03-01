@@ -21,7 +21,7 @@ function Letter2() {
   
   return (
     <div className=" rounded-[5px] min-h-screen w-full sm:pb-40 sm:pt-32  flex items-center justify-center gap-5 relative">
-        <div className=" w-[80%] sm:w-full sm:mx-5 max-w-[1366px] sm:px-2 px-10 border-dashed border border-blue/50 bg-white min-h-[200px] pb-5">
+        <div className=" w-[80%] my-32 sm:w-full sm:mx-5 max-w-[1366px] sm:px-2 px-10 border-dashed border border-blue/50 bg-white min-h-[200px] pb-5">
             <div className=" w-full flex items-center justify-between py-4 ">
                 <div className=" flex flex-col leading-2">
                     <h1 className=" font-semibold text-base sm:text-xs">File Document Requesss</h1>

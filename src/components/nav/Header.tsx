@@ -13,7 +13,10 @@ const Header = ({ navActive, setActive }:any) => {
   
     
   return (
-    <header className=" z-50 animate__animated animate__slideInDown   bg-blue fixed flex justify-between items-center w-full  py-3 border-b-[0px] border-accent  ">
+    <header className=" fixed flex  flex-col  w-full justify-end z-50 animate__animated animate__slideInDown">
+
+   
+    <div className=" animate__animated animate__slideInDown   bg-blue flex justify-between items-center w-full  py-3 border-b-[0px] border-accent  ">
         <Link className=" ml-10 sm:ml-3" to="/react-vite-supreme" >
           <img src={Logo} className=" max-h-[10vh] h-12  sm:h-10 object-contain " alt="Vite logo" />
         </Link>
@@ -72,6 +75,21 @@ const Header = ({ navActive, setActive }:any) => {
         
         
        
+      </div>
+      <div className="  bg-white w-full flex justify-end  sm:items-center  text-sm    items-center sm:mr-0  mr-20 animate__animated  animate__fadeInLeft ">
+          <p className=" text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">
+            Track Document
+          </p>
+          /
+          <p className="text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">
+            In Process
+          </p>
+          /
+          <p className="text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">
+            Accomplished
+          </p>
+        </div>
+
       </header>
   )
 }
