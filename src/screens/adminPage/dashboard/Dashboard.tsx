@@ -1,7 +1,11 @@
 
 function Dashboard() {
   return (
-    <div className=' bg-black w-full min-h-screen'>Dashboard</div>
+    <div className='  w-full h-full bg-blue2 flex items-center justify-center'>
+        <div className=" w-[80%] h-[80%] bg-white rounded-md drop-shadow-glow flex items-center justify-center ">
+                <h1 className=" text-lg font-semibold">Dashboard</h1>
+        </div>
+    </div>
   )
 }
 

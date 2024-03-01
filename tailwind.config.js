@@ -30,6 +30,12 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
   },
     extend: {
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255,255, 255, 0.15)",
+          "0 0px 65px rgba(255, 255,255, 0.2)"
+        ]
+      },
       colors: {
         blue:"#081b43",
         bg:"#e1e1e1",
