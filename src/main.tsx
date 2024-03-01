@@ -6,6 +6,18 @@ import { Suspense, lazy } from "react";
 
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
+
+const AdminPage= lazy(() =>
+  wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
+);
+const AdminDashboard= lazy(() =>
+  wait(500).then(() => import("./screens/adminPage/dashboard/Dashboard.tsx"))
+);
+const Users= lazy(() =>
+  wait(500).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
+);
+
+
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
 );
@@ -117,6 +129,33 @@ const router = createBrowserRouter([
 
   ]
   ,
+  },
+  {
+    path: "/dts/admin",
+    element: <>
+    <Suspense fallback={<Loader />}>
+      <AdminPage />
+    </Suspense>
+  </>,
+    children: [
+    {
+      path: "/dts/admin/d", 
+      element: <Navigate to="/dts/home/dashboard/" />, 
+    },
+    {
+      path: "/dts/admin/dashboard/", 
+      element: <Suspense fallback={<Loader />}>
+      <AdminDashboard />
+    </Suspense>, 
+    },
+    {
+      path: "/dts/admin/user", 
+      element: <Suspense fallback={<Loader />}>
+      <Users />
+    </Suspense>, 
+    }
+  
+  ]
   },
   {
     path: "*",
