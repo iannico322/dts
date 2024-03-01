@@ -25,6 +25,7 @@
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  transition: all ease-in-out 100ms;
 
 
   font-synthesis: none;

@@ -131,7 +131,7 @@ const router = createBrowserRouter([
   ,
   },
   {
-    path: "/dts/admin",
+    path: "/dts/admin/",
     element: <>
     <Suspense fallback={<Loader />}>
       <AdminPage />
@@ -139,8 +139,8 @@ const router = createBrowserRouter([
   </>,
     children: [
     {
-      path: "/dts/admin/d", 
-      element: <Navigate to="/dts/home/dashboard/" />, 
+      path: "/dts/admin/", 
+      element: <Navigate to="/dts/admin/dashboard/" />, 
     },
     {
       path: "/dts/admin/dashboard/", 

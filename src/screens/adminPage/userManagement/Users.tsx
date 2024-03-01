@@ -2,7 +2,7 @@
 
 const Users = () => {
   return (
-    <div className=" w-full h-screen bg-black">Users</div>
+    <div className=" w-full h-screen bg-blue">Users</div>
   )
 }
 
