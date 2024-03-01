@@ -37,6 +37,8 @@ module.exports = {
         textW:"#FFFFFF",
         textB:"#000000",
         blue2: "#163961",
+        adminBG: "#1B4B91",
+
 
 
         border: "hsl(var(--border))",

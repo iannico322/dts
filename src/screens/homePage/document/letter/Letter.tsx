@@ -32,7 +32,7 @@ function Letter() {
                 </Link>
             </div>
             <form className=" w-full border border-gray-500/20 rounded-[5px] px-5 py-8  grid grid-cols-3 gap-3  sm:grid-cols-1    " onSubmit={handleSubmit}>
-                <InputTemp label = "Name of the Requestor" placeholder="E.g Taylor, Shift" span="col-span-2 sm:col-span-1"
+                <InputTemp label = "Name of the Requestor" placeholder="E.g Taylor Sheeesh" span="col-span-2 sm:col-span-1"
                 />
                 <InputTemp label = "Designation / Position" placeholder="E.g Officer1" span="col-span-1 sm:col-span-1"
                 />
