@@ -161,9 +161,6 @@ const router = createBrowserRouter([
       <Users />
     </Suspense>, 
     },
-<<<<<<< HEAD
-    
-=======
     {
       path: "/dts/admin/deactivate", 
       element: <Suspense fallback={<Loader />}>
@@ -172,7 +169,6 @@ const router = createBrowserRouter([
     }
   
   
->>>>>>> 2672e8f4dd9093dc382eab270620a809a3236409
   ]
   },
 
