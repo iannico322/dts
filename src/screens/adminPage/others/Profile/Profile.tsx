@@ -70,11 +70,12 @@ function Profile() {
 
     // creating a new array with values based on the length, index value plus 1
     // e.g (length is 5 so newArray = [1, 2, 3 , 4, 5]) 
-    const data = Array.from({ length: activityLogs.length }, (v:any, k:any) => k+1);
+    const data = Array.from({ length: activityLogs.length }, ( k:any) => k+1);
 
     // Change page
     const [currentPage, setCurrentPage] = useState(0);
-    const handlePageClick = (event:any, value:any) => {
+    const handlePageClick = (_event:any, value:any) => {
+
       setCurrentPage(value);
     };
   
@@ -194,7 +195,7 @@ function Profile() {
                 <div className="flex items-center h-[60px] w-full border-t-2 ">  
                     <div className=" flex flex-row w-full h-[40px] justify-center items-center ">
                         <LucideArrowLeftCircle className=" mr-2 " onClick={prevPage} />
-                        {Array.from({ length: Math.ceil(data.length / 6) }, (v, k) => k).map((page) => (
+                        {Array.from({ length: Math.ceil(data.length / 6) }, (_v, k) => k).map((page) => (
                         <span key={page} onClick={(event) => handlePageClick(event, page)}>
                             {currentPage === page ? '●' : '○'}
                         </span>
