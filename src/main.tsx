@@ -7,6 +7,7 @@ import { Suspense, lazy } from "react";
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
 import DashboardLoader from './screens/adminPage/dashboard/DashboardLoader.tsx';
+import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx';
 
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
@@ -22,7 +23,7 @@ const Deactivated= lazy(() =>
 );
 
 const AdminProfile= lazy(() =>
-  wait(1300).then(() => import ("./screens/adminPage/others/Profile.tsx"))
+  wait(1300).then(() => import ("./screens/adminPage/others/Profile/Profile.tsx"))
 )
 
 
@@ -170,7 +171,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/profile", 
-      element: <Suspense fallback={<Loader />}>
+      element: <Suspense fallback={<ProfileLoader />}>
       <AdminProfile />
     </Suspense>, 
     },
@@ -178,16 +179,6 @@ const router = createBrowserRouter([
   
   ]
   },
-
-  // {
-  //   path: "/dts/admin/profile",
-  //   element:  <>
-  //   <Suspense fallback={<Loader />}>
-  //     <AdminProfile />
-  //   </Suspense>
-  // </>,
-  // },
-
 
   {
     path: "*",
