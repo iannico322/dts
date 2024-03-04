@@ -52,6 +52,16 @@ function Profile() {
         { "via": "Login via Mobile App", "location": "Intramuros, 1002 Manila City", "time": "15 days ago" },
         { "via": "Login via Web Browser", "location": "Binondo, 1006 Manila City", "time": "16 days ago" },
         { "via": "Login via Mobile App", "location": "Malate, 1004 Manila City", "time": "17 days ago" },
+        { "via": "Login via Web Browser", "location": "Eastwood City, 1110 Quezon City", "time": "8 days ago" },
+        { "via": "Login via Mobile App", "location": "Bonifacio Global City, 1634 Taguig City", "time": "9 days ago" },
+        { "via": "Login via Web Browser", "location": "Makati Avenue, 1224 Makati City", "time": "10 days ago" },
+        { "via": "Login via Mobile App", "location": "Ortigas Center, 1605 Pasig City", "time": "11 days ago" },
+        { "via": "Login via Web Browser", "location": "Newport City, 1309 Pasay City", "time": "12 days ago" },
+        { "via": "Login via Mobile App", "location": "East Rembo, 1216 Makati City", "time": "13 days ago" },
+        { "via": "Login via Web Browser", "location": "Cubao, 1109 Quezon City", "time": "14 days ago" },
+        { "via": "Login via Mobile App", "location": "Intramuros, 1002 Manila City", "time": "15 days ago" },
+        { "via": "Login via Web Browser", "location": "Binondo, 1006 Manila City", "time": "16 days ago" },
+        { "via": "Login via Mobile App", "location": "Malate, 1004 Manila City", "time": "17 days ago" },
     ];
     
 

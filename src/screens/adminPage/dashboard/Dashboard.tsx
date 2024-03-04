@@ -6,18 +6,19 @@ import Calendar from "./../../../assets/icons/calendar.png"
 
 
 import ChartUI from "./ChartUI";
+import NumberEffect from "@/components/animation/numbers"
 
 
 function Dashboard() {
   const sampleData = {
     "TotalUsers":5423,
     "ActiveUsers":1893,
-    "Offices":18,
+    "Offices":128,
     "TotalTrans":3000,
     "chartData":[
       {
         name: "Number Documents",
-        data: [1000, 1200, 1500, 1300, 300, 0, 600, 800, 1400, 1600, 1800],
+        data: [1000, 1200, 1500, 1300, 300, 0, 600, 800, 1400, 1600, 800],
       },
       {
           name: "Avg Documents",
@@ -39,7 +40,7 @@ function Dashboard() {
             <img src={Profile} className=" h-[70px] object-contain" alt="profile-icon" />
             <div className=" flex flex-col text-text">
               <p className=" text-sm font-normal">Total Users</p>
-              <h1 className=" text-2xl font-bold">{sampleData.TotalUsers}</h1>
+              <h1 className=" text-2xl font-bold"><NumberEffect value= {sampleData.TotalUsers}/></h1>
             </div>
           </div>
 
@@ -47,7 +48,7 @@ function Dashboard() {
             <img src={ActiveUsers} className=" h-[70px] object-contain" alt="profile-icon" />
             <div className=" flex flex-col text-text">
               <p className=" text-sm font-normal">Active Users</p>
-              <h1 className=" text-2xl font-bold">{sampleData.TotalUsers}</h1>
+              <h1 className=" text-2xl font-bold"> <NumberEffect value= {sampleData.TotalUsers}/></h1>
             </div>
           </div>
 
@@ -55,7 +56,7 @@ function Dashboard() {
             <img src={Office} className=" h-[70px] object-contain" alt="profile-icon" />
             <div className=" flex flex-col text-text">
               <p className=" text-sm font-normal">Offices</p>
-              <h1 className=" text-2xl font-bold">{sampleData.Offices}</h1>
+              <h1 className=" text-2xl font-bold"><NumberEffect value= {sampleData.Offices}/></h1>
             </div>
           </div>
 
@@ -68,7 +69,8 @@ function Dashboard() {
                 <p>This month</p>
               </div>
               <div>
-                <h1 className=" text-[#2B3674] font-semibold text-4xl">{sampleData.TotalTrans}</h1>
+                <h1 className=" text-[#2B3674] font-semibold text-4xl"> 
+                <NumberEffect value={sampleData.TotalTrans}/></h1>
             <p className=" text-sm text-[#0F5FC2] font-medium">Total Transaction</p>
               </div>
               
