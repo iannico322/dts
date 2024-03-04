@@ -166,20 +166,26 @@ const router = createBrowserRouter([
       element: <Suspense fallback={<Loader />}>
       <Deactivated />
     </Suspense>, 
-    }
+    },
+    {
+      path: "/dts/admin/profile", 
+      element: <Suspense fallback={<Loader />}>
+      <AdminProfile />
+    </Suspense>, 
+    },
   
   
   ]
   },
 
-  {
-    path: "/dts/admin/profile",
-    element:  <>
-    <Suspense fallback={<Loader />}>
-      <AdminProfile />
-    </Suspense>
-  </>,
-  },
+  // {
+  //   path: "/dts/admin/profile",
+  //   element:  <>
+  //   <Suspense fallback={<Loader />}>
+  //     <AdminProfile />
+  //   </Suspense>
+  // </>,
+  // },
 
 
   {

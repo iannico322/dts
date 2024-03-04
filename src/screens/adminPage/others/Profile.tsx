@@ -43,7 +43,7 @@ function Profile() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <div className=" grid grid-cols-6 w-screen h-screen justify-center items-center bg-adminBG p-16">
+        <div className=" grid grid-cols-6 w-full h-full justify-center items-center bg-adminBG p-16">
             
             {/* left side */}
             <div className=" col-span-4 w-full h-full pr-32 ">
