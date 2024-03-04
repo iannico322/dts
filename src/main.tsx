@@ -6,6 +6,7 @@ import { Suspense, lazy } from "react";
 
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
+import DashboardLoader from './screens/adminPage/dashboard/DashboardLoader.tsx';
 
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
@@ -151,7 +152,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/dashboard/", 
-      element: <Suspense fallback={<Loader />}>
+      element: <Suspense fallback={<DashboardLoader />}>
       <AdminDashboard />
     </Suspense>, 
     },

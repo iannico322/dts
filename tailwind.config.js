@@ -32,17 +32,19 @@ module.exports = {
     extend: {
       dropShadow: {
         glow: [
-          "0 0px 20px rgba(255,255, 255, 0.15)",
-          "0 0px 65px rgba(255, 255,255, 0.2)"
+          "0 0px 10px rgba(255,255, 255, 0.25)",
+          "0 0px 5px rgba(255, 255,255, 0.2)"
         ]
       },
       colors: {
         blue:"#081b43",
+        text:"#333333",
         bg:"#e1e1e1",
         yellow:"#de9508",
         textW:"#FFFFFF",
         textB:"#000000",
         blue2: "#163961",
+        blue3:"#1e4e93",
         adminBG: "#1B4B91",
 
 
