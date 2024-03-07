@@ -27,9 +27,9 @@ import LogoutIcon from './../../assets/icons/logout.png'
 
 const AdminHeader = ({className}:any) => {
   return (
-    <div className={" animate__animated animate__slideInLeft relative  w-full px-4 py-6 h-screen bg-white " + className}>
+    <div className={" animate__animated animate__slideInLeft relative  px-4 py-6 h-screen bg-white " + className}>
         <div className=" w-full flex  justify-center">
-          <img src={Logo} className=" self-center  h-14 object-contain mb-5" alt="dts_logo" />
+          <img src={Logo} className=" self-center  h-14 md:h-7 md:w-full object-contain mb-5" alt="dts_logo" />
         </div>
         
 

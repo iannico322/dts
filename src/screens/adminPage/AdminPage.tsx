@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom"
 
 function AdminPage() {
   return (
-    <div className=" w-full grid grid-cols-10 overflow-hidden h-screen bg-[#1e4e93]  box-border ">
-        <AdminHeader className=" col-span-2 lg:col-span-3" />
-        <div className=" h-screen w-full col-span-8 lg:col-span-7 bg-[#1e4e93]">
+    <div className=" w-full flex  overflow-hidden h-screen bg-[#1e4e93]  box-border ">
+        <AdminHeader className=" w-[350px] md:w-[120px]" />
+        <div className=" h-screen w-full col-span-6 md:col-span-7 lg:col-span-7 bg-[#1e4e93]">
             <Outlet/>
         </div>
 
