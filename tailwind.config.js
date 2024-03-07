@@ -45,7 +45,17 @@ module.exports = {
         textB:"#000000",
         blue2: "#163961",
         blue3:"#1e4e93",
+
         adminBG: "#1B4B91",
+        blueTable: "#1B4B91",
+        violet1: "#4318FF",
+        textY: "#DE9508",
+        bgY: '#FFEFCD',
+        textR:  '#DF0404',
+        bgR: '#FFC5C5',
+        bgG: '#16C0983D',
+        textG:'#00B087',
+        orange: '#F9D360',
 
 
 
@@ -87,6 +97,9 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        white: '0 0 10px 3px rgba(255, 255, 255, 0.5)',
       },
       keyframes: {
         "accordion-down": {

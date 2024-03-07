@@ -35,6 +35,7 @@ const Message= lazy(() =>
   wait(1300).then(() => import('./components/msg/successMessage.tsx'))
 );
 
+
 const ForgotPasswordPage= lazy(() =>
   wait(1300).then(() => import("./screens/forgotPass/forgotPass.tsx"))
 );
@@ -79,6 +80,7 @@ const router = createBrowserRouter([
     </Suspense>
   </>,
   },
+  
 
   {
     path: "/dts/forgot_password",
