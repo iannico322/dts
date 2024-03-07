@@ -5,7 +5,7 @@ import Check from "./../../../assets/icons/check2.png"
 import Calendar from "./../../../assets/icons/calendar.png"
 
 
-import ChartUI from "./ChartUI";
+import ChartUI from "./components/ChartUI";
 import NumberEffect from "@/components/animation/numbers"
 
 
