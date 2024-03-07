@@ -55,6 +55,7 @@ module.exports = {
         bgR: '#FFC5C5',
         bgG: '#16C0983D',
         textG:'#00B087',
+        orange: '#F9D360',
 
 
 

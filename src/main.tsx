@@ -34,9 +34,6 @@ const LoginPage= lazy(() =>
 const Message= lazy(() =>
   wait(1300).then(() => import('./components/msg/successMessage.tsx'))
 );
-const UserTable= lazy(() =>
-  wait(1300).then(() => import('./components/table/userTable.tsx'))
-);
 
 
 const ForgotPasswordPage= lazy(() =>
@@ -83,14 +80,7 @@ const router = createBrowserRouter([
     </Suspense>
   </>,
   },
-  {
-    path: "/dts/table",
-    element:  <>
-    <Suspense fallback={<Loader />}>
-      <UserTable />
-    </Suspense>
-  </>,
-  },
+  
 
   {
     path: "/dts/forgot_password",
