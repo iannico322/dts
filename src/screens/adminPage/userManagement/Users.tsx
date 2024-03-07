@@ -1,24 +1,29 @@
 
+import { Input } from '@/components/ui/input'
 import userData from './userData.json'
+import { useState } from 'react'
 const Users = () => {
+    const [search,setSearch] = useState("")
   return (
-    <div className='  w-full h-full bg-blue2 flex items-center justify-center'>
-        <div className=" w-[90%] h-[90%] bg-white rounded-md drop-shadow-glow flex flex-col p-10 ">
-        <div className='flex flex-row items-start justify-between'>
+    <div className='  w-full h-full bg-blue3 flex items-center justify-center'>
+        <div className=" w-[90%] h-[80%] bg-white rounded-md drop-shadow-glow flex flex-col p-10 ">
+            <div className='flex flex-row items-start justify-between'>
                 <div className='div1'>
                     <h1 className="text-black font-poppins text-l font-semibold leading-normal tracking-tight"> User Management </h1>
                     <p className="text-teal-500 font-poppins text-m text-base font-normal leading-normal tracking-tight mb-10"> Active Members</p>
                   </div>
                   <div className='div2 space-x-7 flex items-center'>
                     <button className='
-                        rounded-s border-2 border-textG bg-bgG  text-textG px-5 py-1 text-xs
+                        rounded-[5px] border-2 border-textG bg-bgG  text-textG px-5 py-1 font-medium text-xs
                     '> + Add User
                     </button> 
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        className="px-2 py-1 w-18 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
-                    />
+
+                    <Input value={search} onChange={(e)=>{
+
+                        setSearch(e.target.value)
+
+                    }} placeholder='Search...' className=' px-3  w-18 rounded-md border border-gray-300  focus:border-blue-500 outline-none' type='search'/>
+                    
                     <div className="relative">
                         <select
                             className="px-3 py-1 w-18 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
@@ -47,31 +52,32 @@ const Users = () => {
                 </div>
 
             </div>
-                <div className="flex-col overflow-x-auto inline-block overflow-hidden">
-                 <table className="min-w-full text-left text-xs font-light">
-                    <thead className="text-violet1">
-                    <tr>
-                        <th scope="col" className="px-6 py-4">User Name</th>
-                        <th scope="col" className="px-6 py-4">Designation</th>
-                        <th scope="col" className="px-6 py-4">Phone Number</th>
-                        <th scope="col" className="px-20 py-4">Email</th>
-                        <th scope="col" className="px-20 py-4 text-center">Region</th>
-                        <th scope="col" className="px-6 text-center">Status</th>
+                <div className="flex-col max-h-full h-full overflow-hidden ">
+                 <table  className=" w-full text-left text-xs font-light">
+                    <thead className="text-violet1 ">
+                    <tr className='  border-b  border-[#00000013] text-sm'>
+                        <th scope="col" className=" pl-4 py-2">User Name</th>
+                        <th scope="col" className=" py-2">Designation</th>
+                        <th scope="col" className=" py-2">Phone Number</th>
+                        <th scope="col" className=" py-2">Email</th>
+                        <th scope="col" className=" py-2 text-center">Region</th>
+                        <th scope="col" className=" text-center">Status</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {userData.map((user, index) => (
-                        <tr key={index} className="border-b bg-white-100">
-                        <td className="whitespace-nowrap px-6 py-7">{user.username}</td>
-                        <td className="whitespace-nowrap px-6 py-7">{user.designation}</td>
-                        <td className="whitespace-nowrap px-6 py-7">{user['phone number']}</td>
-                        <td className="whitespace-nowrap px-6 py-7">{user.Email}</td>
-                        <td className="whitespace-nowrap px-6 py-7 text-center">{user.Region}</td>
-                        <td className="whitespace-nowrap px-6 py-7 text-center">
-                            <button className='rounded-md border-2 border-textY bg-bgY text-textY font-bold px-5 py-2 mr-2'> 
+                    {userData.filter((word)=> word.username.toLowerCase().startsWith(search) ||
+        word.username.toLowerCase().includes(search)).slice(0, 10).map((user, index) => (
+                        <tr key={index} className="  hover:bg-blue3/10  border-b  border-[#00000013] text-sm font-medium">
+                        <td className=" pl-4 py-4">{user.username}</td>
+                        <td className="  py-4">{user.designation}</td>
+                        <td className="  py-4">{user['phone number']}</td>
+                        <td className="  py-4">{user.Email}</td>
+                        <td className="  py-4 text-center">{user.Region}</td>
+                        <td className="  py-4 text-center flex gap-3 justify-center">
+                            <button className='rounded-[4px]  border-[1px] text-xs border-textY bg-bgY text-textY font-md px-3 py-[4px] hover:bg-opacity-50'> 
                                 UPDATE
                             </button>
-                            <button className='rounded-md border-2 border-textR bg-bgR text-textR font-bold px-5 py-2'> 
+                            <button className=' rounded-[4px] border-[1px] hover:bg-opacity-50 text-xs border-textR bg-bgR text-textR font-md px-3 py-[4px]'> 
                                DEACTIVATE
                             </button>
                         </td>
@@ -82,7 +88,7 @@ const Users = () => {
                 </div>
             
             {/* PAGINATION */}
-                    <div className="flex justify-center gap-4 mt-10 bg-blueTable-100 text-center">
+                    <div className="  flex justify-center gap-4 mt-10 bg-blueTable-100 text-center">
                                         
                         <button
                             disabled
