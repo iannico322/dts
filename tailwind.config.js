@@ -30,12 +30,34 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
   },
     extend: {
+      dropShadow: {
+        glow: [
+          "0 0px 10px rgba(255,255, 255, 0.25)",
+          "0 0px 5px rgba(255, 255,255, 0.2)"
+        ]
+      },
       colors: {
         blue:"#081b43",
+        text:"#333333",
         bg:"#e1e1e1",
         yellow:"#de9508",
         textW:"#FFFFFF",
         textB:"#000000",
+        blue2: "#163961",
+        blue3:"#1e4e93",
+
+        adminBG: "#1B4B91",
+        blueTable: "#1B4B91",
+        violet1: "#4318FF",
+        textY: "#DE9508",
+        bgY: '#FFEFCD',
+        textR:  '#DF0404',
+        bgR: '#FFC5C5',
+        bgG: '#16C0983D',
+        textG:'#00B087',
+        orange: '#F9D360',
+
+
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -75,6 +97,9 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        white: '0 0 10px 3px rgba(255, 255, 255, 0.5)',
       },
       keyframes: {
         "accordion-down": {
