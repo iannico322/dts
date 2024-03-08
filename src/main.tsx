@@ -6,7 +6,7 @@ import { Suspense, lazy } from "react";
 
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
-import DashboardLoader from './screens/adminPage/dashboard/DashboardLoader.tsx';
+import DashboardLoader from './screens/adminPage/dashboard/components/DashboardLoader.tsx';
 import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx';
 
 const AdminPage= lazy(() =>

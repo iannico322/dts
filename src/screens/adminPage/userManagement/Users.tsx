@@ -1,77 +1,101 @@
 
+import { Input } from '@/components/ui/input'
+import searchIcon from '../../../assets/icons/search.png'
 import userData from './userData.json'
+import downIcon from '../../../assets/icons/down.png'
+
+import { useState } from 'react'
 const Users = () => {
+    const [search,setSearch] = useState("")
+    const [sortBy, setSortBy] = useState<string>("");
+
+    const handleSortBy = (criteria: string) => {
+        setSortBy(criteria);
+       
+    };
+
+   
+
+
+    
   return (
-    <div className='  w-full h-full bg-blue2 flex items-center justify-center'>
-        <div className=" w-[90%] h-[90%] bg-white rounded-md drop-shadow-glow flex flex-col p-10 ">
-        <div className='flex flex-row items-start justify-between'>
+    <div className='  w-full h-full bg-blue3 flex items-center justify-center'>
+        <div className=" w-[90%] h-[80%] bg-white rounded-md drop-shadow-glow flex flex-col p-10 ">
+            <div className='flex flex-row items-start justify-between'>
                 <div className='div1'>
                     <h1 className="text-black font-poppins text-l font-semibold leading-normal tracking-tight"> User Management </h1>
                     <p className="text-teal-500 font-poppins text-m text-base font-normal leading-normal tracking-tight mb-10"> Active Members</p>
-                  </div>
-                  <div className='div2 space-x-7 flex items-center'>
-                    <button className='
-                        rounded-s border-2 border-textG bg-bgG  text-textG px-5 py-1 text-xs
-                    '> + Add User
-                    </button> 
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        className="px-2 py-1 w-18 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
-                    />
-                    <div className="relative">
-                        <select
-                            className="px-3 py-1 w-18 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
-                        >
-                            <option value="" disabled selected hidden>Sort...</option>
-                            <option value="name">Name</option>
-                            <option value="designation">Designation</option>
-                            <option value="phoneNumber">Phone Number</option>
-                            <option value="email">Email</option>
-                            <option value="region">Region</option>
-                            <option value="status">Status</option>
-                        </select>
-                        <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                            <svg
-                                className="w-4 h-4 fill-current text-gray-500"
-                                viewBox="0 0 20 20"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M12.806 6.485a.75.75 0 0 1 1.06 1.06l-3.536 3.536a.75.75 0 0 1-1.06 0L6.134 7.545a.75.75 0 0 1 1.06-1.06L10 9.88l2.806-2.806z"
-                                ></path>
-                            </svg>
-                        </div>
-                    </div>
                 </div>
 
+                <div className='div2 space-x-7 flex items-center'>
+                    <button className='
+                        rounded-[5px] border-2 border-textG bg-bgG  text-textG px-5 py-1 font-medium text-xs
+                    '> + Add User
+                    </button> 
+
+                    <div className="relative px-3 py-1 pl-8 h-[18] w-[505] bg-bgW rounded-md ">
+                      <input
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder="Search..."
+                        className="outline-none bg-bgW text-xs ml-8"
+                        type="search"
+                      />
+                      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none mr-7px-4">
+                        <img src={searchIcon} alt="Search" className="h-5 w-5" />
+                      </div>
+                     </div>
+
+                    <div className="relative px-7 py-1 bg-bgW rounded-md flex items-left text-sm">
+                        <div className="flex items-center">
+                            <span className="mr-2 text-sm text-textGray">Sort By:</span>
+                              <div className="flex-grow ">
+                                  <select
+                                      value={sortBy}
+                                      onChange={(e) => handleSortBy(e.target.value)}
+                                      className='bg-bgW appearance-none border-none focus:outline-none w-full mr-10 font-bold'
+                                  >
+                                      <option value="newest">Newest</option>
+                                      <option value="oldest">Oldest</option>
+                                  </select>
+                              </div>
+                        </div>
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                              <img src={downIcon} alt="Dropdown" className="h-5 w-5" />
+                          </div>
+                     </div>                     
             </div>
-                <div className="flex-col overflow-x-auto inline-block overflow-hidden">
-                 <table className="min-w-full text-left text-xs font-light">
-                    <thead className="text-violet1">
-                    <tr>
-                        <th scope="col" className="px-6 py-4">User Name</th>
-                        <th scope="col" className="px-6 py-4">Designation</th>
-                        <th scope="col" className="px-6 py-4">Phone Number</th>
-                        <th scope="col" className="px-20 py-4">Email</th>
-                        <th scope="col" className="px-20 py-4 text-center">Region</th>
-                        <th scope="col" className="px-6 text-center">Status</th>
+
+
+
+            {/* TABLE */}
+            </div>
+                <div className="flex-col max-h-full h-full overflow-hidden ">
+                 <table  className=" w-full text-left text-xs font-light">
+                    <thead className="text-violet1 ">
+                    <tr className='  border-b  border-[#00000013] text-sm'>
+                        <th scope="col" className=" pl-4 py-2">User Name</th>
+                        <th scope="col" className=" py-2">Designation</th>
+                        <th scope="col" className=" py-2">Phone Number</th>
+                        <th scope="col" className=" py-2">Email</th>
+                        <th scope="col" className=" py-2 text-center">Region</th>
+                        <th scope="col" className=" text-center">Status</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    {userData.map((user, index) => (
-                        <tr key={index} className="border-b bg-white-100">
-                        <td className="whitespace-nowrap px-6 py-7">{user.username}</td>
-                        <td className="whitespace-nowrap px-6 py-7">{user.designation}</td>
-                        <td className="whitespace-nowrap px-6 py-7">{user['phone number']}</td>
-                        <td className="whitespace-nowrap px-6 py-7">{user.Email}</td>
-                        <td className="whitespace-nowrap px-6 py-7 text-center">{user.Region}</td>
-                        <td className="whitespace-nowrap px-6 py-7 text-center">
-                            <button className='rounded-md border-2 border-textY bg-bgY text-textY font-bold px-5 py-2 mr-2'> 
+                    <tbody className='overflow-scroll-y'>
+                    {userData.filter((word)=> word.username.toLowerCase().startsWith(search) ||
+        word.username.toLowerCase().includes(search)).slice(0, 10).map((user, index) => (
+                        <tr key={index} className="  hover:bg-blue3/10  border-b  border-[#00000013] text-sm font-medium">
+                        <td className=" pl-4 py-4">{user.username}</td>
+                        <td className="  py-4">{user.designation}</td>
+                        <td className="  py-4">{user['phone number']}</td>
+                        <td className="  py-4">{user.Email}</td>
+                        <td className="  py-4 text-center">{user.Region}</td>
+                        <td className="  py-4 text-center flex gap-3 justify-center">
+                            <button className='rounded-[4px]  border-[1px] text-xs border-textY bg-bgY text-textY font-md px-3 py-[4px] hover:bg-opacity-50'> 
                                 UPDATE
                             </button>
-                            <button className='rounded-md border-2 border-textR bg-bgR text-textR font-bold px-5 py-2'> 
+                            <button className=' rounded-[4px] border-[1px] hover:bg-opacity-50 text-xs border-textR bg-bgR text-textR font-md px-3 py-[4px]'> 
                                DEACTIVATE
                             </button>
                         </td>
@@ -82,7 +106,7 @@ const Users = () => {
                 </div>
             
             {/* PAGINATION */}
-                    <div className="flex justify-center gap-4 mt-10 bg-blueTable-100 text-center">
+                    <div className="  flex justify-center gap-4 mt-10 bg-blueTable-100 text-center">
                                         
                         <button
                             disabled
