@@ -9,6 +9,7 @@ import Loader from './components/loader/loader.tsx';
 import DashboardLoader from './screens/adminPage/dashboard/components/DashboardLoader.tsx';
 import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx';
 import UsersLoader from './screens/adminPage/userManagement/UsersLoader.tsx'
+import FeedbackLoader from './screens/adminPage/others/Feedbacks/FeedbackLoader.tsx';
 
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
@@ -188,7 +189,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/feedbacks", 
-      element: <Suspense fallback={<ProfileLoader />}>
+      element: <Suspense fallback={<FeedbackLoader />}>
       <Feedback />
     </Suspense>, 
     },
