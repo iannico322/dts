@@ -49,7 +49,7 @@ const Dropdown = ({head,lists,headLogo,direct}:any) => {
                  }
                }
                key={key}
-               className=" hover:scale-[1.05] transition-all duration-150 m-0 flex w-full px-5 sm:px-3    rounded-sm cursor-pointer hover:bg-opacity-90 hover:font-semibold  items-center gap-2"
+               className=" hover:scale-[1.05] transition-all duration-150 m-0 flex w-full px-5 sm:px-3 md:px-3    rounded-sm cursor-pointer hover:bg-opacity-90 hover:font-semibold  items-center gap-2"
              >
                <img src={e.icon} className=" m-0 h-5 object-contain" alt={e.li} />
                <h1 className=" m-0 md:hidden ">{e.li}</h1> 
