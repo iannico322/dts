@@ -17,9 +17,7 @@ const AdminPage= lazy(() =>
 const AdminDashboard= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/dashboard/Dashboard.tsx"))
 );
-const Users= lazy(() =>
-  wait(500).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
-);
+
 const Deactivated= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/userManagement/Deactivated.tsx"))
 );
@@ -32,7 +30,7 @@ const Feedback= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
 )
 const AdminUsers= lazy(() =>
-  wait(500).then(() => import ("./screens/adminPage/userManagement/Users.tsx"))
+  wait(1300).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
 )
 
 
