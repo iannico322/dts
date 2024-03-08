@@ -33,7 +33,7 @@ const ChartUI = ({className,chartData}:any) => {
       
             
   return (
-    <div className={" w-full h-full " + className}>
+    <div className={" w-full " + className}>
       <LineChart chartData={lineChartDataOverallRevenue} chartOptions={lineChartOptionsOverallRevenue} />
    </div>
 

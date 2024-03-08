@@ -50,12 +50,16 @@ module.exports = {
         blueTable: "#1B4B91",
         violet1: "#4318FF",
         textY: "#DE9508",
+        textGray: '#7E7E7E',
         bgY: '#FFEFCD',
         textR:  '#DF0404',
         bgR: '#FFC5C5',
         bgG: '#16C0983D',
         textG:'#00B087',
         orange: '#F9D360',
+        bgW:  '#F9FBFF',
+
+
 
 
 

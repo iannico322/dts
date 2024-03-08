@@ -1,4 +1,4 @@
-import './successMessage.css'
+
 import check from './../../assets/icons/check.png'
 const Message = () => {
   
