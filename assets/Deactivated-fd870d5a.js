@@ -1,1 +1,0 @@
-import{j as e}from"./index-d76183ea.js";const s=()=>e.jsx("div",{className:"  w-full h-full bg-blue2 flex items-center justify-center",children:e.jsx("div",{className:" w-[80%] h-[80%] bg-white rounded-md drop-shadow-glow flex items-center justify-center ",children:e.jsx("h1",{className:" text-lg font-semibold",children:"Deactivated"})})});export{s as default};
