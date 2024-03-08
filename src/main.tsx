@@ -8,6 +8,7 @@ import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
 import DashboardLoader from './screens/adminPage/dashboard/components/DashboardLoader.tsx';
 import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx';
+import UsersLoader from './screens/adminPage/userManagement/UsersLoader.tsx'
 
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
@@ -28,6 +29,9 @@ const AdminProfile= lazy(() =>
 
 const Feedback= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
+)
+const AdminUsers= lazy(() =>
+  wait(500).then(() => import ("./screens/adminPage/userManagement/Users.tsx"))
 )
 
 
@@ -166,8 +170,8 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/user", 
-      element: <Suspense fallback={<Loader />}>
-      <Users />
+      element: <Suspense fallback={<UsersLoader />}>
+      <AdminUsers />
     </Suspense>, 
     },
     {
@@ -188,6 +192,7 @@ const router = createBrowserRouter([
       <Feedback />
     </Suspense>, 
     },
+ 
   
   
   ]
