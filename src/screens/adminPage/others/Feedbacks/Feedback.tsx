@@ -100,31 +100,31 @@ function Feedback() {
 
                             <thead className=" border-b-2 ">
                                 <tr>
-                                    <th>
+                                    <th className=" w-[30%] ">
                                         <div className=" flex flex-row items-center gap-2">
                                         <p className=" text-[#436BBE] text-[14px] font-semibold ">Ticket Title</p>
                                         <ChevronDown className=" text-[#A3AED0] " />
                                         </div>
                                     </th>
-                                    <th>
+                                    <th className=" w-[15%] ">
                                         <div className=" flex flex-row items-center gap-2">
                                         <p className=" text-[#436BBE] text-[14px] font-semibold ">Category</p>
                                         <ChevronDown className=" text-[#A3AED0] " />
                                         </div>
                                     </th>
-                                    <th>
+                                    <th className=" w-[25%] ">
                                         <div className=" flex flex-row items-center gap-2">
                                         <p className=" text-[#436BBE] text-[14px] font-semibold ">Email</p>
                                         <ChevronDown className=" text-[#A3AED0] " />
                                         </div>
                                     </th>
-                                    <th>
+                                    <th className=" w-[20%] "> 
                                         <div className=" flex flex-row items-center gap-2">
                                         <p className=" text-[#436BBE] text-[14px] font-semibold ">Date</p>
                                         <ChevronDown className=" text-[#A3AED0] " />
                                         </div>
                                     </th>
-                                    <th>
+                                    <th className=" w-[10%] ">
                                         <div className=" flex flex-row items-center gap-2">
                                         <p className=" text-[#436BBE] text-[14px] font-semibold ">Status</p>
                                         <ChevronDown className=" text-[#A3AED0] " />
@@ -134,16 +134,17 @@ function Feedback() {
                                 
                             </thead>
 
-                            <tbody>
+                            <tbody >
 
                                 {tickets.slice(currentPage * 8, (currentPage + 1) * 8).map((e, index)=>(         
                                     <tr  key={index}>
                                         <td>
-                                            <div className=" flex flex-row gap-2 mt-4">
+                                            <div className=" flex flex-row items-center ">
                                                 <input 
+                                                    className=" w-5 h-5 "
                                                     type="checkbox" checked={checkedItems[index] || false}
                                                     onChange={() => handleCheckboxChange(index)}/>
-                                                <p className=" text-[#2B3674] font-semibold">{e.Ticket_Title}</p>
+                                                <p className=" text-[#2B3674] font-semibold ml-3">{e.Ticket_Title}</p>
                                             </div>
                                         </td>
                                         <td className=" text-[#2B3674] font-semibold">{e.Category}</td>
@@ -152,13 +153,13 @@ function Feedback() {
                                         <td className=" text-[#2B3674] font-semibold w-[110px] h-[50px]">
                                             {e.Status === "Done" 
                                             ? 
-                                            <div className=" bg-[#A6E7D8] py-1 flex flex-row justify-center items-center gap-3 border-[2px] border-[#008767] rounded-[3px] hover:opacity-95 cursor-not-allowed">
-                                                <CheckCircle className=" text-[#008767] w-5 h-5" />
+                                            <div className=" bg-[#A6E7D8] flex flex-row w-[110px] h-[35px] justify-center items-center gap-3 border-[2px] border-[#008767] rounded-[3px] cursor-not-allowed">
+                                                <CheckCircle className=" text-[#008767] w-4 h-4" />
                                                 <p className=" text-[#008767] text-[13px]">Done</p>
                                             </div> 
                                             : 
-                                            <div className=" bg-[#FFFBF3] py-1 flex flex-row justify-center items-center gap-3 border-[2px] border-[#EBA715] rounded-[3px] hover:opacity-95 cursor-not-allowed">
-                                            <FileWarning className=" text-[#EBA715] w-5 h-5" />
+                                            <div className=" bg-[#FFFBF3] py-1 flex flex-row w-[110px] h-[35px] justify-center items-center gap-3 border-[2px] border-[#EBA715] rounded-[3px] cursor-not-allowed">
+                                            <FileWarning className=" text-[#EBA715] w-4 h-4" />
                                             <p className=" text-[#EBA715] text-[13px] ">Pending</p>
                                             </div>
                                             }
