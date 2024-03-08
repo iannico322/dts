@@ -26,6 +26,11 @@ const AdminProfile= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Profile/Profile.tsx"))
 )
 
+const Feedback= lazy(() =>
+  wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
+)
+
+
 
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
@@ -175,6 +180,12 @@ const router = createBrowserRouter([
       path: "/dts/admin/profile", 
       element: <Suspense fallback={<ProfileLoader />}>
       <AdminProfile />
+    </Suspense>, 
+    },
+    {
+      path: "/dts/admin/feedbacks", 
+      element: <Suspense fallback={<ProfileLoader />}>
+      <Feedback />
     </Suspense>, 
     },
   

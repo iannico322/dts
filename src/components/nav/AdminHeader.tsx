@@ -86,7 +86,7 @@ const AdminHeader = ({className}:any) => {
             {
               li: 'Feedbacks',
               icon:FeedbackIcon,
-              link: '/dts/admin/dashboard',
+              link: '/dts/admin/feedbacks',
             },
           ]}
           />
