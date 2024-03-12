@@ -1,219 +1,162 @@
 [
-    {
-      "username": "Joone Copper",
-      "designation": "Developer",
-      "phone number": "090567698",
-      "Email": "joone@example.com",
-      "Region": "I",
-      "Status": "Update, Deactivated"
-    },
-    {
-      "username": "Jane Doe",
-      "designation": "Provincial Officer",
-      "phone number": "090123456",
-      "Email": "jane@example.com",
-      "Region": "II",
-      "Status": "Active"
-    },
-    {
-      "username": "John Smith",
-      "designation": "Regional Director",
-      "phone number": "090987654",
-      "Email": "john@example.com",
-      "Region": "III",
-      "Status": "Active"
-    },
-    {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },{
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },{
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },{
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },{
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-        "username": "Joone Copper",
-        "designation": "Developer",
-        "phone number": "090567698",
-        "Email": "joone@example.com",
-        "Region": "I",
-        "Status": "Update, Deactivated"
-      },
-      {
-        "username": "Jane Doe",
-        "designation": "Provincial Officer",
-        "phone number": "090123456",
-        "Email": "jane@example.com",
-        "Region": "II",
-        "Status": "Active"
-      },
-      {
-        "username": "John Smith",
-        "designation": "Regional Director",
-        "phone number": "090987654",
-        "Email": "john@example.com",
-        "Region": "III",
-        "Status": "Active"
-      },
-      {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },
-        {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },
-        {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },{
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },
-        {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },{
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },
-        {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },{
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },
-        {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },{
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        },
-        {
-          "username": "John Smith",
-          "designation": "Regional Director",
-          "phone number": "090987654",
-          "Email": "john@example.com",
-          "Region": "III",
-          "Status": "Active"
-        }
-  ]
-  
+  {
+    "username": "Joone Copper",
+    "designation": "Developer",
+    "phone number": "090567698",
+    "Email": "joone@example.com",
+    "Region": "I",
+    "Status": "Update, Deactivated"
+  },
+  {
+    "username": "Alice Smith",
+    "designation": "Designer",
+    "phone number": "091234567",
+    "Email": "alice@example.com",
+    "Region": "II",
+    "Status": "Active"
+  },
+  {
+    "username": "Bob Johnson",
+    "designation": "QA Engineer",
+    "phone number": "092345678",
+    "Email": "bob@example.com",
+    "Region": "III",
+    "Status": "Active"
+  },
+  {
+    "username": "Charlie Brown",
+    "designation": "Product Manager",
+    "phone number": "093456789",
+    "Email": "charlie@example.com",
+    "Region": "IV",
+    "Status": "Active"
+  },
+  {
+    "username": "Diana Lee",
+    "designation": "Data Analyst",
+    "phone number": "094567890",
+    "Email": "diana@example.com",
+    "Region": "V",
+    "Status": "Active"
+  },
+  {
+    "username": "Eva Garcia",
+    "designation": "Marketing Specialist",
+    "phone number": "095678901",
+    "Email": "eva@example.com",
+    "Region": "I",
+    "Status": "Active"
+  },
+  {
+    "username": "Frank Adams",
+    "designation": "Sales Representative",
+    "phone number": "096789012",
+    "Email": "frank@example.com",
+    "Region": "II",
+    "Status": "Active"
+  },
+  {
+    "username": "Grace Kim",
+    "designation": "HR Manager",
+    "phone number": "097890123",
+    "Email": "grace@example.com",
+    "Region": "III",
+    "Status": "Active"
+  },
+  {
+    "username": "Henry Martinez",
+    "designation": "Finance Director",
+    "phone number": "098901234",
+    "Email": "henry@example.com",
+    "Region": "IV",
+    "Status": "Active"
+  },
+  {
+    "username": "Isabel Lopez",
+    "designation": "Operations Lead",
+    "phone number": "099012345",
+    "Email": "isabel@example.com",
+    "Region": "V",
+    "Status": "Active"
+  },
+  {
+    "username": "Jack Lee",
+    "designation": "Software Engineer",
+    "phone number": "099123456",
+    "Email": "jack@example.com",
+    "Region": "VI",
+    "Status": "Active"
+  },
+  {
+    "username": "Karen Wang",
+    "designation": "Product Owner",
+    "phone number": "099234567",
+    "Email": "karen@example.com",
+    "Region": "VII",
+    "Status": "Active"
+  },
+  {
+    "username": "Liam Rodriguez",
+    "designation": "Data Scientist",
+    "phone number": "099345678",
+    "Email": "liam@example.com",
+    "Region": "VIII",
+    "Status": "Active"
+  },
+  {
+    "username": "Mia Hernandez",
+    "designation": "UX Designer",
+    "phone number": "099456789",
+    "Email": "mia@example.com",
+    "Region": "IX",
+    "Status": "Active"
+  },
+  {
+    "username": "Noah Kim",
+    "designation": "Business Analyst",
+    "phone number": "099567890",
+    "Email": "noah@example.com",
+    "Region": "X",
+    "Status": "Active"
+  },
+  {
+    "username": "Olivia Garcia",
+    "designation": "Marketing Manager",
+    "phone number": "099678901",
+    "Email": "olivia@example.com",
+    "Region": "XI",
+    "Status": "Active"
+  },
+  {
+    "username": "Patrick Nguyen",
+    "designation": "DevOps Engineer",
+    "phone number": "099789012",
+    "Email": "patrick@example.com",
+    "Region": "XII",
+    "Status": "Active"
+  },
+  {
+    "username": "Quinn Patel",
+    "designation": "Project Manager",
+    "phone number": "099890123",
+    "Email": "quinn@example.com",
+    "Region": "XIII",
+    "Status": "Active"
+  },
+  {
+    "username": "Rachel Smith",
+    "designation": "Technical Writer",
+    "phone number": "099901234",
+    "Email": "rachel@example.com",
+    "Region": "XIV",
+    "Status": "Active"
+  },
+  {
+    "username": "Samuel Brown",
+    "designation": "Frontend Developer",
+    "phone number": "099012345",
+    "Email": "samuel@example.com",
+    "Region": "XV",
+    "Status": "Active"
+  }
+]

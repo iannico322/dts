@@ -49,7 +49,7 @@ const AdminHeader = ({className}:any) => {
             {
               li: 'Users',
               icon:UsersIcon,
-              link: '/dts/admin/user',
+              link: '/dts/admin/user/?search=',
             },
             {
               li: 'Deactivation',
@@ -65,7 +65,7 @@ const AdminHeader = ({className}:any) => {
             {
               li: 'Offices',
               icon:OfficeIcon,
-              link: '/dts/admin/user',
+              link: '/dts/admin/user/?search=',
             },
             {
               li: 'Office Designation',

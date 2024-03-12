@@ -1,16 +1,40 @@
 
-import { Input } from '@/components/ui/input'
 import searchIcon from '../../../assets/icons/search.png'
 import userData from './userData.json'
 import downIcon from '../../../assets/icons/down.png'
 
+import { useLocation} from 'react-router-dom';
+
 import { useState } from 'react'
 const Users = () => {
-    const [search,setSearch] = useState("")
-    const [sortBy, setSortBy] = useState<string>("");
+   
+    const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const s = searchParams.get('search');
+  const type = searchParams.get('sortBy');
 
+    const [search,setSearch] = useState<any>(s)
+    const [sortBy, setSortBy] = useState<any>(type);
+
+    
+
+    
+
+
+    const handleSearch = (e:any)=>{
+         setSearch(e.target.value)
+
+         window.history.pushState(null, "", `/dts/admin/user?search=${e.target.value}&sortBy=${sortBy}`)
+         ;
+
+    }
+
+  
     const handleSortBy = (criteria: string) => {
         setSortBy(criteria);
+        window.history.pushState(null, "",`/dts/admin/user?search=${search}&sortBy=${criteria}`)
+        
+
        
     };
 
@@ -36,7 +60,7 @@ const Users = () => {
                     <div className="relative px-3 py-1 pl-8 h-[18] w-[505] bg-bgW rounded-md ">
                       <input
                         value={search}
-                        onChange={(e) => setSearch(e.target.value)}
+                        onChange={handleSearch}
                         placeholder="Search..."
                         className="outline-none bg-bgW text-xs ml-8"
                         type="search"

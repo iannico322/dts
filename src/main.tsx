@@ -168,7 +168,7 @@ const router = createBrowserRouter([
     </Suspense>, 
     },
     {
-      path: "/dts/admin/user", 
+      path: "/dts/admin/user/", 
       element: <Suspense fallback={<UsersLoader />}>
       <AdminUsers />
     </Suspense>, 
