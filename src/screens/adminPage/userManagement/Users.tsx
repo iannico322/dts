@@ -6,6 +6,7 @@ import downIcon from '../../../assets/icons/down.png'
 import { useLocation} from 'react-router-dom';
 
 import { useState } from 'react'
+import MyTable from './Table';
 const Users = () => {
    
     const location = useLocation();
@@ -95,7 +96,7 @@ const Users = () => {
             {/* TABLE */}
             </div>
                 <div className="flex-col max-h-full h-full overflow-hidden ">
-                 <table  className=" w-full text-left text-xs font-light">
+                 {/* <table  className=" w-full text-left text-xs font-light">
                     <thead className="text-violet1 ">
                     <tr className='  border-b  border-[#00000013] text-sm'>
                         <th scope="col" className=" pl-4 py-2">User Name</th>
@@ -126,11 +127,13 @@ const Users = () => {
                         </tr>
                     ))}
                     </tbody>
-                </table>
+                </table> */}
+                <MyTable search={search} handleSearch={handleSearch}/>
+
                 </div>
             
             {/* PAGINATION */}
-                    <div className="  flex justify-center gap-4 mt-10 bg-blueTable-100 text-center">
+                    {/* <div className="  flex justify-center gap-4 mt-10 bg-blueTable-100 text-center">
                                         
                         <button
                             disabled
@@ -168,7 +171,7 @@ const Users = () => {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
                                     </svg>
                                 </button>
-                    </div>
+                    </div> */}
 
 
         </div>
