@@ -9,6 +9,7 @@ import Loader from './components/loader/loader.tsx';
 import DashboardLoader from './screens/adminPage/dashboard/components/DashboardLoader.tsx';
 import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx';
 import UsersLoader from './screens/adminPage/userManagement/UsersLoader.tsx'
+import FeedbackLoader from './screens/adminPage/others/Feedbacks/FeedbackLoader.tsx';
 
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
@@ -16,9 +17,7 @@ const AdminPage= lazy(() =>
 const AdminDashboard= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/dashboard/Dashboard.tsx"))
 );
-const Users= lazy(() =>
-  wait(500).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
-);
+
 const Deactivated= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/userManagement/Deactivated.tsx"))
 );
@@ -31,7 +30,7 @@ const Feedback= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
 )
 const AdminUsers= lazy(() =>
-  wait(500).then(() => import ("./screens/adminPage/userManagement/Users.tsx"))
+  wait(1300).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
 )
 
 
@@ -188,7 +187,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/feedbacks", 
-      element: <Suspense fallback={<ProfileLoader />}>
+      element: <Suspense fallback={<FeedbackLoader />}>
       <Feedback />
     </Suspense>, 
     },
