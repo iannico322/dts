@@ -13,7 +13,7 @@ function HomePage() {
         
 
         <div
-          className=" w-full h-full"
+          className=" w-full h-full bg-[#ffffff]"
           onClick={() => {
             console.log("hi");
             setActive(false);

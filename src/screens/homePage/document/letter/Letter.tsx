@@ -19,7 +19,7 @@ function Letter() {
 
   
   return (
-    <div className=" rounded-[5px] min-h-screen w-full sm:pb-40 sm:pt-32  flex items-center justify-center gap-5 relative">
+    <div className=" rounded-[5px] min-h-screen w-full sm:pb-40 sm:pt-32  flex items-start justify-center gap-5 relative mt-28  ">
         <div className=" w-[80%] sm:w-full sm:mx-5 max-w-[1366px] sm:px-2 px-10 border-dashed border border-blue/50 bg-white min-h-[200px] pb-5">
             <div className=" w-full flex items-center justify-between py-4 ">
                 <div className=" flex flex-col leading-2">
