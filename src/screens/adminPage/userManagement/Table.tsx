@@ -35,7 +35,7 @@ const columns:any = [
   },
 ];
 
-function MyTable({search,handleSearch}:any) {
+function MyTable({search}:any) {
   const {
     getTableProps,
     getTableBodyProps,
@@ -51,18 +51,23 @@ function MyTable({search,handleSearch}:any) {
     canNextPage,
     pageCount,
     setPageSize,
+  
   }:any = useTable(
     {
       columns,
       data: sampleData,
-      initialState: { pageSize: 5 },
+      
     },
     useGlobalFilter,
     useSortBy,
     usePagination
   );
 
-  const { pageIndex, globalFilter }:any = state;
+  const { pageIndex}:any = state;
+
+  useEffect(()=>{
+    setPageSize(5)
+  },[])
 
   useEffect(()=>{
     setGlobalFilter(search)

@@ -1,7 +1,6 @@
 
 import searchIcon from '../../../assets/icons/search.png'
-import userData from './userData.json'
-import downIcon from '../../../assets/icons/down.png'
+
 
 import { useLocation} from 'react-router-dom';
 
@@ -12,10 +11,9 @@ const Users = () => {
     const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const s = searchParams.get('search');
-  const type = searchParams.get('sortBy');
 
     const [search,setSearch] = useState<any>(s)
-    const [sortBy, setSortBy] = useState<any>(type);
+
 
     
 
@@ -25,19 +23,13 @@ const Users = () => {
     const handleSearch = (e:any)=>{
          setSearch(e.target.value)
 
-         window.history.pushState(null, "", `/dts/admin/user?search=${e.target.value}&sortBy=${sortBy}`)
-         ;
+         window.history.pushState(null, "", `/dts/admin/user?search=${e.target.value}`)
+         
 
     }
 
   
-    const handleSortBy = (criteria: string) => {
-        setSortBy(criteria);
-        window.history.pushState(null, "",`/dts/admin/user?search=${search}&sortBy=${criteria}`)
-        
-
-       
-    };
+    
 
    
 
@@ -58,12 +50,12 @@ const Users = () => {
                     '> + Add User
                     </button> 
 
-                    <div className="relative px-3 py-1 pl-8 h-[18] w-[505] bg-bgW rounded-md ">
+                    <div className="relative px-3 py-1 border-border border  h-[18] flex items-center w-[505] bg-bgW rounded-md ">
                       <input
                         value={search}
                         onChange={handleSearch}
                         placeholder="Search..."
-                        className="outline-none bg-bgW text-xs ml-8"
+                        className="outline-none bg-bgW text-xs pl-7 text-gray-900 py-1 "
                         type="search"
                       />
                       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none mr-7px-4">
@@ -71,24 +63,7 @@ const Users = () => {
                       </div>
                      </div>
 
-                    <div className="relative px-7 py-1 bg-bgW rounded-md flex items-left text-sm">
-                        <div className="flex items-center">
-                            <span className="mr-2 text-sm text-textGray">Sort By:</span>
-                              <div className="flex-grow ">
-                                  <select
-                                      value={sortBy}
-                                      onChange={(e) => handleSortBy(e.target.value)}
-                                      className='bg-bgW appearance-none border-none focus:outline-none w-full mr-10 font-bold'
-                                  >
-                                      <option value="newest">Newest</option>
-                                      <option value="oldest">Oldest</option>
-                                  </select>
-                              </div>
-                        </div>
-                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                              <img src={downIcon} alt="Dropdown" className="h-5 w-5" />
-                          </div>
-                     </div>                     
+                                        
             </div>
 
 
