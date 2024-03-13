@@ -183,7 +183,7 @@ function MyTable({search}:any) {
       <span className='px-3 py-1'>...</span>
     </>
   )}
-  {Array.from({ length: Math.min(4, pageCount) }, (_, index) => {
+  {Array.from({ length: Math.min(5, pageCount) }, (_, index) => {
     const pageNumber = pageIndex - 2 + index;
     if (pageNumber < 0 || pageNumber >= pageCount) return null;
     return (
