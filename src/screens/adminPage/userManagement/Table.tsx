@@ -105,7 +105,7 @@ function MyTable({search}:any) {
       ))}
     </thead>
   </table>
-  <div className='overflow-y-auto overflow-x-hidden max-h-[300px]'>
+  <div className='overflow-y-auto overflow-x-hidden  min-h-[300px] h-full pb-10 pr '>
     <table className='w-full text-xs font-light table-fixed'>
       <tbody {...getTableBodyProps()} className='overflow-hidden w-full'>
       {page.map((row:any) => {
