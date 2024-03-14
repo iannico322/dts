@@ -239,7 +239,7 @@ const [analyst] = useState([
 
 {analyst.map((e:any,key:any)=>(
           
-          <div id="down" key={key} className=" animate__animated animate__fadeInUp delay-800 row-span-1 hover:translate-y-[-10px] transition-all duration-1000    gap-1 flex flex-col col-span-4 lg:col-span-4 md:col-span-6 sm:col-span-12 justify-center  ">
+          <div id="down" key={key} className=" animate__animated animate__fadeInUp delay-700 row-span-1 hover:translate-y-[-10px] transition-all duration-1000    gap-1 flex flex-col col-span-4 lg:col-span-4 md:col-span-6 sm:col-span-12 justify-center  ">
               <div className=" relative flex  h-[200px]  justify-center items-center ">
 
               
