@@ -86,7 +86,7 @@ function Dashboard() {
                   className=" h-5 w-5 object-contain"
                   alt=""
                 />
-                <p>This month</p>
+                <p>This Year</p>
               </div>
               <div className=" sm:text-center">
                 <h1 className=" text-[#2B3674] font-semibold text-4xl  sm:text-lg">

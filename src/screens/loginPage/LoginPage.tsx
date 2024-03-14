@@ -4,6 +4,7 @@ import google from "../../assets/images/google.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alerts } from "./Alert";
+import { Loader2Icon, LoaderIcon } from "lucide-react";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -108,11 +109,20 @@ function LoginPage() {
               Forgot your password?
             </p>
           
-            <input
-              className=" text-textW bg-yellow hover:bg-yellow/80 transition-all  duration-75 cursor-pointer text-[18px] w-full h-[45px] mt-6 rounded-full "
+            {
+              !alert?<button
+              className=" text-textW bg-yellow hover:bg-yellow/80 transition-all  duration-75 cursor-pointer text-[18px] w-full h-[45px] mt-6 rounded-full flex items-center justify-center gap-2 "
               type="submit"
-              value="Login"
-            />
+              
+            > Login </button>:
+            <button
+            className=" pointer-events-none text-textW bg-yellow hover:bg-yellow/80 transition-all  duration-75 cursor-pointer text-[18px] w-full h-[45px] mt-6 rounded-full flex items-center justify-center gap-2 "
+            type="submit"
+            
+          > Loading <span className="material-symbols-outlined animate-spin font-thin">
+          autorenew
+          </span> </button>
+            }
             <div className=" mt-5">
             <Alerts
             variant={alert}
