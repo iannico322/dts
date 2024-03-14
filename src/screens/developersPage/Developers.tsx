@@ -65,7 +65,7 @@ const [analyst] = useState([
     position:"System Analyst",
     school: "University of Science and Technology of Southern Philippines",
     img:"https://media.licdn.com/dms/image/D5603AQHnOyN9QLm_7A/profile-displayphoto-shrink_800_800/0/1710397845034?e=1715817600&v=beta&t=w2YHg55Iqlr6rtdCpn4z7l61MmeNrqUxwYemwRA_LC4&fbclid=IwAR21_Av4tyLZIQh0AlWOY-AUlak4l2azmMQ9xVRnZSlZ52gmTo9EgIgeFl4",
-    linkedin:"www.linkedin.com/in/gia-sumagang-00b2302a2"
+    linkedin:"https://www.linkedin.com/in/gia-sumagang-00b2302a2"
    },
 {
     name:"Johrey E. Sarip",
