@@ -11,6 +11,11 @@ import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx'
 import UsersLoader from './screens/adminPage/userManagement/UsersLoader.tsx'
 import FeedbackLoader from './screens/adminPage/others/Feedbacks/FeedbackLoader.tsx';
 
+
+const Developers= lazy(() =>
+  wait(1300).then(() => import("./screens/developersPage/Developers.tsx"))
+);
+
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
 );
@@ -71,6 +76,14 @@ const router = createBrowserRouter([
   {
     path: "/dts/",
     element: <Navigate to="/dts/login" />,
+  },
+  {
+    path: "/dts/developers",
+    element:  <>
+    <Suspense fallback={<Loader />}>
+      <Developers />
+    </Suspense>
+  </>,
   },
   {
     path: "/dts/login",

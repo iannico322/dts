@@ -2,9 +2,8 @@ import bg from "../../assets/images/DICT-bg.webp";
 import logo from "../../assets/images/DICT-Banner-Logo.webp";
 import google from "../../assets/images/google.png";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Alerts } from "./Alert";
-import { Loader2Icon, LoaderIcon } from "lucide-react";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -21,6 +20,11 @@ function LoginPage() {
   return (
    
       <div className=" grid grid-cols-6 bg-background h-screen w-screen  flex-row justify-center bg-blue2 overflow-hidden ">
+        <Link to="/dts/developers" className="  z-50 absolute text-white bottom-0  p-10 bg-blue2 px-3 py-2 ">
+          <p className="  text-xs">Developed by: <span className=" font-semibold hover:underline">DTS Team</span> </p>
+        </Link>
+       
+       
         {/* image */}
         <div className=" flex md:hidden col-span-4 lg:col-span-3">
           <img
@@ -29,6 +33,8 @@ function LoginPage() {
             alt="DICT_bg"
           />
         </div>
+
+       
 
         {/* login form */}
         <div className=" relative sm:justify-center px-10 lg:col-span-3  col-span-2 md:col-span-6 flex flex-col justify-center items-center h-full w-full   animate__animated animate__slideInUp bg-blue2  ">
