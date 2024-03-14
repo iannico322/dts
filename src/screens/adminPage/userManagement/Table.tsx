@@ -175,35 +175,42 @@ function MyTable({search}:any) {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
                             </svg>
   </button>
-  {pageIndex > 2 && (
-    <>
-      <button onClick={() => gotoPage(0)} className=' px-3 py-1 border h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10  active:bg-orange disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
-        1
-      </button>
-      <span className='px-3 py-1'>...</span>
-    </>
-  )}
-  {Array.from({ length: Math.min(5, pageCount) }, (_, index) => {
-    const pageNumber = pageIndex - 2 + index;
-    if (pageNumber < 0 || pageNumber >= pageCount) return null;
-    return (
-      <button 
-        key={pageNumber} 
-        onClick={() => gotoPage(pageNumber)} 
-        className={`px-3 py-1 border  ${pageIndex === pageNumber ? 'h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg bg-orange text-center align-middle font-sans text-xs font-medium uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none' : 'h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10  active:bg-orange disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'}`}
-      >
-        {pageNumber + 1}
-      </button>
-    );
-  })}
-  {pageIndex < pageCount - 3 && (
-    <>
-      <span className='px-3 py-1'>...</span>
-      <button onClick={() => gotoPage(pageCount - 1)} className=' px-3 py-1 border h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10  active:bg-orange disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
-        {pageCount}
-      </button>
-    </>
-  )}
+ {pageIndex > 2 && pageCount > 5 && (
+  <>
+    <button onClick={() => gotoPage(0)} className=' px-3 py-1 border h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10  active:bg-orange disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
+      1
+    </button>
+    <span className='px-3 py-1'>...</span>
+  </>
+)}
+{Array.from({ length: Math.min(5, pageCount) }, (_, index) => {
+  let pageNumber:any;
+  if (pageCount <= 5 || pageIndex < 3) {
+    pageNumber = index;
+  } else if (pageIndex > pageCount - 4) {
+    pageNumber = pageCount - 5 + index;
+  } else {
+    pageNumber = pageIndex - 2 + index;
+  }
+  return (
+    <button 
+      key={pageNumber} 
+      onClick={() => gotoPage(pageNumber)} 
+      className={`px-3 py-1 border  ${pageIndex === pageNumber ? 'h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg bg-orange text-center align-middle font-sans text-xs font-medium uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none' : 'h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10  active:bg-orange disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'}`}
+    >
+      {pageNumber + 1}
+    </button>
+  );
+})}
+{pageIndex < pageCount - 3 && pageCount > 5 && (
+  <>
+    <span className='px-3 py-1'>...</span>
+    <button onClick={() => gotoPage(pageCount - 1)} className=' px-3 py-1 border h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10  active:bg-orange disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'>
+      {pageCount}
+    </button>
+  </>
+)}
+
   
 
   <button onClick={() => nextPage()} disabled={!canNextPage}
