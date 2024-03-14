@@ -76,7 +76,7 @@ const [analyst] = useState([
    }
 ])
   return (
-    <div className=" w-full  min-h-screen  overflow-y-scroll overflow-hidden flex flex-col bg-blue items-center ">
+    <div className=" w-full  min-h-screen overflow-hidden  overflow-y-scroll  flex flex-col bg-blue items-center ">
 
 <a href="#down" 
   className="cursor-pointer bg-gray-800 px-3 py-5 mr-10 rounded-md text-white tracking-wider shadow-xl animate-bounce  fixed bottom-0 right-0  "
@@ -114,7 +114,7 @@ const [analyst] = useState([
       </nav>
 
       
-        <div className=" grid-flow-row grid grid-cols-12 items-start gap-10 md:gap-5 w-[80%] min-h-full mb-20 overflow-x-hidden ">
+        <div className=" grid-flow-row grid grid-cols-12 items-start gap-10 md:gap-5 w-[80%] min-h-full mb-20 overflow-x-hidden overflow-hidden ">
 
         <h1 className=" text-white font-bold text-4xl py-10 pb-5 sm:pl-20 sm:text-start font-sans col-span-12 text-center  leading-[2px] sm:leading-[14px] "> <span className=" text-base uppercase">Team</span>  <br /> <span className=" text-red-500">Waya</span>-<span className=" text-yellow">waya</span></h1>
 
