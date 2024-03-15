@@ -63,7 +63,7 @@ export default function FeedbacksTable (){
       const { pageIndex}:any = state;
 
       useEffect(()=>{
-        setPageSize(7)
+        setPageSize(10)
       },[])
 
     return(
@@ -122,9 +122,9 @@ export default function FeedbacksTable (){
                                                 <span>
                                                     {column.isSorted ? (
                                                     column.isSortedDesc ? (
-                                                        <CaretUpIcon className='ml-1 w-[25px] h-[25px]' />
-                                                    ) : (
                                                         <CaretDownIcon className='ml-1 w-[25px] h-[25px]' />
+                                                    ) : (
+                                                        <CaretUpIcon className='ml-1 w-[25px] h-[25px]' />
                                                     )
                                                     ) : (
                                                     ''
@@ -203,13 +203,13 @@ export default function FeedbacksTable (){
                 </table>
             </div>
 
-            <div className=' flex justify-center items-center w-full h-[70px] '>
+            <div className=' flex justify-center items-center w-full h-[70px] mt-3 '>
 
                 {/* Previous button */}
                 <button 
                     onClick={() => previousPage()} 
                     disabled={!canPreviousPage}
-                    className= "flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:orange active:bg-orange disabled:bg-transparent disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none"
+                    className= "flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:orange active:bg-orange hover:bg-gray-900/10 disabled:bg-transparent disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none"
                     type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     aria-hidden="true" className="w-4 h-4">
@@ -257,7 +257,7 @@ export default function FeedbacksTable (){
                 </button>{' '}
 
 
-                <span>
+                <span className=' ml-2 '>
                     Page{' '}
                     <strong className=' text-black '>
                     {pageIndex + 1} of {pageCount}

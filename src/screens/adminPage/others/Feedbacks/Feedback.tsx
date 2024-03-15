@@ -5,13 +5,14 @@ import FeedbacksTable from "./FeedbacksTable/Table";
 
 function Feedback() {
 
+
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <div className=" flex flex-col w-full h-full bg-adminBG p-20 ">
 
             <p className=" text-textW text-[24px] font-normal mb-10  ">Others/Tickets</p>
 
-            <div className=" flex flex-col bg-white w-full h-[600px] pb-4 rounded-xl ">
+            <div className=" flex flex-col bg-white w-full h-[580px] pb-2 rounded-xl ">
 
                 
                 {/* Tickets, Done, and Delete Box */}
