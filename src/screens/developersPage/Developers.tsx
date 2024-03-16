@@ -4,6 +4,14 @@ import { ArrowBigDownDashIcon } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
+import angel from './../../assets/images/team_waya_waya/angel.webp'
+import mark from './../../assets/images/team_waya_waya/mark.webp'
+import ian from './../../assets/images/team_waya_waya/ian.webp'
+import sofia from './../../assets/images/team_waya_waya/sofia.webp'
+import jay_ann from './../../assets/images/team_waya_waya/jay_ann.webp'
+import gia from './../../assets/images/team_waya_waya/gia.webp'
+import johnrey from './../../assets/images/team_waya_waya/johnrey.webp'
+
 const Developers = () => {
 
   const [lead] = useState([
@@ -11,7 +19,7 @@ const Developers = () => {
       name:"Angel Rose Naval",
       position:"System Analyst and Designer",
       school: "University of Science and Technology of Southern Philippines",
-      img:"https://media.licdn.com/dms/image/C5603AQGk6xI35pRVXA/profile-displayphoto-shrink_800_800/0/1668012511231?e=1715817600&v=beta&t=Mau_6oLAuBJe7x6uVN7hXgIhkZxhkBtH-Cfl79l1eXs",
+      img:angel,
       linkedin:"https://www.linkedin.com/in/angelrosenaval/"
      },
     
@@ -23,22 +31,21 @@ const Developers = () => {
     name:"Mark Gil P. Rusiana",
     position:"Web Developer",
     school: "University of Science and Technology of Southern Philippines",
-    img:"https://media.licdn.com/dms/image/D5603AQHsVfr5wldYZw/profile-displayphoto-shrink_200_200/0/1710395921633?e=1715817600&v=beta&t=THIMcT4qJN-ye0s5ORNYs85d3d_X8oKzZjnVjwWmPbA",
+    img:mark,
     linkedin:"https://www.linkedin.com/in/mark-gil-rusiana-97553a2ba/"
    },
    {
     name:"Ian Nico M. Caulin",
     position:" Web Developer",
     school: "University of Science and Technology of Southern Philippines",
-    img:"https://media.licdn.com/dms/image/D4E03AQHIx3oFfqwL4Q/profile-displayphoto-shrink_200_200/0/1708134353074?e=2147483647&v=beta&t=wqMPfBxz544PKTfs8Y-s8N3BNtdGtfhsN7E6hwlXgYw",
+    img:ian,
     linkedin:"https://www.linkedin.com/in/ian-nico"
    },
    {
     name:"Sofia Dara P. Alilin",
     position:"Web Developer",
     school: "University of Science and Technology of Southern Philippines",
-    img:"https://media.licdn.com/dms/image/D5603AQFbt6HaN4_4vA/profile-displayphoto-shrink_800_800/0/1710395583557?e=1715817600&v=beta&t=OcCSfJ0UoOm6hJvxCHasVGXJitjo9LlO5oTva2GluBA"
-    ,
+    img:sofia,
     linkedin:"https://www.linkedin.com/in/sofia-alilin-15817a137/"
 
    },
@@ -58,20 +65,20 @@ const [analyst] = useState([
     name:"Jay Ann J. Abella",
     position:"System Analyst",
     school: "MSU - Naawan",
-    img:"https://media.licdn.com/dms/image/D5603AQGM6y2kpJHcvw/profile-displayphoto-shrink_800_800/0/1688443220366?e=1715817600&v=beta&t=_fuHMkSmI9pdbNYzGhxQrhhirljDOF4tmHNp806EB34&fbclid=IwAR0PkFMekR60UE4J6302SoX1JVkuWgN_oTfBUl6S78UOcE7ieA23B9R_gu4",
+    img:jay_ann,
     linkedin:"https://www.linkedin.com/in/jay-ann-j-abella-7a7b1a249/"
    }, {
     name:"Gia C. Sumagang",
     position:"System Analyst",
     school: "University of Science and Technology of Southern Philippines",
-    img:"https://media.licdn.com/dms/image/D5603AQHnOyN9QLm_7A/profile-displayphoto-shrink_800_800/0/1710397845034?e=1715817600&v=beta&t=w2YHg55Iqlr6rtdCpn4z7l61MmeNrqUxwYemwRA_LC4&fbclid=IwAR21_Av4tyLZIQh0AlWOY-AUlak4l2azmMQ9xVRnZSlZ52gmTo9EgIgeFl4",
+    img:gia,
     linkedin:"https://www.linkedin.com/in/gia-sumagang-00b2302a2"
    },
 {
     name:"Johrey E. Sarip",
     position:"System Analyst",
     school: "MSU - Naawan",
-    img:"https://media.licdn.com/dms/image/D5603AQEK4UJOt7KakA/profile-displayphoto-shrink_800_800/0/1710397101559?e=1715817600&v=beta&t=f613541nXoN9mzqQlU2uh9L8qSz2yM1bM8E-qmSfl3s",
+    img:johnrey,
     linkedin:"https://www.linkedin.com/in/johnrey-sarip-7865412ba/"
    }
 ])
