@@ -97,46 +97,48 @@ function Profile() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <div className=" grid grid-cols-6 w-full h-full justify-center items-center bg-adminBG p-16 ">
+        <div className=" grid grid-cols-6 w-full h-full justify-center items-center bg-adminBG md:p-8 p-16 overflow-y-scroll ">
             
             {/* left side */}
-            <div className=" col-span-4 w-full h-full pr-32 ">
+            <div className=" lg:col-span-6 col-span-4 w-full h-full lg:pr-0 pr-32 ">
 
                 <p className=" text-textW text-[24px] font-normal mb-3  ">Others/Profile</p>
 
                 {/* left top */}
-                <div className=" flex flex-row h-[200px] w-full justify-between items-center pl-5">
+                <div className=" flex flex-row min-h-[200px] w-full lg:justify-center justify-between items-center lg:pl-0 pl-5 lg:flex-col ">
 
                     {/* admin name, email, profile pic */}
-                    <div className=" flex flex-row items-center w-[55%] h-full">
+                    <div className=" flex flex-row items-center sm:w-full md:w-[80%] lg:w-[70%] w-[55%] h-full lg:flex-col sm:px-0 lg:px-10 ">
 
                         {/* profile */}
-                        <div className=" z-20 flex justify-center items-center w-[170px] h-[170px] rounded-full">
+                        <div className=" z-20 flex justify-center items-center sm:w-[160px] sm:h-[160px] md:w-[100px] md:h-[100px] lg:w-[130px] lg:h-[130px] w-[170px] h-[170px] rounded-full">
                             <img className=" object-cover aspect-square w-full min-w-[120px] border-[10px] border-white rounded-full"
                                 src={profile}
                                 alt="profile"
                         />
                         </div>
 
-                        <div className=" z-10 flex flex-col w-[400px] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 pl-10 translate-x-[-30px]">
+                        <div className=" z-10 flex flex-col  lg:w-[300px] md:w-[100%] w-[400px] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
                             <p className=" text-[#2B3674] text-[20px] font-semibold">Administrator</p>
                             <p className=" text-[#A3AED0] text-[16px] ">admin.dts@dict.gov.ph</p>
                         </div>
+
+                        {/* admin password */}
+                        <div className=" flex flex-col lg:w-[300px] md:w-[100%]  w-[400px] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 pl-10 ">
+                            <div className=" flex flex-row w-full items-center">
+                                <p className=" text-[#2B3674] text-[20px] font-semibold mr-1">Password</p>
+                                <PencilLine className=" text-adminBG h-[18px] w-[18px]" />
+                            </div>
+                            <p className=" text-[#A3AED0] text-[16px] ">**********************</p>
+                        </div>
                     </div>
 
-                    {/* admin password */}
-                    <div className=" flex flex-col w-[440px] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 pl-8 ">
-                        <div className=" flex flex-row w-full items-center">
-                            <p className=" text-[#2B3674] text-[20px] font-semibold mr-1">Password</p>
-                            <PencilLine className=" text-adminBG h-[18px] w-[18px]" />
-                        </div>
-                        <p className=" text-[#A3AED0] text-[16px] ">**********************</p>
-                    </div>
+
                 </div>
 
 
                 {/* General Information */}
-                <div className=" flex flex-col w-full min-h-[500px] mt-10 pl-10">
+                <div className=" flex flex-col w-full min-h-[500px] mt-10 pl-10 lg:pl-0 ">
 
                     <p className=" text-textW text-[24px] font-normal ">General Information</p>
 
@@ -145,7 +147,7 @@ function Profile() {
 
                     {genInfo.map((e) => {
                         return (
-                            <div className="flex flex-col justify-center h-[70px] w-[33%] pl-4 mt-3 bg-white rounded-xl">
+                            <div className="flex flex-col justify-center h-[70px] sm:w-full lg:w-[48%] w-[33%] pl-4 mt-3 bg-white rounded-xl">
                                 <p className=" text-[#A3AED0] text-[14px] ">{e.entry}</p>
                                 <p className=" text-[#2B3674] text-[13px]">{e.applicable}</p>
                             </div>
@@ -162,7 +164,7 @@ function Profile() {
 
 
             {/* right side */}
-            <div className=" col-span-2 flex flex-col justify-between w-full h-full px-2 bg-white rounded-xl">
+            <div className=" lg:col-span-6 lg:mt-32 col-span-2 flex flex-col justify-between w-full h-full px-2 bg-white rounded-xl">
 
                 <div className=" flex flex-col w-full h-[90%] p-5 pb-12">
 

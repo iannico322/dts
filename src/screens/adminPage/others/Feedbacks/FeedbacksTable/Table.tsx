@@ -67,10 +67,10 @@ export default function FeedbacksTable (){
       },[])
 
     return(
-        <div className=' flex flex-col w-full h-full justify-between'>
+        <div className=' flex flex-col w-full h-full '>
 
-            <div className='w-full h-[30px] border-b-[2px]'>
-                <table {...getTableProps()} className=' w-full '>
+            <div className='w-full h-[30px] border-b-[2px] overflow-hidden'>
+                <table {...getTableProps()} className=' w-full table-fixed '>
 
                     <thead>
 
@@ -116,10 +116,10 @@ export default function FeedbacksTable (){
                                         widthClass = 'w-auto';
                                     }
                                     return (
-                                        <th {...column.getHeaderProps(getSortByToggleProps())} className={` text-[#436BBE] text-[17px] text-start font-semibold ${widthClass}`}>
-                                            <div className=' flex flex-row '>
+                                        <th {...column.getHeaderProps(getSortByToggleProps())} className={` text-[#436BBE] text-[17px] text-left font-semibold ${widthClass}`}>
+                                            <div className=' truncate flex flex-row '>
                                                 {column.render('Header')}
-                                                <span>
+                                                <span >
                                                     {column.isSorted ? (
                                                     column.isSortedDesc ? (
                                                         <CaretDownIcon className='ml-1 w-[25px] h-[25px]' />
@@ -145,8 +145,8 @@ export default function FeedbacksTable (){
 
             </div>
 
-            <div className='w-full h-[370px] overflow-y-scroll'>
-                <table className=' w-full '>
+            <div className='w-full h-[370px] overflow-y-scroll overflow-hidden'>
+                <table className=' w-full table-fixed '>
                     <tbody {...getTableBodyProps()}>
 
                         {
@@ -163,23 +163,23 @@ export default function FeedbacksTable (){
                                                 widthClass = 'w-[30%]';
                                                 break;
                                                 case 1:
-                                                widthClass = 'w-[20%]';
+                                                widthClass = 'w-[20%] pl-1 ';
                                                 break;
                                                 case 2:
-                                                widthClass = 'w-[20%]';
+                                                widthClass = 'w-[20%] pl-1 ';
                                                 break;
                                                 case 3:
-                                                widthClass = 'w-[20%]';
+                                                widthClass = 'w-[20%] pl-1 ';
                                                 break;
                                                 case 4:
-                                                widthClass = 'w-[20%]';
+                                                widthClass = 'w-[20%] pl-2 ';
                                                 break;
                                                 default:
                                                 widthClass = 'w-auto';
                                             }
 
-                                            return <td {...cell.getCellProps()} className= {`text-[#2B3674] font-semibold py-3 ${widthClass}`}> 
-                                                <div className=' w-full flex flex-row items-center'>
+                                            return <td {...cell.getCellProps()} className= {`text-[#2B3674] text-left font-semibold py-3 ${widthClass}`}> 
+                                                <div className=' w-full flex flex-row items-center truncate'>
                                                     {i === 0 && 
                                                         <input 
                                                         type="checkbox" 
@@ -221,16 +221,16 @@ export default function FeedbacksTable (){
 
                 {pageIndex > 3 && 
                 <>
-                    <button className="mx-2 h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg  text-center align-middle font-sans text-xs font-medium uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={() => gotoPage(0)}>1</button> 
-                    <span className=" text-black w-[20px] h-[20px] text-center mx-5">...</span>
+                    <button className=" sm:hidden mx-2 h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg  text-center align-middle font-sans text-xs font-medium uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" onClick={() => gotoPage(0)}>1</button> 
+                    <span className=" sm:hidden text-black w-[20px] h-[20px] text-center mx-5">...</span>
                 </>}
 
-                {Array.from({length: Math.min(7, pageCount)}, (_, i) => Math.max(0, Math.min(pageCount - 7, pageIndex - 3)) + i).map(page => 
+                {Array.from({length: Math.min(5, pageCount)}, (_, i) => Math.max(0, Math.min(pageCount - 7, pageIndex - 3)) + i).map(page => 
                 (page >= 0 && page < pageCount) ? (
                     <button 
                     key={page} 
                     onClick={() => gotoPage(page)} 
-                    className={` mx-2 h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg  text-center align-middle font-sans text-xs font-medium uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ${page === pageIndex ? 'active-page-class bg-orange text-white' : ''}`}
+                    className={` sm:hidden mx-2 h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg  text-center align-middle font-sans text-xs font-medium uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ${page === pageIndex ? 'active-page-class bg-orange text-white' : ''}`}
                     >
                     {page + 1}
                     </button>
@@ -238,9 +238,15 @@ export default function FeedbacksTable (){
                 )}
                 {pageIndex < pageCount - 4 && 
                 <>
-                    <span className=" text-black w-[20px] h-[20px] text-center mx-5 ">...</span> 
-                    <button onClick={() => gotoPage(pageCount - 1)} className="mx-2 h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg  text-center align-middle font-sans text-xs font-medium uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">{pageCount}</button>
+                    <span className=" sm:hidden text-black w-[20px] h-[20px] text-center mx-5 ">...</span> 
+                    <button onClick={() => gotoPage(pageCount - 1)} className=" sm:hidden mx-2 h-9 max-h-[40px] w-9 max-w-[40px] select-none rounded-lg  text-center align-middle font-sans text-xs font-medium uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-orange focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">{pageCount}</button>
                 </>}
+
+                <span className=' ml-2 sm:flex lg:hidden '>
+                    <strong className=' text-black '>
+                    {pageIndex + 1} / {pageCount}
+                    </strong>{' '}
+                </span>
 
 
                 {/* Next button */}
@@ -257,7 +263,7 @@ export default function FeedbacksTable (){
                 </button>{' '}
 
 
-                <span className=' ml-2 '>
+                <span className=' ml-2 lg:hidden '>
                     Page{' '}
                     <strong className=' text-black '>
                     {pageIndex + 1} of {pageCount}

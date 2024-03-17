@@ -8,35 +8,35 @@ function Feedback() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <div className=" flex flex-col w-full h-full bg-adminBG p-20 ">
+        <div className=" flex flex-col w-full h-full bg-adminBG lg:p-10 p-20 ">
 
             <p className=" text-textW text-[24px] font-normal mb-10  ">Others/Tickets</p>
 
-            <div className=" flex flex-col bg-white w-full h-[580px] pb-2 rounded-xl ">
+            <div className=" flex flex-col bg-white w-full min-h-[580px] pb-2 rounded-xl ">
 
                 
                 {/* Tickets, Done, and Delete Box */}
                 <div className=" flex flex-row w-full h-[90px] p-8 ">
 
-                    <p className=" text-[#2B3674] text-[28px] font-bold mr-40 ">Tickets</p>
+                    <p className=" text-[#2B3674] text-[28px] font-bold mr-40 lg:mr-20 md:mr-5 ">Tickets</p>
 
-                    <div className=" px-5 py-4 flex flex-row justify-center items-center gap-3 bg-[#A6E7D8] border-[2px] border-[#00B087] rounded-sm hover:opacity-75 cursor-pointer mr-5 ">
+                    <div className=" py-4 px-5 sm:px-1  flex flex-row justify-center items-center gap-3 bg-[#A6E7D8] border-[2px] border-[#00B087] rounded-sm hover:opacity-75 cursor-pointer mr-5 sm:mr-2 ">
                         <CheckCircle className=" text-[#008767]"/>
-                        <p className=" text-[#008767]">Done</p>
+                        <p className=" text-[#008767] sm:hidden">Done</p>
                     </div>
 
-                    <div className=" px-5 py-4 flex flex-row justify-center items-center gap-3 bg-[#FFE4E4] border-[2px] border-[#C91B1B] rounded-sm hover:opacity-75 cursor-pointer">
+                    <div className=" py-4 px-5 sm:px-1  flex flex-row justify-center items-center gap-3 bg-[#FFE4E4] border-[2px] border-[#C91B1B] rounded-sm hover:opacity-75 cursor-pointer">
                         <TrashIcon className=" text-[#C91B1B] "/>
-                        <p className=" text-[#C91B1B] font-semibold ">Delete</p>
+                        <p className=" text-[#C91B1B] font-semibold sm:hidden">Delete</p>
                     </div>
 
                 </div>
 
 
-                <div className=" flex flex-col w-full h-full justify-between ">
+                <div className=" flex flex-col w-full h-full ">
                     
                     {/* table */}
-                    <div className=" flex w-full px-8 ">
+                    <div className=" flex w-full h-full px-8 overflow-hidden ">
 
                         <FeedbacksTable />
 
