@@ -12,7 +12,7 @@ function Feedback() {
 
             <p className=" text-textW text-[24px] font-normal mb-10  ">Others/Tickets</p>
 
-            <div className=" flex flex-col bg-white w-full md:h-[80%] h-[70%] pb-2 rounded-xl overflow-hidden ">
+            <div className=" flex flex-col bg-white w-full md:h-[90%] h-[80%] pb-2 rounded-xl overflow-hidden ">
 
                 
                 {/* Tickets, Done, and Delete Box */}

@@ -138,12 +138,12 @@ function Profile() {
 
 
                 {/* General Information */}
-                <div className=" flex flex-col w-full min-h-[500px] mt-10 pl-10 lg:pl-0 ">
+                <div className=" flex flex-col w-full h-[55%] mt-10 pl-10 lg:pl-0 ">
 
                     <p className=" text-textW text-[24px] font-normal ">General Information</p>
 
                     {/* container */}
-                    <div className=" flex flex-wrap justify-between w-full h-full ">
+                    <div className=" flex flex-wrap justify-between w-full h-full overflow-y-scroll pr-5 ">
 
                     {genInfo.map((e) => {
                         return (
@@ -164,7 +164,7 @@ function Profile() {
 
 
             {/* right side */}
-            <div className=" lg:col-span-6 lg:mt-32 col-span-2 flex flex-col justify-between w-full h-full px-2 bg-white rounded-xl relative overflow-hidden ">
+            <div className=" lg:col-span-6 lg:mt-32 col-span-2 flex flex-col justify-between w-full h-[80%] px-2 bg-white rounded-xl relative overflow-hidden ">
 
                 <div className=" flex flex-col w-full h-[95%] p-5 pb-5 ">
 
