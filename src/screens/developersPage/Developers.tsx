@@ -64,7 +64,7 @@ const [analyst] = useState([
 {
     name:"Jay Ann J. Abella",
     position:"System Analyst",
-    school: "MSU - Naawan",
+    school: "Mindanao State University at Naawan",
     img:jay_ann,
     linkedin:"https://www.linkedin.com/in/jay-ann-j-abella-7a7b1a249/"
    }, {
@@ -77,7 +77,7 @@ const [analyst] = useState([
 {
     name:"Johrey E. Sarip",
     position:"System Analyst",
-    school: "MSU - Naawan",
+    school: "Mindanao State University at Naawan",
     img:johnrey,
     linkedin:"https://www.linkedin.com/in/johnrey-sarip-7865412ba/"
    }

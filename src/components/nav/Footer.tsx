@@ -8,7 +8,7 @@ const Footer = () => {
         <h1 className=" text-xs sm:text-[10px] text-center font-light">@2024 Department of Information and Techonology Communication</h1>
         <div className=" flex gap-5 font-semibold text-xs">
         <p className=" hover:underline hover:cursor-pointer">TERMS AND CONDITIONS</p>
-        <p className=" hover:underline hover:cursor-pointer">PRIVAY AND POLICY</p>
+        <p className=" hover:underline hover:cursor-pointer">PRIVACY AND POLICY</p>
         </div>
 
         </div>
