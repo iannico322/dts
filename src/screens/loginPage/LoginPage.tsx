@@ -1,20 +1,17 @@
 import bg from "../../assets/images/DICT-bg.webp";
 import logo from "../../assets/images/DICT-Banner-Logo.webp";
 import google from "../../assets/images/google.png";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Alerts } from "./Alert";
+import { AlertBox } from "../../components/alert/Alert";
+
+import axios from "./../../plugin/axios";
 
 function LoginPage() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({ email: "", password: "" });
   const [alert,setAlert]= useState("")
-
-  useEffect(() => {
-    console.table(user);
-  }, [user]);
-
 
 
   return (
@@ -41,30 +38,65 @@ function LoginPage() {
           
          
           <form className=" flex flex-col min-h-[200px]  w-full max-w-[450px] md:max-w-[550px]  mb-20 "
-            onSubmit={(e: any) => {
+            onSubmit={ async (e: any) => {
               e.preventDefault();
 
+              setAlert("s")
 
-              if (user.email =="iannicocaulin@gmail.com" && user.password =="nico322w") {
-                setAlert("success")
-                setTimeout(()=>{
-                  navigate("/dts/home")
-                  setAlert("")
-                },1000)
-              }else if(user.email =="admin@gmail.com" && user.password =="admin123"){
-                setAlert("success")
-                setTimeout(()=>{
-                  navigate("/dts/admin")
-                  setAlert("")
-                },1000)
-              }
-              else{
+              try {
+
+                await axios.post("token/login/",user).then((response:any)=>{
+                  console.log(response.data)
+
+                   axios.get("users/me/",{
+                    headers: {
+                      Authorization: `Token ${response.data.auth_token}`,
+                    }, 
+                  }).then((response:any)=>{
+                    console.log(response.data)
+
+                    setAlert("success")
+                    setTimeout(()=>{
+                          navigate("/dts/home")
+                          setAlert("")
+                    },1000)
+                  })
+
+                }).catch(()=>{
+                  setAlert("error")
+                  setTimeout(()=>{
+                    setAlert("")
+                  },3000)
+                })
                 
+              } catch (error) {
                 setAlert("error")
                 setTimeout(()=>{
                   setAlert("")
                 },3000)
               }
+
+
+              // if (user.email =="iannicocaulin@gmail.com" && user.password =="nico322w") {
+              //   setAlert("success")
+              //   setTimeout(()=>{
+              //     navigate("/dts/home")
+              //     setAlert("")
+              //   },1000)
+              // }else if(user.email =="admin@gmail.com" && user.password =="admin123"){
+              //   setAlert("success")
+              //   setTimeout(()=>{
+              //     navigate("/dts/admin")
+              //     setAlert("")
+              //   },1000)
+              // }
+              // else{
+                
+              //   setAlert("error")
+              //   setTimeout(()=>{
+              //     setAlert("")
+              //   },3000)
+              // }
             }}
           >
 
@@ -130,7 +162,7 @@ function LoginPage() {
           </span> </button>
             }
             <div className=" mt-5">
-            <Alerts
+            <AlertBox
             variant={alert}
             
             />

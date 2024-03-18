@@ -43,14 +43,16 @@ const AdminUsers= lazy(() =>
 const LoginPage= lazy(() =>
   wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
 );
-
-const Message= lazy(() =>
-  wait(1300).then(() => import('./components/msg/successMessage.tsx'))
+const  Activation= lazy(() =>
+  wait(1300).then(() => import("./screens/loginPage/Activation.tsx"))
 );
 
 
 const ForgotPasswordPage= lazy(() =>
   wait(1300).then(() => import("./screens/forgotPass/forgotPass.tsx"))
+);
+const ResetPassword= lazy(() =>
+  wait(1300).then(() => import("./screens/forgotPass/ResetPass.tsx"))
 );
 
 const Letter= lazy(() =>
@@ -92,22 +94,29 @@ const router = createBrowserRouter([
       <LoginPage />
     </Suspense>
   </>,
-  },
+  }, 
   {
-    path: "/dts/message/",
+    path: "/dts/activation/:uid/:token",
     element:  <>
     <Suspense fallback={<Loader />}>
-      <Message />
+      <Activation  />
     </Suspense>
   </>,
   },
   
-
   {
     path: "/dts/forgot_password",
     element:  <>
     <Suspense fallback={<Loader />}>
       <ForgotPasswordPage />
+    </Suspense>
+  </>,
+  },
+  {
+    path: "/dts/reset-password/:uid/:token",
+    element:  <>
+    <Suspense fallback={<Loader />}>
+      <ResetPassword  />
     </Suspense>
   </>,
   },
