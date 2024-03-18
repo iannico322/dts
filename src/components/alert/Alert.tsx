@@ -5,19 +5,20 @@ import {
     AlertDescription,
     AlertTitle,
 } from "@/components/ui/alert"
-export function Alerts({variant}:any) {
+export function AlertBox({variant,title,description}:any) {
 
     switch (variant) {
         case "error":
             return (
                 <Alert variant="destructive" className=" flex flex-row gap-2 items-start animate-pulse">
                     <span className="material-symbols-outlined">
-                    error
+                     error
                     </span>
                     <div>
-                        <AlertTitle>Invalid Credentials</AlertTitle>
+                        <AlertTitle>{title?title: "Invalid Credentials"}</AlertTitle>
                         <AlertDescription>
-                           Your credentials are incorrect, please try again.
+                        {description?description: "Your credentials are incorrect, please try again."}
+                           
                         </AlertDescription>
                     </div>
                 </Alert>
@@ -29,9 +30,10 @@ export function Alerts({variant}:any) {
                     task_alt
                     </span>
                     <div className=" text-green-600">
-                        <AlertTitle>Successfully Login</AlertTitle>
+                        <AlertTitle>{title?title: "Succesfully Login"}</AlertTitle>
                         <AlertDescription>
-                           Your credentials are correct, please wait for awhile.
+                        {description?description: "Your credentials are correct, please wait for awhile."}
+                          
                         </AlertDescription>
                     </div>
                 </Alert>
@@ -43,9 +45,9 @@ export function Alerts({variant}:any) {
                         warning
                         </span>
                         <div className=" text-yellow">
-                            <AlertTitle>Warning</AlertTitle>
+                            <AlertTitle>{title?title: "Warning"}</AlertTitle>
                             <AlertDescription>
-                               Your credentials are correct, but needs to be activated.
+                            {description?description: "Your credentials are correct, but needs to be activated."}
                             </AlertDescription>
                         </div>
                     </Alert>
