@@ -80,7 +80,7 @@ function Profile() {
     };
   
     const nextPage = () => {
-      if (currentPage < Math.ceil(data.length / 6) - 1) {
+      if (currentPage < Math.ceil(data.length / 10) - 1) {
         setCurrentPage(currentPage + 1);
       }
     };
@@ -108,7 +108,7 @@ function Profile() {
                 <div className=" flex flex-row min-h-[200px] w-full lg:justify-center justify-between items-center lg:pl-0 pl-5 lg:flex-col ">
 
                     {/* admin name, email, profile pic */}
-                    <div className=" flex flex-row items-center sm:w-full md:w-[80%] lg:w-[70%] w-[55%] h-full lg:flex-col sm:px-0 lg:px-10 ">
+                    <div className=" flex flex-row items-center sm:w-full md:w-[80%] lg:w-[70%] w-full h-full lg:flex-col sm:px-0 lg:px-10 ">
 
                         {/* profile */}
                         <div className=" z-20 flex justify-center items-center sm:w-[160px] sm:h-[160px] md:w-[100px] md:h-[100px] lg:w-[130px] lg:h-[130px] w-[170px] h-[170px] rounded-full">
@@ -118,18 +118,18 @@ function Profile() {
                         />
                         </div>
 
-                        <div className=" z-10 flex flex-col  lg:w-[300px] md:w-[100%] w-[400px] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
-                            <p className=" text-[#2B3674] text-[20px] font-semibold">Administrator</p>
-                            <p className=" text-[#A3AED0] text-[16px] ">admin.dts@dict.gov.ph</p>
+                        <div className=" z-10 flex flex-col  lg:justify-center lg:items-center lg:w-[300px] md:w-[100%] w-[35%] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
+                            <p className=" text-[#2B3674] text-[20px] font-semibold truncate">Administrator</p>
+                            <p className=" text-[#A3AED0] text-[16px] truncate">admin.dts@dict.gov.ph</p>
                         </div>
 
                         {/* admin password */}
-                        <div className=" flex flex-col lg:w-[300px] md:w-[100%]  w-[400px] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 pl-10 ">
-                            <div className=" flex flex-row w-full items-center">
-                                <p className=" text-[#2B3674] text-[20px] font-semibold mr-1">Password</p>
+                        <div className=" flex flex-col lg:justify-center lg:items-center lg:w-[300px] md:w-[100%]  w-[40%] h-[90px] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 ">
+                            <div className=" flex flex-row w-full items-center lg:justify-center">
+                                <p className=" text-[#2B3674] text-[20px] font-semibold mr-1 truncate">Password</p>
                                 <PencilLine className=" text-adminBG h-[18px] w-[18px]" />
                             </div>
-                            <p className=" text-[#A3AED0] text-[16px] ">**********************</p>
+                            <p className=" text-[#A3AED0] text-[16px] truncate">**********************</p>
                         </div>
                     </div>
 
@@ -164,14 +164,15 @@ function Profile() {
 
 
             {/* right side */}
-            <div className=" lg:col-span-6 lg:mt-32 col-span-2 flex flex-col justify-between w-full h-full px-2 bg-white rounded-xl">
+            <div className=" lg:col-span-6 lg:mt-32 col-span-2 flex flex-col justify-between w-full h-full px-2 bg-white rounded-xl relative overflow-hidden ">
 
-                <div className=" flex flex-col w-full h-[90%] p-5 pb-12">
+                <div className=" flex flex-col w-full h-[95%] p-5 pb-5 ">
 
                     <p className=" text-[#1B2559] text-[20px] font-semibold mb-4 ">Activity Logs</p>
 
                     {/* activity logs */}
-                    {activityLogs.slice(currentPage * 6, (currentPage + 1) * 6).map((e, index)=> {
+                    <div className=" flex flex-col w-full h-full overflow-y-scroll">
+                    {activityLogs.slice(currentPage * 10, (currentPage + 1) * 10).map((e, index)=> {
                         return(
                             <div key = {index} className=" w-full min-h-[80px] flex flex-row">
 
@@ -180,24 +181,25 @@ function Profile() {
                                 </div>
 
                                 <div className=" flex flex-col w-[70%] pl-3 pr-10">
-                                    <p className=" text-[#1B2559] text-[18px] font-semibold ">{e.via}</p>
-                                    <p className=" text-[#18348A] text-[14px]">{e.location}</p>
+                                    <p className=" text-[#1B2559] text-[18px] font-semibold truncate">{e.via}</p>
+                                    <p className=" text-[#18348A] text-[14px] truncate">{e.location}</p>
                                 </div>
 
-                                <div className=" flex justify-start items-center w-[20%]">
-                                    <p className=" text-[#A3AED0]">{e.time}</p>
+                                <div className=" flex justify-start items-center w-[20%] mr-4">
+                                    <p className=" text-[#A3AED0] truncate ">{e.time}</p>
                                 </div>
 
                             </div>                           
                         )
                     })}
+                    </div>
 
                 </div>
                 
-                <div className="flex items-center h-[60px] w-full border-t-2 ">  
+                <div className="flex items-center h-[60px] w-full border-t-2 absolute bottom-0">  
                     <div className=" flex flex-row w-full h-[40px] justify-center items-center ">
                         <LucideArrowLeftCircle className=" mr-2 " onClick={prevPage} />
-                        {Array.from({ length: Math.ceil(data.length / 6) }, (_v, k) => k).map((page) => (
+                        {Array.from({ length: Math.ceil(data.length / 10) }, (_v, k) => k).map((page) => (
                         <span key={page} onClick={(event) => handlePageClick(event, page)}>
                             {currentPage === page ? '●' : '○'}
                         </span>

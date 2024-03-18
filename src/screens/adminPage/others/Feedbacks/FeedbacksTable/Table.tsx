@@ -63,11 +63,11 @@ export default function FeedbacksTable (){
       const { pageIndex}:any = state;
 
       useEffect(()=>{
-        setPageSize(10)
+        setPageSize(15)
       },[])
 
     return(
-        <div className=' flex flex-col w-full h-full '>
+        <div className=' flex flex-col w-full h-full relative '>
 
             <div className='w-full h-[30px] border-b-[2px] overflow-hidden'>
                 <table {...getTableProps()} className=' w-full table-fixed '>
@@ -145,7 +145,7 @@ export default function FeedbacksTable (){
 
             </div>
 
-            <div className='w-full h-[370px] overflow-y-scroll overflow-hidden'>
+            <div className='w-full h-[77%] overflow-y-scroll overflow-hidden'>
                 <table className=' w-full table-fixed '>
                     <tbody {...getTableBodyProps()}>
 
@@ -203,7 +203,7 @@ export default function FeedbacksTable (){
                 </table>
             </div>
 
-            <div className=' flex justify-center items-center w-full h-[70px] mt-3 '>
+            <div className=' flex justify-center items-center w-full h-[70px] absolute bottom-0     '>
 
                 {/* Previous button */}
                 <button 
