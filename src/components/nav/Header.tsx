@@ -76,7 +76,7 @@ const Header = ({ navActive, setActive }:any) => {
         
        
       </div>
-      <div className="  bg-white w-full flex justify-end  sm:items-center  text-sm    items-center sm:mr-0  mr-20 animate__animated  animate__fadeInLeft ">
+      <div className="  bg-white border-0 w-full flex justify-end  sm:items-center  text-sm    items-center sm:mr-0  mr-20 animate__animated  animate__fadeInLeft ">
           <p className=" text-xs text-center cursor-pointer px-4 py-2 hover:font-semibold  transition-all duration-150">
             Track Document
           </p>
