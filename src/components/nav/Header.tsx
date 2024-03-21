@@ -23,7 +23,7 @@ const Header = ({ navActive, setActive }:any) => {
         <nav className=" lg:hidden mr-10 text-accent-foreground flex gap-20 uppercase items-center">
           <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
             <img className=" h-4 object-contain" alt="ProfileIcon" src={ProfileIcon}/>
-          Profile
+          Account
           </Link>
           <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white" to="" >
           <img className=" h-4 object-contain" alt="NotifIcon" src={NotifIcon}/>
@@ -58,7 +58,7 @@ const Header = ({ navActive, setActive }:any) => {
 
           <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white h-14 w-full pl-10  hover:bg-yellow" to="" >
             <img className=" h-4 object-contain" alt="ProfileIcon" src={ProfileIcon}/>
-          Profile
+          Account
           </Link>
           <Link className=" flex items-center gap-2 hover:font-semibold text-xs transition-all duration-75 text-white h-14 w-full pl-10  hover:bg-yellow" to="" >
           <img className=" h-4 object-contain" alt="NotifIcon" src={NotifIcon}/>
