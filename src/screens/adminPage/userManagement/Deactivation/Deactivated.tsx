@@ -1,12 +1,12 @@
 
-import searchIcon from '../../../assets/icons/search.png'
+import searchIcon from '../../../../assets/icons/search.png'
 
 
 import { useLocation} from 'react-router-dom';
 
 import { useState } from 'react'
-import MyTable from './Table';
-const Users = () => {
+import MyTable from './Table2';
+const Deactivated = () => {
    
     const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -45,10 +45,7 @@ const Users = () => {
                 </div>
 
                 <div className='  flex sm:flex-col items-center gap-5 sm:justify-between w-full justify-end  relative sm:gap-5 sm:items-start  '>
-                    <button className='
-                        rounded-[5px] truncate border-2 border-textG bg-bgG  text-textG px-5 py-1 font-medium text-xs
-                    '> + Add User
-                    </button> 
+                    
 
                     <div className="relative px-3 py-1 border-border border  flex items-center w-[80%] sm:w-full bg-bgW rounded-md m-0  max-w-[200px] sm:max-w-full">
                       <input
@@ -154,4 +151,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Deactivated

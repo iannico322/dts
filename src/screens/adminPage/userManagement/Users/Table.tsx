@@ -1,7 +1,7 @@
 // MyTable.tsx
 
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
-import data from './userData.json'
+import data from '../userData.json'
 import { useEffect } from 'react';
 import { PencilIcon, TrashIcon } from 'lucide-react';
 
@@ -121,12 +121,12 @@ function MyTable({search}:any) {
                 !(cell.column.id == "status")?<td key={cell.column.id} className='h-10 pl-4 py-4 text-left truncate'> {/* Add truncate class */}
                 {cell.render('Cell')}
               </td>:
-               <td  key={cell.column.id} className=" h-full w-full  items-center   py-4 sm:py-2 text-center flex gap-3 sm:gap-1 justify-center sm:flex-col">
-               <button className='rounded-[4px]  border-[1px] text-xs border-textY bg-bgY text-textY font-md px-2 py-1 sm:py-1 sm:px-1 hover:bg-opacity-50 sm:items-center sm:justify-center'> 
+               <td  key={cell.column.id} className=" box-border relative h-full w-full  items-center   py-4 sm:py-2 text-center flex gap-3 sm:gap-1 justify-between sm:flex-col">
+               <button className='rounded-[4px]   border-[1px] text-xs w-1/2 border-textY bg-bgY text-textY font-md px-2 py-1 sm:py-1 sm:px-1 hover:bg-opacity-50 sm:items-center sm:justify-center'> 
                   <PencilIcon className=' h-2 w-2 hidden sm:flex'/>
-                  <p className=' sm:hidden '>UPDATE</p>  
+                  <p className=' sm:hidden truncate '>UPDATE</p>  
                </button>
-               <button className=' rounded-[4px] border-[1px] hover:bg-opacity-50 text-xs border-textR bg-bgR text-textR font-md px-2 py-1 sm:px-1 sm:py-1'> 
+               <button className=' rounded-[4px] border-[1px] w-1/2  hover:bg-opacity-50 text-xs border-textR bg-bgR text-textR font-md px-2 py-1 sm:px-1 sm:py-1'> 
                <TrashIcon className=' h-2 w-2 hidden sm:flex'/>
                   <p className=' sm:hidden truncate'>DEACTIVATE</p>
                   

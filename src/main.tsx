@@ -24,7 +24,7 @@ const AdminDashboard= lazy(() =>
 );
 
 const Deactivated= lazy(() =>
-  wait(500).then(() => import("./screens/adminPage/userManagement/Deactivated.tsx"))
+  wait(500).then(() => import("./screens/adminPage/userManagement/Deactivation/Deactivated.tsx"))
 );
 
 const AdminProfile= lazy(() =>
@@ -35,7 +35,7 @@ const Feedback= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
 )
 const AdminUsers= lazy(() =>
-  wait(1300).then(() => import("./screens/adminPage/userManagement/Users.tsx"))
+  wait(1300).then(() => import("./screens/adminPage/userManagement/Users/Users.tsx"))
 )
 
 
@@ -197,7 +197,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/deactivate", 
-      element: <Suspense fallback={<Loader />}>
+      element: <Suspense fallback={<UsersLoader />}>
       <Deactivated />
     </Suspense>, 
     },
