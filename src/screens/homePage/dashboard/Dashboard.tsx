@@ -22,19 +22,19 @@ const Dashboard = () => {
         
       <img alt="Gpass" src={Gpass}  className="   sm:h-20   object-contain px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between" />
       <img alt="Inventory " src={Inventory }   className="   sm:h-20   object-contain px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between" />
-      <div className='    sm:w-[40%] sm:h-24 sm:pb-8   px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between'>
+      <div className='  sm:min-w-[150px]   sm:w-[40%] sm:h-24 sm:pb-8   px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between'>
       <img alt="Pmo" src={Pmo}  className="  h-full object-contain " />
       <p className=' text-sm font-bold text-blue'>Task</p>
       </div>
 
 
-      <div className='    sm:w-[40%] sm:h-24 sm:pb-8  px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between'>
+      <div className='    sm:w-[40%] sm:min-w-[150px] sm:h-24 sm:pb-8  px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between'>
         <img alt="Elgu" src={Elgu}  className="     h-full object-contain" />
         <p className=' text-sm font-bold text-blue'>Task</p>
       </div>
       
 
-      <img alt="eGov" src={EGov}  className="  sm:w-[80%]  sm:h-20  object-contain px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between" />
+      <img alt="eGov" src={EGov}  className=" sm:min-w-[308px]  sm:w-[80%]  sm:h-20  object-contain px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between" />
        </div>
 
         

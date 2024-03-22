@@ -11,9 +11,9 @@ const Document = () => {
      <div className=" animate__animated animate__fadeInDown min-w-[60%] h-full grid grid-cols-5 sm:grid-cols-2 gap-10 justify-center  px-10 items-center lg:grid-cols-3 md:grid-cols-2 sm:gap-5">
       {Options.map((e:any,id:number)=>(
         e=="Letter" || e=="Accomplishment Reports"  || e=="Daily Time Record" ? 
-        <Link to="/dts/home/letter/"  className=" flex flex-col gap-2 hover:scale-[1.01] items-center transition-all duration-150 cursor-pointer">
+        <Link to="/dts/home/letter/" key={id} className=" flex flex-col gap-2 hover:scale-[1.01] items-center transition-all duration-150 cursor-pointer">
           <div className={id%2==0?" sm:h-[100px] sm:w-[100px]  bg-blue h-[150px] w-[150px] flex flex-col items-center px-5 justify-around rounded-full":" sm:h-[100px] sm:w-[100px]  bg-yellow h-[150px] w-[150px] flex flex-col items-center px-5 justify-around rounded-full"} >
-         <BookCopyIcon className=" sm:h-16 sm:w-16 h-24 w-24 text-bg"/>
+         <BookCopyIcon className=" sm:h-16 sm:w-16 h-24 w-24 text-white"/>
          
        </div>
        <p  className=" sm:text-xs capitalize text-center font-semibold text-blue">{e}</p>
@@ -21,7 +21,7 @@ const Document = () => {
         
         :<Link to="/dts/home/letter2/"  className=" flex flex-col gap-2 hover:scale-[1.01] items-center transition-all duration-150 cursor-pointer">
         <div className={id%2==0?" sm:h-[100px] sm:w-[100px]  bg-blue h-[150px] w-[150px] flex flex-col items-center px-5 justify-around rounded-full":" sm:h-[100px] sm:w-[100px]  bg-yellow h-[150px] w-[150px] flex flex-col items-center px-5 justify-around rounded-full"} >
-       <BookCopyIcon className=" sm:h-16 sm:w-16 h-24 w-24 text-bg"/>
+       <BookCopyIcon className=" sm:h-16 sm:w-16 h-24 w-24 text-white"/>
        
      </div>
      <p  className=" sm:text-xs capitalize text-center font-semibold text-blue">{e}</p>

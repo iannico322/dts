@@ -23,7 +23,7 @@ const Deactivated = () => {
     const handleSearch = (e:any)=>{
          setSearch(e.target.value)
 
-         window.history.pushState(null, "", `/dts/admin/user?search=${e.target.value}`)
+         window.history.pushState(null, "", `/dts/admin/deactivate?search=${e.target.value}`)
          
 
     }
