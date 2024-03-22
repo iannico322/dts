@@ -6,7 +6,7 @@ import { AlertBox } from "@/components/alert/Alert";
 import { useParams,Link }  from 'react-router-dom';
 import { LoaderIcon } from "lucide-react";
 
-import logo from "../../assets/images/DICT-Banner-Logo.webp";
+import logo from "../../../assets/images/DICT-Banner-Logo.webp";
 
 const ResetPassword = () => {
   const key = useParams()
