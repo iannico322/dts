@@ -1,11 +1,11 @@
-import bg from "../../assets/images/DICT-bg.webp";
-import logo from "../../assets/images/DICT-Banner-Logo.webp";
-import google from "../../assets/images/google.png";
+import bg from "../../../assets/images/DICT-bg.webp";
+import logo from "../../../assets/images/DICT-Banner-Logo.webp";
+import google from "../../../assets/images/google.png";
 import {  useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AlertBox } from "../../components/alert/Alert";
+import { AlertBox } from "../../../components/alert/Alert";
 
-import axios from "./../../plugin/axios";
+import axios from "../../../plugin/axios";
 
 function LoginPage() {
   const navigate = useNavigate();

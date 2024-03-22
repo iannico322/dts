@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 import { useEffect, useState } from "react";
-import axios from "./../../plugin/axios"
+import axios from "../../../plugin/axios"
 import { AlertBox } from "@/components/alert/Alert";
 import { useParams,Link }  from 'react-router-dom';
 import { LoaderIcon } from "lucide-react";

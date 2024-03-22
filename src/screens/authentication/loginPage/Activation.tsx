@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import axios from "./../../plugin/axios";
+import axios from "../../../plugin/axios";
 import { useNavigate, useParams }  from 'react-router-dom';
 import logo from "../../assets/images/DICT-Banner-Logo.webp";
-import { AlertBox } from '../../components/alert/Alert';
+import { AlertBox } from '../../../components/alert/Alert';
 
 
 const Activation = () => {

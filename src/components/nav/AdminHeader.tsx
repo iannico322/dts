@@ -65,7 +65,7 @@ const AdminHeader = ({className}:any) => {
             {
               li: 'Offices',
               icon:OfficeIcon,
-              link: '/dts/admin/user/?search=',
+              link: '/dts/admin/offices',
             },
             {
               li: 'Office Designation',

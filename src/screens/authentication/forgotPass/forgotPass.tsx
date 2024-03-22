@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import axios from "./../../plugin/axios";
-import bg from './../../../src/assets/images/DICT-bg.webp'
-import banner from './../../../src/assets/images/DICT-Banner-Logo.webp'
+import axios from "../../../plugin/axios";
+import bg from './../../../../src/assets/images/DICT-bg.webp'
+import banner from './../../../../src/assets/images/DICT-Banner-Logo.webp'
 import { useEffect, useState } from "react";
 
 import { ArrowLeft } from "lucide-react";

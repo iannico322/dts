@@ -11,19 +11,19 @@ const sampleData = data;
 
 const columns: any = [
   {
-    Header: 'Username',
-    accessor: 'username',
+    Header: 'Bureau / Division',
+    accessor: 'division',
   },
   {
-    Header: 'Designation',
-    accessor: 'designation',
+    Header: 'No. Users',
+    accessor: 'nouser',
   },
   {
-    Header: 'Phone Number',
-    accessor: 'phoneNumber',
+    Header: 'Address',
+    accessor: 'address',
   },
   {
-    Header: 'Email',
+    Header: 'Office Email',
     accessor: 'email',
   },
   {
@@ -128,7 +128,7 @@ function MyTable({ search }: any) {
                           </button>
                           <button className=' rounded-[4px] border-[1px] w-1/2  hover:bg-opacity-50 text-xs border-textR bg-bgR text-textR font-md px-2 py-1 sm:px-1 sm:py-1'>
                             <TrashIcon className=' h-2 w-2 hidden sm:flex' />
-                            <p className=' sm:hidden truncate'>DEACTIVATE</p>
+                            <p className=' sm:hidden truncate'>Delete</p>
 
                           </button>
                         </td>

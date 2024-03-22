@@ -16,15 +16,22 @@ const Developers= lazy(() =>
   wait(1300).then(() => import("./screens/developersPage/Developers.tsx"))
 );
 
+
 const AdminPage= lazy(() =>
   wait(1300).then(() => import("./screens/adminPage/AdminPage.tsx"))
 );
 const AdminDashboard= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/dashboard/Dashboard.tsx"))
 );
-
+const AdminUsers= lazy(() =>
+  wait(1300).then(() => import("./screens/adminPage/userManagement/Users/Users.tsx"))
+)
 const Deactivated= lazy(() =>
   wait(500).then(() => import("./screens/adminPage/userManagement/Deactivation/Deactivated.tsx"))
+);
+
+const Offices= lazy(() =>
+  wait(500).then(() => import("./screens/adminPage/officeManagement/Offices/Offices.tsx"))
 );
 
 const AdminProfile= lazy(() =>
@@ -34,27 +41,34 @@ const AdminProfile= lazy(() =>
 const Feedback= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
 )
-const AdminUsers= lazy(() =>
-  wait(1300).then(() => import("./screens/adminPage/userManagement/Users/Users.tsx"))
-)
+
 
 
 
 const LoginPage= lazy(() =>
-  wait(1300).then(() => import("./screens/loginPage/LoginPage.tsx"))
+  wait(1300).then(() => import("./screens/authentication/loginPage/LoginPage.tsx"))
 );
 const  Activation= lazy(() =>
-  wait(1300).then(() => import("./screens/loginPage/Activation.tsx"))
+  wait(1300).then(() => import("./screens/authentication/loginPage/Activation.tsx"))
 );
 
 
 const ForgotPasswordPage= lazy(() =>
-  wait(1300).then(() => import("./screens/forgotPass/forgotPass.tsx"))
+  wait(1300).then(() => import("./screens/authentication/forgotPass/forgotPass.tsx"))
 );
 const ResetPassword= lazy(() =>
-  wait(1300).then(() => import("./screens/forgotPass/ResetPass.tsx"))
+  wait(1300).then(() => import("./screens/authentication/forgotPass/ResetPass.tsx"))
 );
 
+const HomePage= lazy(() =>
+  wait(1300).then(() => import("./screens/homePage/HomePage.tsx"))
+);
+const Dashboard= lazy(() =>
+  wait(1300).then(() => import("./screens/homePage/dashboard/Dashboard.tsx"))
+);
+const Document= lazy(() =>
+  wait(500).then(() => import("./screens/homePage/document/Document.tsx"))
+);
 const Letter= lazy(() =>
   wait(500).then(() => import("./screens/homePage/document/letter/Letter.tsx"))
 );
@@ -62,17 +76,19 @@ const Letter2= lazy(() =>
   wait(500).then(() => import("./screens/homePage/document/letter/Letter2.tsx"))
 );
 
-const Document= lazy(() =>
-  wait(500).then(() => import("./screens/homePage/document/Document.tsx"))
+
+
+const ReceivePage= lazy(() =>
+  wait(1300).then(() => import("./screens/receiverPage/ReceiverPage.tsx"))
 );
 
-const Dashboard= lazy(() =>
-  wait(1300).then(() => import("./screens/homePage/dashboard/Dashboard.tsx"))
+const RDashboard= lazy(() =>
+  wait(500).then(() => import("./screens/receiverPage/dashboard/Dashboard.tsx"))
 );
 
-const HomePage= lazy(() =>
-  wait(1300).then(() => import("./screens/homePage/HomePage.tsx"))
-);
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -171,6 +187,38 @@ const router = createBrowserRouter([
   ]
   ,
   },
+
+  {
+    path: "/dts/receive",
+    element: <>
+    <Suspense fallback={<Loader />}>
+      <ReceivePage />
+    </Suspense>
+  </>,
+    children: [
+    {
+      path: "/dts/receive/", 
+      element: <Navigate to="/dts/receive/dashboard/" />, 
+    },
+    {
+      path: "/dts/receive/dashboard/",
+      element:  <>
+      <Suspense fallback={<Loader />}>
+        <RDashboard />
+      </Suspense>
+    </>,
+    }
+
+
+  ]
+  ,
+  },
+  
+ 
+
+
+
+
   {
     path: "/dts/admin/",
     element: <>
@@ -199,6 +247,12 @@ const router = createBrowserRouter([
       path: "/dts/admin/deactivate", 
       element: <Suspense fallback={<UsersLoader />}>
       <Deactivated />
+    </Suspense>, 
+    },
+    {
+      path: "/dts/admin/offices", 
+      element: <Suspense fallback={<UsersLoader />}>
+      <Offices />
     </Suspense>, 
     },
     {

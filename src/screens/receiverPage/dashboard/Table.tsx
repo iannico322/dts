@@ -1,7 +1,7 @@
 // MyTable.tsx
 
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
-import data from '../userData.json'
+import data from './userData.json'
 import { useEffect } from 'react';
 import { PencilIcon, TrashIcon } from 'lucide-react';
 
@@ -167,7 +167,7 @@ function MyTable({ search }: any) {
         </button>
       </div>
 
-      <div className=' sm:hidden  h-[10%] k w-full items-center bottom-0 self-center mb-2 flex justify-center gap-4 sm:gap-2 mt-2 bg-blueTable-100 text-center'>
+      <div className=' sm:hidden  h-[100px] k w-full items-center bottom-0 self-center mb-2 flex justify-center gap-4 sm:gap-2 mt-2 bg-blueTable-100 text-center'>
         <button onClick={() => previousPage()} disabled={!canPreviousPage} className='className="flex items-center gap-2 px-6 sm:px-3 sm:p-3 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-900/10 active:bg-orange
                                     disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"
