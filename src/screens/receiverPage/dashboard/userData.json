@@ -1,418 +1,182 @@
 [
   {
-    "username": "Joone Copper",
-    "designation": "Developer",
-    "phoneNumber": "090567698",
-    "email": "joone@example.com",
-    "region": "I",
-    "status": "Active"
-  },
+    "tracknumber": "LTR20242204",
+    "title": "Work From Home Request",
+    "requestor": "John Doe",
+    "doctype": "Work From Home",
+    "datesubmitted": "April 15, 2024",
+    "status": "waiting"
+},
+{
+    "tracknumber": "LTR20242205",
+    "title": "Travel Authorization",
+    "requestor": "Jane Smith",
+    "doctype": "Travel",
+    "datesubmitted": "April 22, 2024",
+    "status": "ongoing"
+},
+{
+    "tracknumber": "LTR20242206",
+    "title": "Overtime Approval",
+    "requestor": "Emily Davis",
+    "doctype": "Overtime",
+    "datesubmitted": "April 05, 2024",
+    "status": "accepted"
+},
+{
+    "tracknumber": "LTR20242207",
+    "title": "Annual Leave Request",
+    "requestor": "Michael Johnson",
+    "doctype": "Annual Leave",
+    "datesubmitted": "April 18, 2024",
+    "status": "waiting"
+},
+{
+    "tracknumber": "LTR20242208",
+    "title": "Letter for Sick Leave",
+    "requestor": "Gia C. Sumagang",
+    "doctype": "Sick Leave",
+    "datesubmitted": "April 10, 2024",
+    "status": "ongoing"
+},
+{
+    "tracknumber": "LTR20242209",
+    "title": "Work From Home Request",
+    "requestor": "John Doe",
+    "doctype": "Work From Home",
+    "datesubmitted": "April 20, 2024",
+    "status": "accepted"
+},
+{
+    "tracknumber": "LTR20242210",
+    "title": "Travel Authorization",
+    "requestor": "Jane Smith",
+    "doctype": "Travel",
+    "datesubmitted": "April 25, 2024",
+    "status": "waiting"
+},
+{
+    "tracknumber": "LTR20242211",
+    "title": "Overtime Approval",
+    "requestor": "Emily Davis",
+    "doctype": "Overtime",
+    "datesubmitted": "April 08, 2024",
+    "status": "ongoing"
+},
+{
+    "tracknumber": "LTR20242212",
+    "title": "Annual Leave Request",
+    "requestor": "Michael Johnson",
+    "doctype": "Annual Leave",
+    "datesubmitted": "April 12, 2024",
+    "status": "accepted"
+},
+{
+    "tracknumber": "LTR20242213",
+    "title": "Letter for Sick Leave",
+    "requestor": "Gia C. Sumagang",
+    "doctype": "Sick Leave",
+    "datesubmitted": "April 17, 2024",
+    "status": "waiting"
+},
+{
+  "tracknumber": "LTR20242213",
+  "title": "Letter for Sick Leave",
+  "requestor": "Gia C. Sumagang",
+  "doctype": "Sick Leave",
+  "datesubmitted": "April 17, 2024",
+  "status": "waiting"
+},
+{
+  "tracknumber": "LTR20242213",
+  "title": "Letter for Sick Leave",
+  "requestor": "Gia C. Sumagang",
+  "doctype": "Sick Leave",
+  "datesubmitted": "April 17, 2024",
+  "status": "waiting"
+}
+
+
+,
   {
-    "username": "Alice Smith",
-    "designation": "Designer",
-    "phoneNumber": "091234567",
-    "email": "alice@example.com",
-    "region": "II",
-    "status": "Active"
-  },
-  {
-    "username": "Bob Johnson",
-    "designation": "QA Engineer",
-    "phoneNumber": "092345678",
-    "email": "bob@example.com",
-    "region": "III",
-    "status": "Active"
-  },
-  {
-    "username": "Charlie Brown",
-    "designation": "Product Manager",
-    "phoneNumber": "093456789",
-    "email": "charlie@example.com",
-    "region": "IV",
-    "status": "Active"
-  },
-  {
-    "username": "Diana Lee",
-    "designation": "Data Analyst",
-    "phoneNumber": "094567890",
-    "email": "diana@example.com",
-    "region": "V",
-    "status": "Active"
-  },
-  {
-    "username": "Eva Garcia",
-    "designation": "Marketing Specialist",
-    "phoneNumber": "095678901",
-    "email": "eva@example.com",
-    "region": "I",
-    "status": "Active"
-  },
-  {
-    "username": "Frank Adams",
-    "designation": "Sales Representative",
-    "phoneNumber": "096789012",
-    "email": "frank@example.com",
-    "region": "II",
-    "status": "Active"
-  },
-  {
-    "username": "Grace Kim",
-    "designation": "HR Manager",
-    "phoneNumber": "097890123",
-    "email": "grace@example.com",
-    "region": "III",
-    "status": "Active"
-  },
-  {
-    "username": "Henry Martinez",
-    "designation": "Finance Director",
-    "phoneNumber": "098901234",
-    "email": "henry@example.com",
-    "region": "IV",
-    "status": "Active"
-  },
-  {
-    "username": "Isabel Lopez",
-    "designation": "Operations Lead",
-    "phoneNumber": "099012345",
-    "email": "isabel@example.com",
-    "region": "V",
-    "status": "Active"
-  },
-  {
-    "username": "Jack Lee",
-    "designation": "Software Engineer",
-    "phoneNumber": "099123456",
-    "email": "jack@example.com",
-    "region": "VI",
-    "status": "Active"
-  },
-  {
-    "username": "Karen Wang",
-    "designation": "Product Owner",
-    "phoneNumber": "099234567",
-    "email": "karen@example.com",
-    "region": "VII",
-    "status": "Active"
-  },
-  {
-    "username": "Liam Rodriguez",
-    "designation": "Data Scientist",
-    "phoneNumber": "099345678",
-    "email": "liam@example.com",
-    "region": "VIII",
-    "status": "Active"
-  },
-  {
-    "username": "Mia Hernandez",
-    "designation": "UX Designer",
-    "phoneNumber": "099456789",
-    "email": "mia@example.com",
-    "region": "IX",
-    "status": "Active"
-  },
-  {
-    "username": "Noah Kim",
-    "designation": "Business Analyst",
-    "phoneNumber": "099567890",
-    "email": "noah@example.com",
-    "region": "X",
-    "status": "Active"
-  },
-  {
-    "username": "Olivia Garcia",
-    "designation": "Marketing Manager",
-    "phoneNumber": "099678901",
-    "email": "olivia@example.com",
-    "region": "XI",
-    "status": "Active"
-  },
-  {
-    "username": "Patrick Nguyen",
-    "designation": "DevOps Engineer",
-    "phoneNumber": "099789012",
-    "email": "patrick@example.com",
-    "region": "XII",
-    "status": "Active"
-  },
-  {
-    "username": "Quinn Patel",
-    "designation": "Project Manager",
-    "phoneNumber": "099890123",
-    "email": "quinn@example.com",
-    "region": "XIII",
-    "status": "Active"
-  },
-  {
-    "username": "Rachel Smith",
-    "designation": "Technical Writer",
-    "phoneNumber": "099901234",
-    "email": "rachel@example.com",
-    "region": "XIV",
-    "status": "Active"
-  },
-  {
-    "username": "Samuel Brown",
-    "designation": "Frontend Developer",
-    "phoneNumber": "099012345",
-    "email": "samuel@example.com",
-    "region": "XV",
-    "status": "Active"
-  },
-  {
-    "username": "Diana Lee",
-    "designation": "Data Analyst",
-    "phoneNumber": "094567890",
-    "email": "diana@example.com",
-    "region": "V",
-    "status": "Active"
-  },
-  {
-    "username": "Eva Garcia",
-    "designation": "Marketing Specialist",
-    "phoneNumber": "095678901",
-    "email": "eva@example.com",
-    "region": "I",
-    "status": "Active"
-  },
-  {
-    "username": "Frank Adams",
-    "designation": "Sales Representative",
-    "phoneNumber": "096789012",
-    "email": "frank@example.com",
-    "region": "II",
-    "status": "Active"
-  },
-  {
-    "username": "Grace Kim",
-    "designation": "HR Manager",
-    "phoneNumber": "097890123",
-    "email": "grace@example.com",
-    "region": "III",
-    "status": "Active"
-  },
-  {
-    "username": "Henry Martinez",
-    "designation": "Finance Director",
-    "phoneNumber": "098901234",
-    "email": "henry@example.com",
-    "region": "IV",
-    "status": "Active"
-  },
-  {
-    "username": "Isabel Lopez",
-    "designation": "Operations Lead",
-    "phoneNumber": "099012345",
-    "email": "isabel@example.com",
-    "region": "V",
-    "status": "Active"
-  },
-  {
-    "username": "Jack Lee",
-    "designation": "Software Engineer",
-    "phoneNumber": "099123456",
-    "email": "jack@example.com",
-    "region": "VI",
-    "status": "Active"
-  },
-  {
-    "username": "Karen Wang",
-    "designation": "Product Owner",
-    "phoneNumber": "099234567",
-    "email": "karen@example.com",
-    "region": "VII",
-    "status": "Active"
-  },
-  {
-    "username": "Liam Rodriguez",
-    "designation": "Data Scientist",
-    "phoneNumber": "099345678",
-    "email": "liam@example.com",
-    "region": "VIII",
-    "status": "Active"
-  },
-  {
-    "username": "Mia Hernandez",
-    "designation": "UX Designer",
-    "phoneNumber": "099456789",
-    "email": "mia@example.com",
-    "region": "IX",
-    "status": "Active"
-  },
-  {
-    "username": "Noah Kim",
-    "designation": "Business Analyst",
-    "phoneNumber": "099567890",
-    "email": "noah@example.com",
-    "region": "X",
-    "status": "Active"
-  },
-  {
-    "username": "Olivia Garcia",
-    "designation": "Marketing Manager",
-    "phoneNumber": "099678901",
-    "email": "olivia@example.com",
-    "region": "XI",
-    "status": "Active"
-  },
-  {
-    "username": "Patrick Nguyen",
-    "designation": "DevOps Engineer",
-    "phoneNumber": "099789012",
-    "email": "patrick@example.com",
-    "region": "XII",
-    "status": "Active"
-  },
-  {
-    "username": "Quinn Patel",
-    "designation": "Project Manager",
-    "phoneNumber": "099890123",
-    "email": "quinn@example.com",
-    "region": "XIII",
-    "status": "Active"
-  },
-  {
-    "username": "Rachel Smith",
-    "designation": "Technical Writer",
-    "phoneNumber": "099901234",
-    "email": "rachel@example.com",
-    "region": "XIV",
-    "status": "Active"
-  },
-  {
-    "username": "Samuel Brown",
-    "designation": "Frontend Developer",
-    "phoneNumber": "099012345",
-    "email": "samuel@example.com",
-    "region": "XV",
-    "status": "Active"
-  },
-  {
-    "username": "Diana Lee",
-    "designation": "Data Analyst",
-    "phoneNumber": "094567890",
-    "email": "diana@example.com",
-    "region": "V",
-    "status": "Active"
-  },
-  {
-    "username": "Eva Garcia",
-    "designation": "Marketing Specialist",
-    "phoneNumber": "095678901",
-    "email": "eva@example.com",
-    "region": "I",
-    "status": "Active"
-  },
-  {
-    "username": "Frank Adams",
-    "designation": "Sales Representative",
-    "phoneNumber": "096789012",
-    "email": "frank@example.com",
-    "region": "II",
-    "status": "Active"
-  },
-  {
-    "username": "Grace Kim",
-    "designation": "HR Manager",
-    "phoneNumber": "097890123",
-    "email": "grace@example.com",
-    "region": "III",
-    "status": "Active"
-  },
-  {
-    "username": "Henry Martinez",
-    "designation": "Finance Director",
-    "phoneNumber": "098901234",
-    "email": "henry@example.com",
-    "region": "IV",
-    "status": "Active"
-  },
-  {
-    "username": "Isabel Lopez",
-    "designation": "Operations Lead",
-    "phoneNumber": "099012345",
-    "email": "isabel@example.com",
-    "region": "V",
-    "status": "Active"
-  },
-  {
-    "username": "Jack Lee",
-    "designation": "Software Engineer",
-    "phoneNumber": "099123456",
-    "email": "jack@example.com",
-    "region": "VI",
-    "status": "Active"
-  },
-  {
-    "username": "Karen Wang",
-    "designation": "Product Owner",
-    "phoneNumber": "099234567",
-    "email": "karen@example.com",
-    "region": "VII",
-    "status": "Active"
-  },
-  {
-    "username": "Liam Rodriguez",
-    "designation": "Data Scientist",
-    "phoneNumber": "099345678",
-    "email": "liam@example.com",
-    "region": "VIII",
-    "status": "Active"
-  },
-  {
-    "username": "Mia Hernandez",
-    "designation": "UX Designer",
-    "phoneNumber": "099456789",
-    "email": "mia@example.com",
-    "region": "IX",
-    "status": "Active"
-  },
-  {
-    "username": "Noah Kim",
-    "designation": "Business Analyst",
-    "phoneNumber": "099567890",
-    "email": "noah@example.com",
-    "region": "X",
-    "status": "Active"
-  },
-  {
-    "username": "Olivia Garcia",
-    "designation": "Marketing Manager",
-    "phoneNumber": "099678901",
-    "email": "olivia@example.com",
-    "region": "XI",
-    "status": "Active"
-  },
-  {
-    "username": "Patrick Nguyen",
-    "designation": "DevOps Engineer",
-    "phoneNumber": "099789012",
-    "email": "patrick@example.com",
-    "region": "XII",
-    "status": "Active"
-  },
-  {
-    "username": "Quinn Patel",
-    "designation": "Project Manager",
-    "phoneNumber": "099890123",
-    "email": "quinn@example.com",
-    "region": "XIII",
-    "status": "Active"
-  },
-  {
-    "username": "Rachel Smith",
-    "designation": "Technical Writer",
-    "phoneNumber": "099901234",
-    "email": "rachel@example.com",
-    "region": "XIV",
-    "status": "Active"
-  },
-  {
-    "username": "Samuel Brown",
-    "designation": "Frontend Developer",
-    "phoneNumber": "099012345",
-    "email": "samuel@example.com",
-    "region": "XV",
-    "status": "Active"
-  }
+    "tracknumber": "LTR20242204",
+    "title": "Work From Home Request",
+    "requestor": "John Doe",
+    "doctype": "Work From Home",
+    "datesubmitted": "April 15, 2024",
+    "status": "waiting"
+},
+{
+    "tracknumber": "LTR20242205",
+    "title": "Travel Authorization",
+    "requestor": "Jane Smith",
+    "doctype": "Travel",
+    "datesubmitted": "April 22, 2024",
+    "status": "ongoing"
+},
+{
+    "tracknumber": "LTR20242206",
+    "title": "Overtime Approval",
+    "requestor": "Emily Davis",
+    "doctype": "Overtime",
+    "datesubmitted": "April 05, 2024",
+    "status": "accepted"
+},
+{
+    "tracknumber": "LTR20242207",
+    "title": "Annual Leave Request",
+    "requestor": "Michael Johnson",
+    "doctype": "Annual Leave",
+    "datesubmitted": "April 18, 2024",
+    "status": "waiting"
+},
+{
+    "tracknumber": "LTR20242208",
+    "title": "Letter for Sick Leave",
+    "requestor": "Gia C. Sumagang",
+    "doctype": "Sick Leave",
+    "datesubmitted": "April 10, 2024",
+    "status": "ongoing"
+},
+{
+    "tracknumber": "LTR20242209",
+    "title": "Work From Home Request",
+    "requestor": "John Doe",
+    "doctype": "Work From Home",
+    "datesubmitted": "April 20, 2024",
+    "status": "accepted"
+},
+{
+    "tracknumber": "LTR20242210",
+    "title": "Travel Authorization",
+    "requestor": "Jane Smith",
+    "doctype": "Travel",
+    "datesubmitted": "April 25, 2024",
+    "status": "waiting"
+},
+{
+    "tracknumber": "LTR20242211",
+    "title": "Overtime Approval",
+    "requestor": "Emily Davis",
+    "doctype": "Overtime",
+    "datesubmitted": "April 08, 2024",
+    "status": "ongoing"
+},
+{
+    "tracknumber": "LTR20242212",
+    "title": "Annual Leave Request",
+    "requestor": "Michael Johnson",
+    "doctype": "Annual Leave",
+    "datesubmitted": "April 12, 2024",
+    "status": "accepted"
+},
+{
+    "tracknumber": "LTR20242213",
+    "title": "Letter for Sick Leave",
+    "requestor": "Gia C. Sumagang",
+    "doctype": "Sick Leave",
+    "datesubmitted": "April 17, 2024",
+    "status": "waiting"
+}
+
 ]

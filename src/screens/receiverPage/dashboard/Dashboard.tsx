@@ -11,7 +11,7 @@ const Dashboard = () => {
      <div className=" h-screen w-full flex justify-center gap-4 flex-wrap">
 
       
-       <div className=' w-full h-[60%] mt-[150px] mb-[200px]  flex   justify-center'>
+       <div className=' w-full h-[90%]  mt-[200px] mb-[200px]  flex   justify-center'>
         <TableTabs />
        </div>
         

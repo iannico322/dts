@@ -3,32 +3,34 @@
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
 import data from './userData.json'
 import { useEffect } from 'react';
-import { PencilIcon, TrashIcon } from 'lucide-react';
+
+import Sent from './../../../assets/icons/sent.png'
 
 
 
 const sampleData = data;
 
+
 const columns: any = [
   {
-    Header: 'Username',
-    accessor: 'username',
+    Header: 'Track Number',
+    accessor: 'tracknumber',
   },
   {
-    Header: 'Designation',
-    accessor: 'designation',
+    Header: 'Title',
+    accessor: 'title',
   },
   {
-    Header: 'Phone Number',
-    accessor: 'phoneNumber',
+    Header: 'Requestor',
+    accessor: 'requestor',
   },
   {
-    Header: 'Email',
-    accessor: 'email',
+    Header: 'Document Type',
+    accessor: 'doctype',
   },
   {
-    Header: 'Region',
-    accessor: 'region',
+    Header: 'Date Submitted',
+    accessor: 'datesubmitted',
   },
   {
     Header: 'Status',
@@ -75,11 +77,11 @@ function MyTable({ search }: any) {
   }, [search])
 
   return (
-    <div className=' flex flex-col h-full w-full justify-between'>
+    <div className=' relative flex flex-col h-[80%] w-full overflow-hidden justify-between'>
 
       <div className='overflow-hidden'>
         <table {...getTableProps()} className='w-full text-xs font-light table-fixed'>
-          <thead className='text-violet1 h-[20px]'>
+          <thead className='text-[#0077FF] h-[20px]'>
             {headerGroups.map((headerGroup: any) => (
               <tr {...headerGroup.getHeaderGroupProps()} className='border-b border-[#00000013] text-sm'>
                 {headerGroup.headers.map((column: any) => (
@@ -105,33 +107,38 @@ function MyTable({ search }: any) {
             ))}
           </thead>
         </table>
-        <div className='overflow-y-auto overflow-x-hidden  min-h-[300px] h-full pb-10 pr '>
+        <div className='overflow-y-auto overflow-x-hidden  min-h-[100px] h-full '>
           <table className='w-full text-xs font-light table-fixed'>
             <tbody {...getTableBodyProps()} className='overflow-hidden w-full'>
-              {page.map((row: any) => {
+              {page.map((row: any,key:any) => {
                 prepareRow(row);
                 return (
                   <tr
                     {...row.getRowProps()}
-                    className='hover:bg-blue3/10 h-10 border-b border-[#00000013] text-sm font-medium'
+                    className={key%2==0?' cursor-pointer hover:bg-[#ffe34638] h-10 border-b border-[#00000013] text-sm font-medium bg-[#e8ebef]':' cursor-pointer hover:bg-[#ffe34638] border-b border-[#00000013] text-sm font-medium bg-[#d0d7df]'}
                   >
                     {row.cells.map((cell: any) =>
 
                     (
-                      !(cell.column.id == "status") ? <td key={cell.column.id} className='h-10 pl-4 py-4 text-left truncate'> {/* Add truncate class */}
-                        {cell.render('Cell')}
-                      </td> :
-                        <td key={cell.column.id} className=" box-border relative h-full w-full  items-center   py-4 sm:py-2 text-center flex gap-3 sm:gap-1 justify-between sm:flex-col">
-                          <button className='rounded-[4px]   border-[1px] text-xs w-1/2 border-textY bg-bgY text-textY font-md px-2 py-1 sm:py-1 sm:px-1 hover:bg-opacity-50 sm:items-center sm:justify-center'>
-                            <PencilIcon className=' h-2 w-2 hidden sm:flex' />
-                            <p className=' sm:hidden truncate '>UPDATE</p>
-                          </button>
-                          <button className=' rounded-[4px] border-[1px] w-1/2  hover:bg-opacity-50 text-xs border-textR bg-bgR text-textR font-md px-2 py-1 sm:px-1 sm:py-1'>
-                            <TrashIcon className=' h-2 w-2 hidden sm:flex' />
-                            <p className=' sm:hidden truncate'>DEACTIVATE</p>
+                      cell.column.Header == "Track Number"?
+                    
+                    
+                    <td key={cell.column.id} className=' h-10 pl-4 py-4 text-left text-[#163961] font-semibold truncate'> {/* Add truncate class */}
 
-                          </button>
-                        </td>
+                    <div className=' flex items-center gap-2'>
+                      <img src={Sent} className=' h-4 object-contain' alt="" />
+                        {cell.render('Cell')}
+                    </div>
+                     
+                      </td> :
+
+                      <td key={cell.column.id} className='h-10 pl-4 py-4 font-semibold text-[#163961] text-left truncate'> {/* Add truncate class */}
+                      {cell.render('Cell')}
+                      </td> 
+                      
+                    
+                      
+                       
                     )
 
 
