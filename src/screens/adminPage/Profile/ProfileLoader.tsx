@@ -40,7 +40,7 @@ const ProfileLoader = () => {
                 {/* container */}
                 <div className=" grid lg:grid-col-span-6 grid-cols-4 w-full h-full gap-4">
 
-                    {genInfo.map((e, key) => {
+                    {genInfo.map((_e, key) => {
                         return (
                             <div className="lg:col-span-2 col-span-1 flex flex-col justify-center h-[70px] w-full pl-4 mt-3 mr-2 bg-slate-400 rounded-xl animate-pulse"
                             key={key}>

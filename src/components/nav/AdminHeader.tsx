@@ -11,17 +11,10 @@ import OfficeManagementIcon from './../../assets/icons/officeManagement.png'
 import OfficeIcon from './../../assets/icons/offices.png'
 import OfficeGo from './../../assets/icons/officeGo.png'
 
-import Audit from './../../assets/icons/auditing.png'
 
 import OthersIcon from './../../assets/icons/others.png'
 import ProfileIcon from './../../assets/icons/profileIcon.png'
-import FeedbackIcon from './../../assets/icons/feedback.png'
 import LogoutIcon from './../../assets/icons/logout.png'
-
-
-
-
-
 
 
 
