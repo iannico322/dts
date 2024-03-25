@@ -11,6 +11,8 @@ import OfficeManagementIcon from './../../assets/icons/officeManagement.png'
 import OfficeIcon from './../../assets/icons/offices.png'
 import OfficeGo from './../../assets/icons/officeGo.png'
 
+import Audit from './../../assets/icons/auditing.png'
+
 import OthersIcon from './../../assets/icons/others.png'
 import ProfileIcon from './../../assets/icons/profileIcon.png'
 import FeedbackIcon from './../../assets/icons/feedback.png'
@@ -75,20 +77,18 @@ const AdminHeader = ({className}:any) => {
           ]}
           />
           <Dropdown
-          head="Others"
-          headLogo={OthersIcon}
-          lists={[
-            {
-              li: 'Profile',
-              icon:ProfileIcon,
-              link: '/dts/admin/profile',
-            },
-            {
-              li: 'Feedbacks',
-              icon:FeedbackIcon,
-              link: '/dts/admin/feedbacks',
-            },
-          ]}
+          head="Profile"
+          headLogo={ProfileIcon}
+          direct="/dts/admin/Profile"
+          lists={[]}
+          
+          />
+
+          <Dropdown
+            head="Audit Trail"
+            headLogo={OthersIcon}
+            direct="/dts/admin/audit_trail"
+            lists={[]}
           />
            <Dropdown
           head="Logout"
