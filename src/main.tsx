@@ -91,11 +91,6 @@ const RDashboard= lazy(() =>
   wait(500).then(() => import("./screens/receiverPage/dashboard/Dashboard.tsx"))
 );
 
-const Completed= lazy(() =>
-  wait(500).then(() => import("./screens/receiverPage/completed/Completed.tsx"))
-);
-
-
 
 
 
@@ -217,22 +212,6 @@ const router = createBrowserRouter([
         <RDashboard />
       </Suspense>
     </>,
-    },
-    {
-      path: "/dts/receive/track",
-      element:  <>
-      <Suspense fallback={<Loader />}>
-        <RDashboard />
-      </Suspense>
-    </>,
-    },
-    {
-      path: "/dts/receive/completed",
-      element:  <>
-      <Suspense fallback={<Loader />}>
-        <Completed/>
-      </Suspense>
-    </>,
     }
 
 
@@ -283,7 +262,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/profile", 
-      element: <Suspense >
+      element: <Suspense fallback={<ProfileLoader />}>
       <AdminProfile />
     </Suspense>, 
     },

@@ -69,7 +69,7 @@ function Profile() {
 
 
                 {/* General Information */}
-                <div className=" flex flex-col w-full mt-4 ">
+                <div className=" flex flex-col w-full mt-4 lg:mt-10 ">
 
                     <p className=" text-textW text-[24px] font-normal ">General Information</p>
 
