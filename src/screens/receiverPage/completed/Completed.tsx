@@ -1,15 +1,53 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Letter from './Letter'
 
 import FileIcon from './../../../assets/icons/document-copy.png'
 import AR from './AR';
-
+import axios from './../../../plugin/axios';
 
 
 
 
 const Completed = () => {
+
+  const [data, setData] = useState<any[]>(JSON.parse(localStorage.getItem("data") || ""));
+
+   useEffect(  ()=>{
+
+    axios.get('document/all/',{
+      headers: {
+        Authorization: `Token c14e451b025ca2d62626252f33d229d66babc0a6 `,
+      }, 
+    }).then((e:any)=>{
+      localStorage.setItem('data',JSON.stringify(e.data ))
+      setData(e.data);
+    }).catch((e:any)=>{
+      console.log(e.data)
+    })
+
+    const interval = setInterval(() => {
+      axios.get('document/all/',{
+        headers: {
+          Authorization: `Token c14e451b025ca2d62626252f33d229d66babc0a6 `,
+        }, 
+      }).then((e:any)=>{
+        
+        localStorage.setItem('data',JSON.stringify(e.data ))
+        setData(e.data);
+      }).catch((e:any)=>{
+        console.log(e.data)
+      })
+    }, 2000); // 2000 milliseconds = 2 seconds
+  
+    // Clear the interval when the component is unmounted
+    return () => clearInterval(interval);
+
+   },[])
+
+   useEffect(() => {
+    localStorage.setItem('data',JSON.stringify(data))
+  }, [data]);
  
 
   const [activePage,setActivePage]=useState("Letter")
@@ -64,11 +102,7 @@ const Completed = () => {
         </nav>
 
         <main className=' relative h-[90%] w-full px-20 flex justify-center items-center'>
-            {navList.map((e:any,key:any)=>(
-              <div key={key} className={activePage==e.name?' flex h-full w-full':'hidden'}>
-                  {e.screen}
-              </div>
-            ))}
+             <Letter data={data.filter((item:any) => item.status  === 'Accepted') || []} />
         </main>
 
         

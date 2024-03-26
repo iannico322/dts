@@ -1,15 +1,11 @@
 // MyTable.tsx
 
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
-import data from './userData.json'
 import { useEffect, useState } from 'react';
 
 import Sent from './../../../assets/icons/sent.png'
 import { useLocation } from 'react-router-dom';
 import SearchIcon from './../../../assets/icons/search.png'
-
-
-const sampleData = data.filter(item => item.status === 'accepted');
 
 
 const columns: any = [
@@ -41,7 +37,7 @@ const columns: any = [
 
 
 
-function Letter() {
+function Letter({data}:any) {
 
   const {
     getTableProps,
@@ -62,7 +58,7 @@ function Letter() {
   }: any = useTable(
     {
       columns,
-      data: sampleData,
+      data: data,
 
     },
     useGlobalFilter,

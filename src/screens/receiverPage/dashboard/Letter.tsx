@@ -2,14 +2,16 @@
 
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
 
-import { useEffect, useState } from 'react';
 
 import Sent from './../../../assets/icons/sent.png'
 import { useLocation } from 'react-router-dom';
 import SearchIcon from './../../../assets/icons/search.png'
+import { useEffect, useState } from 'react';
 
-const data = JSON.parse(localStorage.getItem('data')||"");
-const sampleData = data.filter((item:any) => item.status === 'waiting');
+
+
+
+
 
 
 const columns: any = [
@@ -39,9 +41,14 @@ const columns: any = [
   },
 ];
 
+function Letter({data,setShow}:any) {
 
-
-function Letter() {
+ 
+//   const [data,setData] = useState([]);
+// useEffect(() => {
+//   console.log(data);
+//   localStorage.setItem("menus", JSON.stringify(data));
+// }, [data]);
 
   const {
     getTableProps,
@@ -62,7 +69,7 @@ function Letter() {
   }: any = useTable(
     {
       columns,
-      data: sampleData,
+      data: data,
 
     },
     useGlobalFilter,
@@ -154,9 +161,15 @@ function Letter() {
             <tbody {...getTableBodyProps()} className='overflow-hidden w-full'>
               {page.map((row: any,key:any) => {
                 prepareRow(row);
+
+
                 return (
                   <tr
                     {...row.getRowProps()}
+                    onClick={()=>{
+                      localStorage.setItem("selected",row.cells[0].value)
+                      setShow(true)
+                    }}
                     className={key%2==0?' cursor-pointer hover:bg-[#ffe34638] h-10 border-b border-[#00000013] text-sm font-medium bg-[#e8ebef]':' cursor-pointer hover:bg-[#ffe34638] border-b border-[#00000013] text-sm font-medium bg-[#d0d7df]'}
                   >
                     {row.cells.map((cell: any) =>

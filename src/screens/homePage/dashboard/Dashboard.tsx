@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
-     <div className=" min-h-screen w-full flex items-center justify-center gap-4 flex-wrap">
+     <div className=" h-full w-full  flex items-center justify-center gap-4 flex-wrap overflow-hidden">
 
        <div className=" animate__animated animate__fadeInUp  w-[1200px] flex flex-wrap justify-center gap-8 sm:gap-2 md:gap-4   ">
         <Link to="/dts/home/document/"  className='   sm:h-20   object-contain px-5 py-3 shadow-lg border-border border rounded-md cursor-pointer  flex flex-col items-center gap-1  hover:scale-[1.05] transition-all duration-400 justify-between'>

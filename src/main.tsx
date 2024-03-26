@@ -94,6 +94,10 @@ const RDashboard= lazy(() =>
 const Completed= lazy(() =>
   wait(500).then(() => import("./screens/receiverPage/completed/Completed.tsx"))
 );
+const  Track= lazy(() =>
+  wait(500).then(() => import("./screens/receiverPage/track/Track.tsx"))
+);
+
 
 
 
@@ -222,7 +226,7 @@ const router = createBrowserRouter([
       path: "/dts/receive/track",
       element:  <>
       <Suspense fallback={<Loader />}>
-        <RDashboard />
+        <Track />
       </Suspense>
     </>,
     },

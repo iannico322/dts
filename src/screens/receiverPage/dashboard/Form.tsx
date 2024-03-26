@@ -1,25 +1,49 @@
 import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
 import Message from "@/components/msg/successMessage"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ComboboxDemo } from "@/components/input/Dropdown";
 import InputTemp from "@/components/input/Input";
-import axios from "./../../../../plugin/axios";
+import axios from "./../../../plugin/axios";
 
 
-function Letter() {
+function Form({setShow}:any) {
 
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
     const [data,setData]= useState({
+      "id":"",
       "title": "",
-      "remarks":"ok",
-      "position":"",
       "type":"letter",
       "requestor": "",
       "doctype": "",
       "message":"",
+      "status":"",
+      "position":"",
+      "remarks": ""
   })
+
+    useEffect(()=>{
+
+      let dat = JSON.parse(localStorage.getItem("data") ||"")
+      dat =  dat.filter((item:any) => item.tracknumber  === localStorage.getItem("selected"))
+
+      setData(dat[0])
+      console.log(dat)
+
+      
+
+    },[])
+
+    useEffect(()=>{
+
+      console.log(data)
+
+      
+
+    },[data])
+
+    
+
+   
 
   const onChangeInput = (e: any) => {
 
@@ -39,7 +63,7 @@ function Letter() {
 
     const handleSubmit = (e:any) =>{
         e.preventDefault()
-        axios.post('document/all/',data,{
+        axios.put(`document/${data.id}`,{...data,status:"Accepted"},{
           headers: {
             Authorization: `Token c14e451b025ca2d62626252f33d229d66babc0a6 `,
           }, 
@@ -48,13 +72,15 @@ function Letter() {
           setShowSuccessMessage(true);
           setTimeout(() => setShowSuccessMessage(false), 3000)
           setData({
+            "id":"",
             "title": "",
-            "remarks":"ok",
-            "position":"",
             "type":"letter",
             "requestor": "",
             "doctype": "",
             "message":"",
+            "status":"",
+            "position":"",
+            "remarks": ""
         })
         }).catch((e:any)=>{
           console.log(e.data)
@@ -76,13 +102,15 @@ function Letter() {
         <div className=" relative animate__animated animate__fadeInUp w-[80%] sm:w-full sm:mx-5 max-w-[1366px] sm:px-2 px-10 border-dashed border border-blue/50 bg-white min-h-[200px] pb-5">
             <div className=" w-full flex items-center justify-between py-4 ">
                 <div className=" flex flex-col leading-2">
-                    <h1 className=" font-semibold text-base sm:text-xs">File Document Request</h1>
-                    <p className=" text-xs font-medium sm:text-[8px]">Please make sure to check all items before submitting</p>
+                    <h1 className=" font-semibold text-base sm:text-xs">Received File Details</h1>
+                    <p className=" text-xs font-medium sm:text-[8px]">Don’t forget to leave remarks of the before clicking Received</p>
                 </div>
                 
-                <Link to="/dts/home/document"  className=" flex items-center justify-center bg-[#FF9292] text-xs rounded-[5px] border-dashed border text-blue border-blue h-[20px] w-[80px] ">
-                        Cancel
-                </Link>
+                <div onClick={()=>{
+                  setShow(false)
+                }}  className=" flex items-center justify-center bg-[#FF9292] text-xs rounded-[5px] border-dashed border text-blue border-blue h-[20px] w-[80px] ">
+                        Back
+                </div>
             </div>
             <form className=" w-full border border-gray-500/20 rounded-[5px] px-5 py-8  grid grid-cols-3 gap-3  sm:grid-cols-1    " onSubmit={handleSubmit}>
                 <InputTemp label = "Name of the Requestor" placeholder="E.g Taylor Sheeesh" span="col-span-2 sm:col-span-1"
@@ -131,75 +159,18 @@ function Letter() {
 
                 pl
                 />
-                <InputTemp label = "Remarks" placeholder="E.g Signed" span="col-span-3 sm:col-span-1"
+                <InputTemp label = "Message from Sender" placeholder="E.g Signed" span="col-span-3 sm:col-span-1"
                 value={data.message}
                 name="message"
                 onChange={onChangeInput}
                 />
-                <ComboboxDemo
-                span=" col-span-3 sm:col-span-1 "
-                label="Receiver"
-                placeholder="Select name..."
-             
-                frameworks={[
-                  
-                      {
-                        label: "Angel",
-                      },
-                      {
-                        label: "Rose Mar",
-                      },
-                      {
-                        label: "Arnold",
-                      },{
-                        label: "Mark",
-                      },
-                      {
-                        label: "Angel",
-                      },
-                      {
-                        label: "Rose Mar",
-                      },
-                      {
-                        label: "Arnold",
-                      },{
-                        label: "Mark",
-                      },
-                      {
-                        label: "Angel",
-                      },
-                      {
-                        label: "Rose Mar",
-                      },
-                      {
-                        label: "Arnold",
-                      },{
-                        label: "Mark",
-                      },
-                      {
-                        label: "Angel",
-                      },
-                      {
-                        label: "Rose Mar",
-                      },
-                      {
-                        label: "Arnold",
-                      },{
-                        label: "Mark",
-                      },
-                      {
-                        label: "Angel",
-                      },
-                      {
-                        label: "Rose Mar",
-                      },
-                      {
-                        label: "Arnold",
-                      },
-                  ]}
 
-                
+<InputTemp label = "Remarks" placeholder="E.g Signed" span="col-span-3 sm:col-span-1"
+                value={data.remarks}
+                name="remarks"
+                onChange={onChangeInput}
                 />
+                
                
                 
                 
@@ -216,4 +187,4 @@ function Letter() {
   )
 }
 
-export default Letter
+export default Form

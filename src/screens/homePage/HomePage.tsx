@@ -1,19 +1,17 @@
 import Footer from "@/components/nav/Footer";
 import Header from "@/components/nav/Header";
-import { ThemeProvider } from "@/components/theme-provider";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 function HomePage() {
   const [navActive, setActive] = useState(false);
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <div className=" bg-background min-h-screen w-full overflow-hidden flex flex-col  items-center">
+      <div className="relative w-full flex flex-col h-screen  overflow-hidden bg-[#ffffff]  box-border">
         <Header navActive={navActive} setActive={setActive} />
         
 
         <div
-          className=" w-full h-full bg-[#ffffff]"
+          className=" relative flex-col h-full overflow-hidden"
           onClick={() => {
             console.log("hi");
             setActive(false);
@@ -24,7 +22,6 @@ function HomePage() {
 
         <Footer />
       </div>
-    </ThemeProvider>
   );
 }
 

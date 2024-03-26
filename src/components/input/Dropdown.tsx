@@ -19,15 +19,9 @@ import {
 } from "@/components/ui/popover"
 
 
-export function ComboboxDemo({frameworks,placeholder,label,span,setData}:any) {
+export function ComboboxDemo({frameworks,placeholder,label,span,docTypeCallback}:any) {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
-
-  React.useEffect(()=>{
-
-    setData
-
-  },[value])
 
   return (
     <div className={"w-full flex flex-col gap-1  " + span}>
@@ -57,7 +51,7 @@ export function ComboboxDemo({frameworks,placeholder,label,span,setData}:any) {
                 value={framework.label.toLowerCase()}
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue)
-                  
+                  docTypeCallback(currentValue)
                   setOpen(false)
                 }}
               >
