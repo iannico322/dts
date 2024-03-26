@@ -262,7 +262,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/dts/admin/profile", 
-      element: <Suspense fallback={<ProfileLoader />}>
+      element: <Suspense >
       <AdminProfile />
     </Suspense>, 
     },

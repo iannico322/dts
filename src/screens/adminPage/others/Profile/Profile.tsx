@@ -28,34 +28,34 @@ function Profile() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <div className="  w-full h-full justify-center items-center bg-adminBG md:p-8 p-16  ">
+        <div className="  w-full h-full justify-center items-center bg-adminBG md:p-0 p-0  ">
             
             {/* top side */}
             <div className="  w-full h-full ">
 
-                <p className=" text-textW text-[24px] font-normal mb-3  ">Profile</p>
+                <p className=" text-textW text-[24px] font-normal mb-3  ">Profile can't fast refresh</p>
 
                 {/* left top */}
-                <div className=" flex flex-row min-h-[200px] w-full lg:justify-center justify-between items-center lg:pl-0 pl-5 lg:flex-col ">
+                <div className=" flex flex-row min-h-[200px] w-full lg:justify-center justify-between items-center lg:pl-0 pl-5 lg:flex-col">
 
                     {/* admin name, email, profile pic */}
                     <div className=" flex flex-row items-center sm:w-full md:w-[80%] lg:w-[70%] w-full h-full lg:flex-col sm:px-0 lg:px-10 ">
 
                         {/* profile */}
-                        <div className=" z-20 flex justify-center items-center sm:w-[160px] sm:h-[160px] md:w-[100px] md:h-[100px] lg:w-[130px] lg:h-[130px] w-[170px] h-[170px] rounded-full">
+                        <div className=" bg-black z-20 flex justify-center items-center sm:w-[160px] sm:h-[160px] md:w-[100px] md:h-[100px] lg:w-[130px] lg:h-[130px] w-[170px] h-[170px] rounded-full">
                             <img className=" object-cover aspect-square w-full min-w-[120px] border-[10px] border-white rounded-full"
                                 src={profile}
                                 alt="profile"
                         />
                         </div>
 
-                        <div className=" z-10 flex flex-col  lg:justify-center lg:items-center  md:w-[100%] w-[400px] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
+                        <div className=" z-10 flex flex-col  lg:justify-center lg:items-center  md:w-[100%] w-[40%] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
                             <p className=" text-[#2B3674] text-[20px] font-semibold truncate">Administrator</p>
                             <p className=" text-[#A3AED0] text-[16px] truncate">admin.dts@dict.gov.ph</p>
                         </div>
 
                         {/* admin password */}
-                        <div className=" flex flex-col lg:justify-center lg:items-center  md:w-[100%]  w-[400px] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 ">
+                        <div className=" flex flex-col lg:justify-center lg:items-center  md:w-[100%]  w-[40%] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 ">
                             <div className=" flex flex-row w-full items-center lg:justify-center">
                                 <p className=" text-[#2B3674] text-[20px] font-semibold mr-1 truncate">Password</p>
                                 <PencilLine className=" text-adminBG h-[18px] w-[18px]" />
@@ -74,7 +74,7 @@ function Profile() {
                     <p className=" text-textW text-[24px] font-normal ">General Information</p>
 
                     {/* container */}
-                    <div className=" grid lg:grid-col-span-6 grid-cols-4 w-full h-full gap-4">
+                    <div className=" grid lg:grid-col-span-6 grid-cols-4 h-full ">
 
                         {genInfo.map((e) => {
                             return (
