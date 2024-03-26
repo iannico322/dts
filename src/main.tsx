@@ -7,9 +7,10 @@ import { Suspense, lazy } from "react";
 import NotFound from "./screens/notFound";
 import Loader from './components/loader/loader.tsx';
 import DashboardLoader from './screens/adminPage/dashboard/components/DashboardLoader.tsx';
-import ProfileLoader from './screens/adminPage/others/Profile/ProfileLoader.tsx';
+import ProfileLoader from './screens/adminPage/Profile/ProfileLoader.tsx';
 import UsersLoader from './screens/adminPage/userManagement/UsersLoader.tsx'
 import FeedbackLoader from './screens/adminPage/others/Feedbacks/FeedbackLoader.tsx';
+import AuditLoader from './screens/adminPage/auditTrail/auditLoader.tsx';
 
 
 const Developers= lazy(() =>
@@ -35,11 +36,15 @@ const Offices= lazy(() =>
 );
 
 const AdminProfile= lazy(() =>
-  wait(1300).then(() => import ("./screens/adminPage/others/Profile/Profile.tsx"))
+  wait(1300).then(() => import ("./screens/adminPage/Profile/Profile.tsx"))
 )
 
 const Feedback= lazy(() =>
   wait(1300).then(() => import ("./screens/adminPage/others/Feedbacks/Feedback.tsx"))
+)
+
+const Audit= lazy(() =>
+  wait(1300).then(() => import ("./screens/adminPage/auditTrail/audit.tsx"))
 )
 
 
@@ -286,6 +291,12 @@ const router = createBrowserRouter([
       path: "/dts/admin/feedbacks", 
       element: <Suspense fallback={<FeedbackLoader />}>
       <Feedback />
+    </Suspense>, 
+    },
+    {
+      path: "/dts/admin/audit_trail", 
+      element: <Suspense fallback={<AuditLoader />}>
+      <Audit />
     </Suspense>, 
     },
  

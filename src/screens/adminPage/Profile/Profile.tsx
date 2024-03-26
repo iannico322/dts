@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 
 
-import profile from '../../../../assets/images/profile.png'
+import profile from '../../../assets/images/profile.webp'
 
 import { PencilLine } from "lucide-react";
 
