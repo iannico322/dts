@@ -1,15 +1,15 @@
 // MyTable.tsx
 
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
-import data from './userData.json'
+
 import { useEffect, useState } from 'react';
 
 import Sent from './../../../assets/icons/sent.png'
 import { useLocation } from 'react-router-dom';
 import SearchIcon from './../../../assets/icons/search.png'
 
-
-const sampleData = data.filter(item => item.status === 'waiting');
+const data = JSON.parse(localStorage.getItem('data')||"");
+const sampleData = data.filter((item:any) => item.status === 'waiting');
 
 
 const columns: any = [

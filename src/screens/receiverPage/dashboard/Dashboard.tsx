@@ -18,7 +18,7 @@ const Dashboard = () => {
         Authorization: `Token 8eb01bb88da50b2e599b76c7397f3c57980dddeb `,
       }, 
     }).then((e:any)=>{
-      localStorage.setItem('data',e.data)
+      localStorage.setItem('data',JSON.stringify(e.data))
     }).catch((e:any)=>{
       console.log(e.data)
     })
