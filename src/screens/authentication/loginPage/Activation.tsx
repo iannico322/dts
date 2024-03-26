@@ -4,6 +4,8 @@ import { useNavigate, useParams }  from 'react-router-dom';
 import logo from "../../../assets/images/DICT-Banner-Logo.webp";
 import { AlertBox } from '../../../components/alert/Alert';
 
+import bg from './../../../../src/assets/images/DICT-bg.webp'
+
 
 const Activation = () => {
 
@@ -31,12 +33,16 @@ const Activation = () => {
   
   return (
     <div className='w-screen h-screen'>
-      <div className=' h-full bg-blue3 sm:h-full flex  w-full items-center  justify-center '>
+
+      {/* background image */}
+      <img className= " absolute z-10 w-full h-full object-cover " src={bg} alt="DICT_bg" />
+
+      <div className=' flex z-20 absolute h-full bg-[#163961] bg-opacity-80 sm:h-full w-full items-center justify-center '>
 
         <div className='text-gray-100  w-[60%] flex items-center flex-col gap-3 sm:w-[90%] '>
             <img src={logo} alt="" />
 
-          <hr className=' borde-b-[.4px] border-[#e8e8e8] w-[40%] my-4 min-w-[500px] sm:min-w-[200px] sm:my-2'  />
+          <hr className=' border-b-[.4px] border-[#e8e8e8] w-[40%] my-4 min-w-[500px] sm:min-w-[200px] sm:my-2'  />
 
           <p className='text-[60px] font-semibold sm:text-[40px] text-center '>{ok?"Successfully Activated ":"You're Almost There!"}</p>
 
@@ -51,7 +57,7 @@ const Activation = () => {
           
           style={{display:ok?" none":"flex"}}
           
-          className='px-10 py-3 text-lg font-semibold bg-gray-800 rounded-lg active:bg-opacity-75 sm:text-lg hover:bg-opacity-90 mt-9 '
+          className='px-10 py-3 text-textW bg-yellow cursor-pointer hover:bg-yellow/70  transition-all duration-200 active:scale-95 text-[18px] mt-9 rounded-full '
           
           
           onClick={()=>{
