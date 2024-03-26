@@ -19,11 +19,15 @@ import {
 } from "@/components/ui/popover"
 
 
-export function ComboboxDemo({frameworks,placeholder,label,span}:any) {
+export function ComboboxDemo({frameworks,placeholder,label,span,setData}:any) {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
 
- 
+  React.useEffect(()=>{
+
+    setData
+
+  },[value])
 
   return (
     <div className={"w-full flex flex-col gap-1  " + span}>
@@ -44,7 +48,7 @@ export function ComboboxDemo({frameworks,placeholder,label,span}:any) {
       </PopoverTrigger>
       <PopoverContent className="w-[500px] sm:w-[300px] p-0">
         <Command>
-          <CommandInput placeholder={placeholder} required />
+          <CommandInput placeholder={placeholder} required  name="requestor" />
           <CommandEmpty>{placeholder}</CommandEmpty>
           <CommandGroup className=" max-h-[140px] overflow-y-scroll">
             {frameworks.map((framework:any) => (
@@ -53,6 +57,7 @@ export function ComboboxDemo({frameworks,placeholder,label,span}:any) {
                 value={framework.label.toLowerCase()}
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue)
+                  
                   setOpen(false)
                 }}
               >
@@ -72,3 +77,4 @@ export function ComboboxDemo({frameworks,placeholder,label,span}:any) {
     </div>
   )
 }
+

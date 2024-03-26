@@ -2,14 +2,18 @@
   {
     "tracknumber": "LTR20242204",
     "title": "Work From Home Request",
+    "type":"Letter",
     "requestor": "John Doe",
     "doctype": "Work From Home",
+    "message":"Blabla",
+    "remarks":"Nice",
     "datesubmitted": "April 15, 2024",
     "status": "waiting"
 },
 {
     "tracknumber": "LTR20242205",
     "title": "Travel Authorization",
+    "type":"Letter",
     "requestor": "Jane Smith",
     "doctype": "Travel",
     "datesubmitted": "April 22, 2024",
@@ -18,6 +22,7 @@
 {
     "tracknumber": "LTR20242206",
     "title": "Overtime Approval",
+    "type":"Letter",
     "requestor": "Emily Davis",
     "doctype": "Overtime",
     "datesubmitted": "April 05, 2024",
@@ -26,6 +31,7 @@
 {
     "tracknumber": "LTR20242207",
     "title": "Annual Leave Request",
+    "type":"Letter",
     "requestor": "Michael Johnson",
     "doctype": "Annual Leave",
     "datesubmitted": "April 18, 2024",
@@ -34,6 +40,7 @@
 {
     "tracknumber": "LTR20242208",
     "title": "Letter for Sick Leave",
+    "type":"Letter",
     "requestor": "Gia C. Sumagang",
     "doctype": "Sick Leave",
     "datesubmitted": "April 10, 2024",
@@ -42,6 +49,7 @@
 {
     "tracknumber": "LTR20242209",
     "title": "Work From Home Request",
+    "type":"Letter",
     "requestor": "John Doe",
     "doctype": "Work From Home",
     "datesubmitted": "April 20, 2024",
@@ -50,6 +58,7 @@
 {
     "tracknumber": "LTR20242210",
     "title": "Travel Authorization",
+    "type":"Letter",
     "requestor": "Jane Smith",
     "doctype": "Travel",
     "datesubmitted": "April 25, 2024",
@@ -58,6 +67,7 @@
 {
     "tracknumber": "LTR20242211",
     "title": "Overtime Approval",
+    "type":"Letter",
     "requestor": "Emily Davis",
     "doctype": "Overtime",
     "datesubmitted": "April 08, 2024",
@@ -66,6 +76,7 @@
 {
     "tracknumber": "LTR20242212",
     "title": "Annual Leave Request",
+    "type":"Letter",
     "requestor": "Michael Johnson",
     "doctype": "Annual Leave",
     "datesubmitted": "April 12, 2024",
@@ -74,6 +85,7 @@
 {
     "tracknumber": "LTR20242213",
     "title": "Letter for Sick Leave",
+    "type":"Letter",
     "requestor": "Gia C. Sumagang",
     "doctype": "Sick Leave",
     "datesubmitted": "April 17, 2024",
@@ -82,6 +94,7 @@
 {
   "tracknumber": "LTR20242213",
   "title": "Letter for Sick Leave",
+  "type":"Letter",
   "requestor": "Gia C. Sumagang",
   "doctype": "Sick Leave",
   "datesubmitted": "April 17, 2024",
@@ -90,6 +103,7 @@
 {
   "tracknumber": "LTR20242213",
   "title": "Letter for Sick Leave",
+  "type":"Letter",
   "requestor": "Gia C. Sumagang",
   "doctype": "Sick Leave",
   "datesubmitted": "April 17, 2024",
@@ -101,6 +115,7 @@
   {
     "tracknumber": "LTR20242204",
     "title": "Work From Home Request",
+    "type":"Letter",
     "requestor": "John Doe",
     "doctype": "Work From Home",
     "datesubmitted": "April 15, 2024",
@@ -109,6 +124,7 @@
 {
     "tracknumber": "LTR20242205",
     "title": "Travel Authorization",
+    "type":"Letter",
     "requestor": "Jane Smith",
     "doctype": "Travel",
     "datesubmitted": "April 22, 2024",
@@ -117,6 +133,7 @@
 {
     "tracknumber": "LTR20242206",
     "title": "Overtime Approval",
+    "type":"Letter",
     "requestor": "Emily Davis",
     "doctype": "Overtime",
     "datesubmitted": "April 05, 2024",
@@ -125,6 +142,7 @@
 {
     "tracknumber": "LTR20242207",
     "title": "Annual Leave Request",
+    "type":"Letter",
     "requestor": "Michael Johnson",
     "doctype": "Annual Leave",
     "datesubmitted": "April 18, 2024",
@@ -133,6 +151,7 @@
 {
     "tracknumber": "LTR20242208",
     "title": "Letter for Sick Leave",
+    "type":"Letter",
     "requestor": "Gia C. Sumagang",
     "doctype": "Sick Leave",
     "datesubmitted": "April 10, 2024",
@@ -141,6 +160,7 @@
 {
     "tracknumber": "LTR20242209",
     "title": "Work From Home Request",
+    "type":"Letter",
     "requestor": "John Doe",
     "doctype": "Work From Home",
     "datesubmitted": "April 20, 2024",
@@ -149,6 +169,7 @@
 {
     "tracknumber": "LTR20242210",
     "title": "Travel Authorization",
+    "type":"Letter",
     "requestor": "Jane Smith",
     "doctype": "Travel",
     "datesubmitted": "April 25, 2024",
@@ -157,6 +178,7 @@
 {
     "tracknumber": "LTR20242211",
     "title": "Overtime Approval",
+    "type":"Letter",
     "requestor": "Emily Davis",
     "doctype": "Overtime",
     "datesubmitted": "April 08, 2024",
@@ -165,6 +187,7 @@
 {
     "tracknumber": "LTR20242212",
     "title": "Annual Leave Request",
+    "type":"Letter",
     "requestor": "Michael Johnson",
     "doctype": "Annual Leave",
     "datesubmitted": "April 12, 2024",
@@ -173,6 +196,7 @@
 {
     "tracknumber": "LTR20242213",
     "title": "Letter for Sick Leave",
+    "type":"Letter",
     "requestor": "Gia C. Sumagang",
     "doctype": "Sick Leave",
     "datesubmitted": "April 17, 2024",

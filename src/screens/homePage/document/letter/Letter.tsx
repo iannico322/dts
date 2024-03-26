@@ -4,16 +4,52 @@ import Message from "@/components/msg/successMessage"
 import { useState } from "react";
 import { ComboboxDemo } from "@/components/input/Dropdown";
 import InputTemp from "@/components/input/Input";
+import axios from "./../../../../plugin/axios";
 
 
 function Letter() {
 
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
+    const [data,setData]= useState({
+      "title": "",
+      "type":"letter",
+      "requestor": "",
+      "doctype": "Absent",
+      "message":"",
+  })
+
+  const onChangeInput = (e: any) => {
+
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+  };
+
     const handleSubmit = (e:any) =>{
         e.preventDefault()
-        setShowSuccessMessage(true);
-        setTimeout(() => setShowSuccessMessage(false), 3000)
+        axios.post('document/all/',data,{
+          headers: {
+            Authorization: `Token 8eb01bb88da50b2e599b76c7397f3c57980dddeb `,
+          }, 
+        }).then((e:any)=>{
+          console.log(e.data)
+          setShowSuccessMessage(true);
+          setTimeout(() => setShowSuccessMessage(false), 3000)
+          setData({
+            "title": "",
+            "type":"",
+            "requestor": "",
+            "doctype": "",
+            "message":"",
+        })
+        }).catch((e:any)=>{
+          console.log(e.data)
+        })
+  
+
+        
     }
   
 
@@ -33,16 +69,33 @@ function Letter() {
             </div>
             <form className=" w-full border border-gray-500/20 rounded-[5px] px-5 py-8  grid grid-cols-3 gap-3  sm:grid-cols-1    " onSubmit={handleSubmit}>
                 <InputTemp label = "Name of the Requestor" placeholder="E.g Taylor Sheeesh" span="col-span-2 sm:col-span-1"
+                
+                value={data.requestor}
+                name="requestor"
+                onChange={onChangeInput}
+                
                 />
                 <InputTemp label = "Designation / Position" placeholder="E.g Officer1" span="col-span-1 sm:col-span-1"
+                
                 />
 
                 <InputTemp label = "Title of the Document" placeholder="E.g Letter" span="col-span-2 sm:col-span-1"
+                
+                value={data.title}
+                name="title"
+                onChange={onChangeInput}
+                
                 />
                  <ComboboxDemo
                  label="Types of Document"
                 span=" col-span-1 sm:col-span-1 "
                 placeholder="Types of Documents"
+                
+                name="doctype"
+                setData={()=>{
+                  setData({...data,doctype:"ssdsd"})
+                }}
+            
                 frameworks={[
                     {
                       label: "AIP",
@@ -64,11 +117,15 @@ function Letter() {
                 pl
                 />
                 <InputTemp label = "Remarks" placeholder="E.g Signed" span="col-span-3 sm:col-span-1"
+                value={data.message}
+                name="message"
+                onChange={onChangeInput}
                 />
                 <ComboboxDemo
                 span=" col-span-3 sm:col-span-1 "
                 label="Receiver"
                 placeholder="Select name..."
+             
                 frameworks={[
                     {
                       label: "Ian",

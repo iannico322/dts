@@ -1,29 +1,15 @@
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Letter from './Letter'
 
 import FileIcon from './../../../assets/icons/document-copy.png'
 import AR from './AR';
-import axios from './../../../plugin/axios';
 
 
 
 
-const Dashboard = () => {
 
-   useEffect(()=>{
-
-    axios.get('document/all/',{
-      headers: {
-        Authorization: `Token 8eb01bb88da50b2e599b76c7397f3c57980dddeb `,
-      }, 
-    }).then((e:any)=>{
-      localStorage.setItem('data',JSON.stringify(e.data))
-    }).catch((e:any)=>{
-      console.log(e.data)
-    })
-
-   },[])
+const Track = () => {
  
 
   const [activePage,setActivePage]=useState("Letter")
@@ -97,4 +83,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Track

@@ -1,14 +1,15 @@
 // MyTable.tsx
 
 import { useTable, useSortBy, usePagination, useGlobalFilter } from 'react-table';
-import data from './userData.json'
-import { useEffect } from 'react';
+
+import { useEffect, useState } from 'react';
 
 import Sent from './../../../assets/icons/sent.png'
+import { useLocation } from 'react-router-dom';
+import SearchIcon from './../../../assets/icons/search.png'
 
-
-
-const sampleData = data;
+const data = JSON.parse(localStorage.getItem('data')||"");
+const sampleData = data.filter((item:any) => item.status === 'waiting');
 
 
 const columns: any = [
@@ -38,7 +39,10 @@ const columns: any = [
   },
 ];
 
-function MyTable({ search }: any) {
+
+
+function Letter() {
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -68,6 +72,31 @@ function MyTable({ search }: any) {
 
   const { pageIndex }: any = state;
 
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const s = searchParams.get("search");
+
+  const [search, setSearch] = useState<any>(s);
+
+  const handleSearch = (e: any) => {
+    setSearch(e.target.value);
+
+    window.history.pushState(
+      null,
+      "",
+      `/dts/receive/dashboard?search=${e.target.value}`
+    );
+  };
+
+
+
+
+
+
+
+
+
+
   useEffect(() => {
     setPageSize(10)
   }, [])
@@ -76,9 +105,22 @@ function MyTable({ search }: any) {
     setGlobalFilter(search)
   }, [search])
 
-  return (
-    <div className=' relative flex flex-col h-[80%] w-full overflow-hidden justify-between'>
+  
 
+  return (
+    <div className=' bg-white relative flex flex-col h-full w-full overflow-hidden justify-between  mt-4'>
+       <div className=" self-start relative  flex  px-3 py-1 border-border border  items-center w-[80%] sm:w-full bg-bgW rounded-md m-0  max-w-[400px] sm:max-w-full">
+                <input
+                  value={search}
+                  onChange={handleSearch}
+                  placeholder="Search..."
+                  className="outline-none w-full bg-bgW text-xs pl-7 text-gray-900 py-1 "
+                  type="search"
+                />
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none mr-7px-4">
+                  <img src={SearchIcon} alt="Search" className="h-5 w-5" />
+                </div>
+        </div>
       <div className='overflow-hidden'>
         <table {...getTableProps()} className='w-full text-xs font-light table-fixed'>
           <thead className='text-[#0077FF] h-[20px]'>
@@ -107,7 +149,7 @@ function MyTable({ search }: any) {
             ))}
           </thead>
         </table>
-        <div className='overflow-y-auto overflow-x-hidden  min-h-[100px] h-full '>
+        <div className='overflow-y-auto overflow-x-hidden  min-h-[300px] h-full pb-10 '>
           <table className='w-full text-xs font-light table-fixed'>
             <tbody {...getTableBodyProps()} className='overflow-hidden w-full'>
               {page.map((row: any,key:any) => {
@@ -135,9 +177,6 @@ function MyTable({ search }: any) {
                       <td key={cell.column.id} className='h-10 pl-4 py-4 font-semibold text-[#163961] text-left truncate'> {/* Add truncate class */}
                       {cell.render('Cell')}
                       </td> 
-                      
-                    
-                      
                        
                     )
 
@@ -174,7 +213,7 @@ function MyTable({ search }: any) {
         </button>
       </div>
 
-      <div className=' sm:hidden  h-[100px] k w-full items-center bottom-0 self-center mb-2 flex justify-center gap-4 sm:gap-2 mt-2 bg-blueTable-100 text-center'>
+      <div className=' sm:hidden  min-h-[60px] items-center   w-full  bottom-0 self-center mb-2 flex justify-center gap-4 sm:gap-2 mt-2 bg-blueTable-100 text-center'>
         <button onClick={() => previousPage()} disabled={!canPreviousPage} className='className="flex items-center gap-2 px-6 sm:px-3 sm:p-3 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-900/10 active:bg-orange
                                     disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"
@@ -234,4 +273,4 @@ function MyTable({ search }: any) {
   );
 }
 
-export default MyTable;
+export default Letter;
