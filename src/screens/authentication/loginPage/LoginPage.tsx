@@ -182,15 +182,11 @@ function LoginPage() {
                 onClick={() => {
                   console.log("Sign in with Google");
                 }}
-                className=" flex flex-row justify-center items-center gap-5 w-[225px] h-[40px] bg-white rounded-md hover:bg-[#ffffffdc]  cursor-pointer transition-all duration-150 "
+                className=" flex flex-row justify-center items-center gap-5 w-[225px] h-[40px] bg-blue rounded-full hover:bg-blue/40  cursor-pointer transition-all duration-150 "
               >
-                <img
-                  className=" object-contain  w-[24px] h-[24px] "
-                  src={google}
-                  alt="google_account"
-                />
-                <p className=" text-[#7f7f7f] font-semibold">
-                  Sign in with Google
+                
+                <p className=" text-white font-semibold">
+                  Register
                 </p>
               </button>
             </div>

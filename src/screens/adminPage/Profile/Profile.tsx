@@ -28,7 +28,7 @@ function Profile() {
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <div className="  w-full h-full justify-center items-center bg-adminBG md:p-8 p-16  ">
+        <div className="  w-full h-full justify-center items-center bg-adminBG md:p-8 p-16 hideScroll overflow-y-scroll overflow-hidden scroll-smooth ">
             
             {/* top side */}
             <div className="  w-full h-full ">
@@ -49,13 +49,13 @@ function Profile() {
                         />
                         </div>
 
-                        <div className=" z-10 flex flex-col  lg:justify-center lg:items-center  md:w-[100%] w-[400px] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
+                        <div className=" z-10 flex flex-col  lg:justify-center lg:items-center  md:w-[100%] w-[40%] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 pl-10 translate-x-[-30px] sm:translate-y-[-20px] md:translate-y-[-10px] lg:translate-y-[-20px] lg:translate-x-[0px] ">
                             <p className=" text-[#2B3674] text-[20px] font-semibold truncate">Administrator</p>
                             <p className=" text-[#A3AED0] text-[16px] truncate">admin.dts@dict.gov.ph</p>
                         </div>
 
                         {/* admin password */}
-                        <div className=" flex flex-col lg:justify-center lg:items-center  md:w-[100%]  w-[400px] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 ">
+                        <div className=" flex flex-col lg:justify-center lg:items-center  md:w-[100%] w-[40%] h-[90px] lg:min-w-[300px] lg:w-[100%] lg:h-[80px] bg-white rounded-xl p-4 lg:pl-0 ">
                             <div className=" flex flex-row w-full items-center lg:justify-center">
                                 <p className=" text-[#2B3674] text-[20px] font-semibold mr-1 truncate">Password</p>
                                 <PencilLine className=" text-adminBG h-[18px] w-[18px]" />
@@ -69,7 +69,7 @@ function Profile() {
 
 
                 {/* General Information */}
-                <div className=" flex flex-col w-full mt-4 ">
+                <div className=" flex flex-col w-full mt-4 lg:mt-10 ">
 
                     <p className=" text-textW text-[24px] font-normal ">General Information</p>
 

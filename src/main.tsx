@@ -11,7 +11,7 @@ import ProfileLoader from './screens/adminPage/Profile/ProfileLoader.tsx';
 import UsersLoader from './screens/adminPage/userManagement/UsersLoader.tsx'
 import FeedbackLoader from './screens/adminPage/others/Feedbacks/FeedbackLoader.tsx';
 import AuditLoader from './screens/adminPage/auditTrail/auditLoader.tsx';
-
+import LoaderChild from './components/loader/loaderChild.tsx';
 
 const Developers= lazy(() =>
   wait(1300).then(() => import("./screens/developersPage/Developers.tsx"))
@@ -166,7 +166,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/home/dashboard/",
       element:  <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LoaderChild/>}>
         <Dashboard />
       </Suspense>
     </>,
@@ -174,7 +174,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/home/document/",
       element:  <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LoaderChild />}>
         <Document />
       </Suspense>
     </>,
@@ -183,7 +183,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/home/letter",
   element:  <>
-  <Suspense fallback={<Loader />}>
+  <Suspense fallback={<LoaderChild />}>
     <Letter />
   </Suspense>
 </>,
@@ -191,7 +191,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/home/letter2",
   element:  <>
-  <Suspense fallback={<Loader />}>
+  <Suspense fallback={<LoaderChild />}>
     <Letter2 />
   </Suspense>
 </>,
@@ -205,7 +205,7 @@ const router = createBrowserRouter([
   {
     path: "/dts/receive",
     element: <>
-    <Suspense fallback={<Loader />}>
+    <Suspense fallback={<LoaderChild />}>
       <ReceivePage />
     </Suspense>
   </>,
@@ -217,7 +217,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/receive/dashboard/",
       element:  <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LoaderChild />}>
         <RDashboard />
       </Suspense>
     </>,
@@ -225,7 +225,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/receive/track",
       element:  <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LoaderChild />}>
         <Track />
       </Suspense>
     </>,
@@ -233,7 +233,7 @@ const router = createBrowserRouter([
     {
       path: "/dts/receive/completed",
       element:  <>
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={<LoaderChild />}>
         <Completed/>
       </Suspense>
     </>,
