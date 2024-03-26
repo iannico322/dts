@@ -29,6 +29,8 @@ export default function AuditTable (){
 
 
     const [checkedState, setCheckedState] = useState<boolean[]>([])
+    const [selectAll, setSelectAll] = useState<boolean>(false);
+
 
     useEffect(()=>{
         console.log(data)
@@ -63,6 +65,7 @@ export default function AuditTable (){
     setPageSize(15)
     },[])
 
+
     return(
         <div className=' flex flex-col w-full h-full relative  '>
 
@@ -75,13 +78,8 @@ export default function AuditTable (){
                             headerGroups.map((headerGroup:any)=> (
                                 <tr {...headerGroup.getHeaderGroupProps()} >
                                 {
-                                    headerGroup.headers.map((column:any, i:any) => {
-                                            
-                                    const {
-                                        getSortByToggleProps,
-
-                                    } = column;
-                            
+                                    headerGroup.headers.map((column: any & { getSortByToggleProps: () => any }, i: any) => {
+                                                         
      
                                     let widthClass = '';
 
@@ -103,22 +101,41 @@ export default function AuditTable (){
                                         widthClass = 'w-auto';
                                     }
                                     return (
-                                        <th {...column.getHeaderProps(getSortByToggleProps())} className={` text-[#436BBE] text-[20px] text-left font-semibold ${widthClass}`}>
-                                            <div className=' truncate flex flex-row '>
-                                                <span className='truncate'>{column.render('Header')}</span>
-                                                <span >
-                                                    {column.isSorted ? (
-                                                    column.isSortedDesc ? (
-                                                        <CaretDownIcon className='ml-1 w-[35px] h-[35px]' />
-                                                    ) : (
-                                                        <CaretUpIcon className='ml-1 w-[35px] h-[35px]' />
-                                                    )
-                                                    ) : (
-                                                    ''
-                                                    )}
-                                                </span>
-                                            </div>
-                                        </th>
+                                    <th {...column.getHeaderProps(column.getSortByToggleProps())} className={` text-[#436BBE] text-[20px] text-left font-semibold ${widthClass}`}>
+                                        <div className=' truncate items-center flex flex-row '>
+                                            { i === 0 && 
+                                            <input 
+                                                type="checkbox" 
+                                                className='mr-3 text-white w-5 h-5 cursor-pointer '
+                                                checked={selectAll} 
+                                                onClick={(e) => {
+                                                e.stopPropagation();
+                                                setSelectAll(!selectAll);
+                                                setCheckedState(prev => {
+                                                    const newState = { ...prev };
+                                                    page.forEach((row: any) => {
+                                                    newState[row.id] = !selectAll;
+                                                    });
+                                                    return newState;
+                                                });
+                                                }}
+                                            />
+                                            }
+                                            <span className='truncate'>{column.render('Header')}</span>
+                                            <span >
+                                            {column.isSorted ? (
+                                                column.isSortedDesc ? (
+                                                <CaretDownIcon className='ml-1 w-[35px] h-[35px]' />
+                                                ) : (
+                                                <CaretUpIcon className='ml-1 w-[35px] h-[35px]' />
+                                                )
+                                            ) : (
+                                                ''
+                                            )}
+                                            </span>
+                                        </div>
+                                    </th>
+
                                     );
                                     })
                                 }
@@ -168,7 +185,7 @@ export default function AuditTable (){
                                                 {i === 0 && 
                                                     <input 
                                                     type="checkbox" 
-                                                    className='mr-3 text-white w-5 h-5 cursor-pointer ' 
+                                                    className='mr-3 text-white w-5 h-5 cursor-pointer '
                                                     checked={!!checkedState[row.id]} 
                                                     onChange={() => setCheckedState(prev => ({...prev, [row.id]: !prev[row.id]}))}
                                                     />
